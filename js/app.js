@@ -1,5 +1,10 @@
 import addProduct from './products.js'; 
+import productsApi from './product-api.js';
+
+//const products = productsApi.getAll();
+
 
 addProduct.init(function(product) {
-    console.log('hello', product); 
+
+    productsApi.add(product);
 }); 
