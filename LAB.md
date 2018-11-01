@@ -85,9 +85,7 @@ Static content with main button for "order now!"
 * List of all customers and total order
 * Order Detail
     * Reuse shopping cart!
-    * Click on list items to show detail of that one item!
-
-Allow Admins to 
+    * Click on list items to show detail of that one item! 
 
 ## Project Structure
 
