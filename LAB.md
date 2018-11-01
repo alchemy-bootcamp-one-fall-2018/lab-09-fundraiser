@@ -72,6 +72,7 @@ Static content with main button for "order now!"
 
 * Shows Shopping Cart
 * Customer Form
+    * Include billing and shipping address with "copy" functionality
 * On order, adds order to orders
 
 ### Products Page
