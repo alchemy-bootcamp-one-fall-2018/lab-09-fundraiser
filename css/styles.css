@@ -9,3 +9,9 @@ header nav a {
 nav {
      clear: both;
 }
+
+.cart {
+    float: right;
+    width: 25%;
+    border: 2px solid black;
+}

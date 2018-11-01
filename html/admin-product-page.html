@@ -15,6 +15,27 @@
                 <a href="./order-page.html">Order</a>
                 <a href="./checkout-page.html">Checkout</a>
             </nav>
+
+            <section class="catalog">
+                <h1>Products Available</h1>
+                <ul class="pickList"></ul>
+            </section>
+
+            <form>
+                <fieldset>
+                    <legend>Add Item</legend>
+
+                    <label for="itemName"></label>
+                    <input type="text" name="itemName" id="itemName" required>
+
+                    <label for="itemType"></label>
+                    <select>
+                        <option name="itemType" value="food">Food</option>
+                        <option name="itemType" value="clothing">Clothing</option>
+                        <option name="itemType" value="hygiene">Hygiene</option>
+                    </select>
+                </fieldset>
+            </form>
     </header>
 
 

@@ -17,8 +17,12 @@
             </nav>
     </header>
 
-    <section id="checkCart">
-        <ul id="checkoutItems"></ul>
+    <section id="userInfo">
+        
+        <aside class="cart">
+            <h2>Cart</h2>
+        </aside>
+
         <form id="billingInfo">
             <fieldset>
                 <legend>Personal Information</legend>
@@ -32,7 +36,7 @@
                 <input type="email" name="email" id="email" required>
             </fieldset>
 
-            <fieldset>
+            <fieldset id="shippingAddress">
                 <legend>Shipping Address:</legend>
                 <label for="shipStreet1">Line 1 Street</label>
                 <input type="text" name="shipStreet1" id="shipStreet1" required>
@@ -40,17 +44,39 @@
                 <label for="shipStreet2">Line 2 Street</label>
                 <input type="text" name="shipStreet2" id="shipStreet2" required>
 
-                <label for="city">City</label>
-                <input type="text" name="city" id="city" required>
+                <label for="shipCity">City</label>
+                <input type="text" name="shipCity" id="shipCity" required>
 
-                <label for="state">State</label>
-                <input type="text" name="state" id="state" required>
+                <label for="shipState">State</label>
+                <input type="text" name="shipState" id="shipState" required>
 
-                <label for="zip">Zip Code</label>
-                <input type="text" name="zip" id="zip" required>
+                <label for="shipZip">Zip Code</label>
+                <input type="text" name="shipZip" id="shipZip" required>
 
+                <label for="sameAddress"></label>
+                <input type="checkbox" name="sameAddress" id="sameAddress">Use Same Address for Billing
             </fieldset>
 
+            <fieldset id="billingAddress">
+                <legend>Billing Address:</legend>
+                <label for="billStreet1">Line 1 Street</label>
+                <input type="text" name="billStreet1" id="billStreet1" required>
+                
+                <label for="billStreet2">Line 2 Street</label>
+                <input type="text" name="billStreet2" id="billStreet2" required>
+
+                <label for="billCity">City</label>
+                <input type="text" name="billCity" id="billCity" required>
+
+                <label for="billState">State</label>
+                <input type="text" name="billState" id="billState" required>
+
+                <label for="billZip">Zip Code</label>
+                <input type="text" name="billZip" id="billZip" required>
+            </fieldset>
+
+            <button type="submit">Submit Order!</button>
+            
         </form>
     </section>
 
