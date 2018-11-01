@@ -8,23 +8,58 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-        <header>
-                <nav>
-                    <img src="../assets/Homeplate_logo.png" alt="homeplate for youth logo">
-                    <a href="../index.html">Home</a>
-                    <a href="./order-page.html">Order</a>
-                    <a href="./checkout-page.html">Checkout</a>
-                </nav>
-        </header>
-    
-    
-    
-    
-        <footer>
-                <nav>
-                    <a href="./admin-product-page.html">Admin: Products Page</a>
-                    <a href="./admin-order-report.html">Admin: Order Report</a>
-                </nav>
-        </footer>
+    <header>
+            <nav>
+                <img src="../assets/Homeplate_logo.png" alt="homeplate for youth logo">
+                <a href="../index.html">Home</a>
+                <a href="./order-page.html">Order</a>
+                <a href="./checkout-page.html">Checkout</a>
+            </nav>
+    </header>
+
+    <section id="checkCart">
+        <ul id="checkoutItems"></ul>
+        <form id="billingInfo">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fName">First Name:</label>
+                <input type="text" name="fName" id="fName" required>
+
+                <label for="lName">Last Name:</label>
+                <input type="text" name="lName" id="lName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Shipping Address:</legend>
+                <label for="shipStreet1">Line 1 Street</label>
+                <input type="text" name="shipStreet1" id="shipStreet1" required>
+                
+                <label for="shipStreet2">Line 2 Street</label>
+                <input type="text" name="shipStreet2" id="shipStreet2" required>
+
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" required>
+
+                <label for="state">State</label>
+                <input type="text" name="state" id="state" required>
+
+                <label for="zip">Zip Code</label>
+                <input type="text" name="zip" id="zip" required>
+
+            </fieldset>
+
+        </form>
+    </section>
+
+
+    <footer>
+            <nav>
+                <a href="./admin-product-page.html">Admin: Products Page</a>
+                <a href="./admin-order-report.html">Admin: Order Report</a>
+            </nav>
+    </footer>
 </body>
 </html>

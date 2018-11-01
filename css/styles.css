@@ -5,3 +5,7 @@ header {
 header nav a {
     color: white;
 }
+
+nav {
+     clear: both;
+}

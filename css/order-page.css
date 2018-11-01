@@ -1,0 +1,11 @@
+#cart {
+    float: right;
+    width: 25%;
+    border: 2px solid black;
+}
+
+#catalog {
+    float: left;
+    width: 70%;
+}
+
