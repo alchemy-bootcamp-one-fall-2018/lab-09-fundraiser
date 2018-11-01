@@ -1,5 +1,5 @@
 import addProduct from './products.js'; 
-import productsApi from './product-api.js';
+import productsApi from './product-api.js'; 
 
 //const products = productsApi.getAll();
 
