@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+nav li {
+    list-style: none;
+    display:inline;
+}
+
+body {
+    margin: 0 auto;
+    
+}
+header  {
+    display: flex;
+    justify-content: center;
+    border:3px solid black;
+    background-image: url(https://images2.alphacoders.com/808/thumb-1920-808265.jpg);
+    background-position:50% 35%;
+    height:375px;
+}
+
+h1 {
+    text-align: center;
+}
