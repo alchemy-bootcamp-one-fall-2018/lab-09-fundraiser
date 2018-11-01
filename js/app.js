@@ -1,0 +1,1 @@
+import addProduct from './add-product.js';
