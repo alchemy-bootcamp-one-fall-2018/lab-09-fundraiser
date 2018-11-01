@@ -22,9 +22,31 @@
      </header>
 
      <main>
+         <section id="add-product">
+         <h2>Add a Product</h2>
 
-         
-
+            <form id="product-form">
+                <label>
+                    Product name
+                    <input required name="name">
+                </label>
+                <label>
+                    Description
+                    <input required name="description">
+                </label>
+                <label>Animal</label>
+                    <select id="animal">
+                        <option value="" hidden disabled selected>Select an animal</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="bird">Bird</option>                
+                    </select>
+            </form>
+        </section>
+         <section id="product-list">
+            <h2>Products</h2>
+            <ul id="products"></ul>
+         </section>
      </main>
  </body>
  </html>
