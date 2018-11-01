@@ -1,14 +1,17 @@
-import html from './html.js';
 
 function addProduct(product) {
-    const html =  `
-
-    `;
-
+    const html = /*html*/`
+        <li class="product">
+            <h3 class="item">${product.item}</h3>
+            <h3 class="detail">${product.detail}</h3>
+            <h3 class="price">${product.price}</h3>
+        </li>
+        `;
+        
     const template = document.createElement('template');
-    
+        
     template.innerHTML = html;
-
+    
     return template.content;
 }
 
@@ -19,13 +22,13 @@ const list = document.getElementById('products');
 const productsList = {
     init(products) {
         for(let i = 0; i < products.length; i++) {
-            const dom = addProduct(products[i]);
-            list.appendChild(dom);
+            productsList.add(products[i]);
         }
-
+        productsList.products = products;
     },
     add(product) {
-        const dom = 
+        const dom = addProduct(product);
+        list.appendChild(dom);
     }
 };
 
