@@ -1,6 +1,4 @@
 
-
-
 let cart = [];
 
 function saveCart() {
@@ -27,6 +25,7 @@ const cartApi = {
             orderItem.quantity++;
         }
         else {
+            console.log(product.grain);
             cart.push({
                 name: product.name,
                 quantity: 1
