@@ -2,33 +2,26 @@
 const formData = {
 
     init(onAdd) {
-        const formInput = document.getElementById('product-form');
-        console.log(formInput);
+       // const formInput = document.getElementById('product-form');
+        const formGrains = document.getElementById('grains-div');
+     
 
-        formInput.addEventListener('submit', function(event) {
+        const products = {};
+
+        formGrains.addEventListener('onclick', function(event){
             event.preventDefault();
 
-            const elements = formInput.elements;
+            products.name = formGrains.name;
+            products.quantity = formGrains.value;
 
-            const cartContents = {
+            onAdd(products);
+            formGrains.reset(); 
 
-                grain: elements.grain.value,
-                fruit: elements.fruit.value,
-                beans: elements.beans.value
+            console.log(products);
 
-            };
-
-            onAdd(cartContents);
-            formInput.reset();
-            console.log(cartContents);
         });
     }
-
 };
+
+
 export default formData;
-
-
-
-
-
-

@@ -17,6 +17,7 @@ const cartApi = {
         return cart;
     }, 
     add(product) {
+        console.log(product);
         const orderItem = cart.find(item => {
 
             return item.name === product.name;
@@ -25,7 +26,6 @@ const cartApi = {
             orderItem.quantity++;
         }
         else {
-            console.log(product.grain);
             cart.push({
                 name: product.name,
                 quantity: 1
