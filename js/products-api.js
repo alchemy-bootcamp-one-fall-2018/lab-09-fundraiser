@@ -1,31 +1,26 @@
 let products = [
     {
         name: 'T-Shirt',
-        // color: 'black',
         image: '',
         description: 'black t-shirt'
     },
     {
         name: 'Hard hat',
-        // color: 'white',
         image: '',
         description: 'A very hard hat'
     },
     {
         name: 'Exec Pen',
-        // color: 'black',
         image: '',
         description: 'VIP'
     },
     {
         name: 'Umbrella',
-        // color: 'assorted',
         image: '',
         description: 'outdoor protection'
     },
     {
         name: 'Backpack',
-        // color: 'black',
         image: '',
         description: 'Holds stuff'
     },   
