@@ -6,7 +6,11 @@ let total;
 
 function addItems(buttonId) {
     let selectedProduct = products[parseInt(buttonId)];
-    cartItems.push(selectedProduct);
+    if(cartItems) {
+        cartItems.push(selectedProduct);
+    } else {
+        cartItems = [selectedProduct];
+    }
     storeCart();
 }
 
@@ -16,17 +20,14 @@ function storeCart() {
 }
 
 function displayCart() {
-    const cartAside = JSON.parse(localStorage.getItem('cart'));
-    console.log(cartAside);
-    // const sideCart = document.getElementById('sideCart');
-
+    const cartAside = JSON.parse(localStorage.getItem('cart'));  
+    const sideItems = document.getElementById('sideItems');  
     let html;
-
+    
     cartAside.forEach(function(item) {
         total = JSON.parse(localStorage.getItem('cartTotal'));
         total += item.price;
         
-        console.log('total before add', total);
         html += `
         <p>Item: ${item.name}</p>
         <p>Price: ${item.price}</p><br /><br /><br />     
@@ -35,8 +36,11 @@ function displayCart() {
     html += `<p>Total: ${total}</p>`;
     localStorage.setItem('cartTotal', JSON.stringify(total));
     
-    console.log(html);
+    sideItems.innerHTML = html;
+    
+    
 }
+
 
 const addToCart = {
     init(buttonId) {
