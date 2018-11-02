@@ -4,6 +4,8 @@ import productApi from './products-api.js';
 import productDetail from './product-detail';
 
 const products = productApi.getAll();
+console.log(products);
+
 
 productList.init(products, /*onSelect*/ function(product){
     productDetail.update(product);
