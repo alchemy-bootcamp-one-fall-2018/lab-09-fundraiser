@@ -4,8 +4,9 @@ import itemsApi from './components/products-api.js';
 
 const items = itemsApi.getAll();
 
-itemList.init(items, function(item) {
-    itemsApi.update(item);
+itemList.init(items, /*onSelect*/ function(item) {
+    const index = itemsApi.remove(item);
+    itemList.remove(index);
 
 });
 

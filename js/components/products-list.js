@@ -25,26 +25,28 @@ const list = document.getElementById('items');
 const itemList = {
 
     
-    init(items, onRemove) {
+    init(items, onSelect) {
         for(let i = 0; i < items.length; i++) {
             itemList.add(items[i]);
         }
-        itemList.onRemove = onRemove;
+        itemList.onSelect = onSelect;
+        itemList.items = items;
     },
     
     add(item) {
         const dom = makeItem(item);
        
-        const removeButton = dom.querySelector('button');
+        // const removeButton = dom.querySelector('button');
         const listItem = dom.querySelector('li');
 
-        removeButton.addEventListener('click', function() {
-            itemList.onRemove(item);
-            listItem.remove();
-
+        listItem.addEventListener('click', function() {
+            itemList.onSelect(item);
         });
 
         list.appendChild(dom);
+    },
+    remove(index) {
+        list.querySelectorAll('li')[index].remove();
     }
 };
 
