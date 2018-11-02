@@ -1,6 +1,6 @@
 var productList = [
     {
-        id: 0,
+        id: 'backpack',
         name: 'Backpack',
         type: 'survival',
         description: 'It is a backpack',
@@ -9,7 +9,7 @@ var productList = [
     },
 
     {
-        id: 1,
+        id: 'bottledWater',
         name: 'Bottled Water',
         type: 'food',
         description: 'It is a case of waters in bottles',
@@ -18,7 +18,7 @@ var productList = [
     },
 
     {
-        id: 2,
+        id: 'razor',
         name: 'Razor',
         type: 'hygiene',
         description: 'A pack of 5 razors',
@@ -27,7 +27,7 @@ var productList = [
     },
 
     {
-        id: 3,
+        id: 'sweatShirt',
         name: 'Sweat Shirt',
         type: 'clothing',
         description: 'One hoodie to keep warm',

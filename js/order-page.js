@@ -1,6 +1,7 @@
 'use strict';
 
 import productsApi from './products-api.js';
+import addToCart from './add-to-cart.js';
 
 const listOrders = {
     init() {
@@ -16,11 +17,21 @@ const listOrders = {
                 <img src="${product.image}">
                 <p class="price">$${product.price}</p>
                 <p class="description">${product.description}</p>
-                <button id="${product.id}>Add to Cart</button>
+                <button class="addToCart" id="${product.id}">Add to Cart</button>
                  `;
-            
+                 
             pickList.appendChild(node);
+                
         });
+        
+        const addCartButton = document.querySelectorAll('.addToCart');
+
+        addCartButton.forEach(function(button) {
+            button.addEventListener('click', function() {
+                addToCart.init(button.id);
+            });
+        });
+
     }
 };
 
