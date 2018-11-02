@@ -57,4 +57,10 @@ input {
     margin: 2%;
     border: 2px solid seagreen;
     background-color: white;
+    width: 20%;
+    padding: 2%;
+}
+
+.pickList img{
+    width: 20%;
 }

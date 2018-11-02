@@ -9,20 +9,21 @@ const listOrders = {
         console.log(pickList);
         const products = productsApi.getProducts();
 
-
-        products.forEach(function(product) {
-            var node = document.createElement('li');
-            node.innerHTML = `
-                <h3 class="productName">${product.name}</h3>
-                <img src="${product.image}">
-                <p class="price">$${product.price}</p>
-                <p class="description">${product.description}</p>
-                <button class="addToCart" id="${product.id}">Add to Cart</button>
-                 `;
-                 
-            pickList.appendChild(node);
+        if(pickList){
+            products.forEach(function(product) {
+                var node = document.createElement('li');
+                node.innerHTML = `
+                    <h3 class="productName">${product.name}</h3>
+                    <img src="${product.image}">
+                    <p class="price">$${product.price}</p>
+                    <p class="description">${product.description}</p>
+                    <button class="addToCart" id="${product.id}">Add to Cart</button>
+                     `;
+                     
+                pickList.appendChild(node);
+            });
+        }
                 
-        });
         
         const addCartButton = document.querySelectorAll('.addToCart');
 
