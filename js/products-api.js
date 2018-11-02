@@ -14,7 +14,8 @@ let products = [
     }
 ];
 function saveProducts() {
-    localStorage.setItem('products', JSON.stringify(products)); }
+    localStorage.setItem('products', JSON.stringify(products));
+}
 
 
 const productApi = {

@@ -1,20 +1,21 @@
-import html from './html.js';
-
-const addItemTable = document.getElementById('add-form');
+const addItemTable = document.getElementById('products');
 
 function addItem(product) {
 
-    return html`
-    <div> 
-        <ul>
-            <li>ID:${product.id}</li>
-            <li>NAME:${product.name}</li>
-            <li>DESCRIPTION:${product.description}</li>
-            <li>PRICE:${product.price}</li>
-            <li>IMAGE:${product.image}</li>
-        <ul>
-    </div>`;
+    const html = /*html*/`
+    <li> 
 
+        <p>ID:${product.id}</p>
+        <p>NAME:${product.name}</p>
+        <p>DESCRIPTION:${product.description}</p>
+        <p>PRICE:${product.price}</p>
+        <p>IMAGE:${product.image}</p>
+    
+    </li>`;
+    const template = document.createElement('template');
+
+    template.innerHTML = html;
+    return template.content;
 }
 
 const itemTable = {
