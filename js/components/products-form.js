@@ -11,7 +11,7 @@ const productForm = {
 
             const listItems = {};
             
-            listItems.image = image.value;
+            // listItems.image = image.value;
             listItems.name = name.value;
             listItems.description = description.value;
             listItems.price = price.value;
