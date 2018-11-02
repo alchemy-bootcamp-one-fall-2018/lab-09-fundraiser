@@ -2,7 +2,7 @@
 function addProduct(product) {
     const html = /*html*/`
         <li class="product">
-            <h3 class="item">${product.item}</h3>
+            <h3 class="name">${product.name}</h3>
             <h3 class="detail">${product.detail}</h3>
             <h3 class="price">${product.price}</h3>
         </li>

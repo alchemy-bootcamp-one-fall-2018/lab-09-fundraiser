@@ -6,7 +6,7 @@ const addProduct = {
             event.preventDefault();
             const elements = form.elements;
             const product = {
-                item: elements.item.value,
+                name: elements.name.value,
                 detail: elements.detail.value,
                 price: elements.price.value
             };
