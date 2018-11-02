@@ -8,7 +8,7 @@ function makeCookie(cookie) {
                 </h3>
                 <p>${cookie.description}</p>
                 <p>${cookie.price}</p>
-                <img src="${cookie.image}"/></img>
+                <img src="${cookie.image}"/>
             
         </li>
         `;
