@@ -8,11 +8,13 @@ function makeProduct(product) {
     // }; 
     const html = `
         <li class="product">
-            <h3 class="name">
-            ${product.name}
-            ${product.description}
-            </h3>
             <img src="assets/${product.image ? product.image : 'logo.png'}">
+            <h3 class="name">
+            ${product.name + ' :'}
+            </h3>
+            <p class="description">
+            ${product.description}
+            </p>
         </li>
         `;
 
