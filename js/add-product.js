@@ -1,8 +1,7 @@
+const addItemInput = document.getElementById('product-detail');
+console.log(addItemInput);
 
-const addItemInput = document.getElementById('addItemForm');
-
-
-const addItemData = {
+const productDetail = {
 
     init(onAdd) {
         addItemInput.addEventListener('submit', function(event){
@@ -19,10 +18,9 @@ const addItemData = {
             productData.image = elements.imageItem.value;
 
             onAdd(productData);
-            console.log(productData);
             addItemInput.reset();
         });
     }
 };
 
-export default addItemData;
+export default productDetail;

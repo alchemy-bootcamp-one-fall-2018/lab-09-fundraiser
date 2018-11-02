@@ -1,6 +1,6 @@
 import html from './html.js';
 
-const addItemTable = document.getElementById('product-table'); //change id to order page id somehow
+const addItemTable = document.getElementById('add-form');
 
 function addItem(product) {
 
