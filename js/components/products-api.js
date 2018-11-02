@@ -1,4 +1,17 @@
-let items = [];
+let items = [
+    {
+        image: 'Cari.jpg',
+        item: 'Frisbee',
+        description: 'Cari Pizza autographed tron frisbee',
+        price: 50
+    },
+    {
+        image: 'torgazi-bass.jpg',
+        item: 'bass',
+        description: 'Torgazi Bass',
+        price: 200
+    }
+];
 
 function saveItems() {
     localStorage.setItem('items', JSON.stringify(items));
