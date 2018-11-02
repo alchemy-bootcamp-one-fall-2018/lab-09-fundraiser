@@ -23,6 +23,15 @@ const shoppingCart = {
     }
 };
 
-const address = document.getElementById('address');
+const addressCheckbox = document.getElementById('add-checkbox');
+// const addressShipping = document.getElementById('address');
+
+if(addressCheckbox.checked) {
+    console.log(12);
+    // addressShipping = '';
+
+}
+
+
 
 export default shoppingCart;
