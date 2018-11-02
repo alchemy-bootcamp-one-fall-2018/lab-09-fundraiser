@@ -15,7 +15,6 @@ function makeProduct(product) {
     template.innerHTML = html;
 
     return template.content;
-
 }
 
 const list = document.getElementById('products');
