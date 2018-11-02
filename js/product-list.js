@@ -1,12 +1,9 @@
-
-
 function makeProduct(product) {
     const html = /*html*/`
         <li>
             <h3>${product.name}</h3>
-            <p>${product.animal}</p>
+            <h4>${product.animal}</h4>
             <p>${product.price}</p>
-            <button class="danger">X</button>
         </li>
     `;
 
@@ -18,23 +15,25 @@ function makeProduct(product) {
 const list = document.getElementById('products');
 
 const productList = {
-    init(products, onRemove) {
+    init(products, onSelect) {
         for(let i = 0; i < products.length; i++) {
             productList.add(products[i]);
 
         }
-        productList.onRemove = onRemove;
+        productList.onSelect = onSelect;
+        productList.products = products;
     },
     add(product) {
         const dom = makeProduct(product);
-        const removeButton = dom.querySelector('button');
         const listItem = dom.querySelector('li');
 
-        removeButton.addEventListener('click', function() {
-            productList.onRemove(product);
-            listItem.remove();
+        listItem.addEventListener('click', function() {
+            productList.onSelect(product);
         });
         list.appendChild(dom);
+    },
+    remove(index) {
+        list.querySelectorAll('li')[index].remove();
     }
 };
     
