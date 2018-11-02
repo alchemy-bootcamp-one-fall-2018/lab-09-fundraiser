@@ -1,13 +1,16 @@
 import cartApi from './cart-api.js';
-import formData from './cart-form.js';
+import addItemData from './collectAddItemData.js';
+import itemTable from './addItemAdmin.js';
 
+const items = cartApi.get();
+// creates the table in HTML
+itemTable.init(items);
 
-
-formData.init(function(formInfo){
-
-    cartApi.add(formInfo);
-
+//pushes add item to cart cart api 
+addItemData.init(function(oranges){
+    cartApi.add(oranges);
 });
+
 
 
 
