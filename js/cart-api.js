@@ -1,10 +1,10 @@
 
-
 let cart = [];
 
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
+
 
 const cartApi = {
     get() {
@@ -22,7 +22,6 @@ const cartApi = {
         if(orderItem) {
             orderItem.quantity++;
         }
-
         else {
             cart.push({
                 name: product.name,
@@ -32,7 +31,12 @@ const cartApi = {
         }
 
         saveCart();
+    },
+    remove(product) {
+        
     }
 };
+
+
 
 export default cartApi;
