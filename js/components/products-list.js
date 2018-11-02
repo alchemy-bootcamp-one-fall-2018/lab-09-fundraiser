@@ -2,6 +2,7 @@
 function makeItem(item) {
     const html = /*html*/`
         <li>
+            <img src="../../assets/${item.image ? item.image : 'Cari.jpg'}">
             <h3> 
                 ${item.name}
             </h3>  
@@ -9,7 +10,8 @@ function makeItem(item) {
                 ${item.description}
             </h4>    
                 ${item.price}
-            </h4>    
+            </h4>  
+
             <br> 
             <button class="danger">Remove</button>   
         </li>

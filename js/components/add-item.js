@@ -1,5 +1,5 @@
 const form = document.getElementById('products-form');
-// const image = document.getElementById('image');
+const image = document.getElementById('image');
 const name = document.getElementById('name');
 const description = document.getElementById('description');
 const price = document.getElementById('price');
@@ -11,7 +11,7 @@ const addItem = {
 
             const listItems = {};
             
-            // listItems.image = image.value;
+            listItems.image = image.value;
             listItems.name = name.value;
             listItems.description = description.value;
             listItems.price = price.value;
