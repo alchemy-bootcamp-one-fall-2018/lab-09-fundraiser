@@ -22,12 +22,12 @@
  
  .banner {
     background-image:
-    url("https://kitt.lewagon.com/placeholder/cities/berlin");
+    url("https://www.washingtonpost.com/resizer/G0Q3nT9zG_nItbWN2K21o-ecVdA=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/ZNWWDYP3I45HRHDUILXPYWRZRA.jpg");
     background-image:
     linear-gradient(-225deg,
     rgba(0,101,168,0.6) 0%,
     rgba(0,36,61,0.6) 50%),
-    url("https://kitt.lewagon.com/placeholder/cities/berlin");
+    url("https://www.washingtonpost.com/resizer/G0Q3nT9zG_nItbWN2K21o-ecVdA=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/ZNWWDYP3I45HRHDUILXPYWRZRA.jpg");
  }
  
  .order-now-button {
