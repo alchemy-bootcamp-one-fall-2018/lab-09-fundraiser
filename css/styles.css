@@ -1,17 +1,35 @@
+body {
+    text-align: center;
+    background-color: lightblue;
+}
+
 header {
     background-color: blue;
+    width: 100%;
+    border: 2px solid black;
+}
+
+header img {
+    width: 70%;
 }
 
 header nav a {
     color: white;
+    width: 10%;
+    /* display: block; */
 }
 
 nav {
      clear: both;
+     float: right;
 }
 
 aside {
     float: right;
     width: 25%;
     border: 2px solid black;
+}
+
+footer {
+    margin-top: 5%;
 }
