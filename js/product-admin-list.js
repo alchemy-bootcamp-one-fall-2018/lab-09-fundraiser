@@ -1,12 +1,17 @@
 /* eslint-disable indent */
 function makeProduct(product) {
+    console.log('make product', product); 
+    // const product = {
+    //     name: 'Tote',
+    //     image: 'tote.png',
+    //     description: 'Tote'
+    // }; 
     const html = `
         <li class="product">
-            <h3 class="name" style="background: ${product.name};">
-                ${product.description}
+            <h3 class="name">
+            ${product.name}
             </h3>
-            <img src=assets/${product.image ? product.image : 'logo.png'}">
-            </li>
+        </li>
         `;
 
     const template = document.createElement('template'); 
@@ -21,6 +26,7 @@ const list = document.getElementById('products');
 
 const productList = {
     init(products, onSelect) {
+        console.log('hello', products); 
         for(let i = 0; i < products.length; i++) {
             productList.add(products[i]);
         }
@@ -28,11 +34,12 @@ const productList = {
         productList.products = products; 
     }, 
     add(product) {
+        // console.log('productList.add', product); 
         const dom = makeProduct(product); 
 
         const listItem = dom.querySelector('li'); 
 
-        listItem.addEventListener('click', function(){
+        listItem.addEventListener('click', function() {
                 productList.onSelect(product); 
         }); 
 

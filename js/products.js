@@ -1,7 +1,7 @@
 const addProduct = {
 
     init(onAdd) {
-        const form = document.getElementById('product-form'); 
+        const form = document.getElementById('add-product'); 
 
         form.addEventListener('submit', function(event) {
             console.log('submit'); 
@@ -10,9 +10,9 @@ const addProduct = {
             const elements = form.elements; 
 
             const product = {
-                mugs: elements.mugs.value,
-                tshirt: elements.tshirt.value,
-                totes: elements.totes.value
+                name: elements.name.value,
+                image: elements.image.value,
+                description: elements.description.value
             }; 
             
             onAdd(product); 

@@ -13,7 +13,7 @@ let products = [
         name: 'Tote',
         image: 'tote.png',
         description: 'Tote'
-    }
+    }, 
 ];
 
 function saveProducts() {
