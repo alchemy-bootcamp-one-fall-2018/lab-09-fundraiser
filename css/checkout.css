@@ -1,0 +1,14 @@
+@media (max-width: 715px) {
+    body {
+        background-color: red;
+    }
+    #name-label {
+        display: block;
+    }
+    #desc-label {
+        display: block;
+    }
+    #price-label {
+        display: block;
+    }
+}
