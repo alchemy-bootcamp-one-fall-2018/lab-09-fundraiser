@@ -21,6 +21,7 @@ const addItemData = {
             productData.image = elements.imageItem.value;
 
             onAdd(productData);
+            console.log(productData);
             addItemInput.reset();
         });
     }

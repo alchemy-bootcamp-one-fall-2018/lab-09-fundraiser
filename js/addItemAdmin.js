@@ -1,19 +1,19 @@
 import html from './html.js';
 
 
-const addItemTable = document.getElementById('productTable'); // no correct id
+const addItemTable = document.getElementById('productTable'); //change id to order page id somehow
 
 function addItem(product) {
 
     return html`
     <div> 
-        <tr>
-            <td>${product.id}</td>
-            <td>${product.name}</td>
-            <td>${product.description}</td>
-            <td>${product.price}</td>
-            <td>${product.image}</td>
-        </tr>
+        <ul>
+            <li>ID:${product.id}</li>
+            <li>NAME:${product.name}</li>
+            <li>DESCRIPTION:${product.description}</li>
+            <li>PRICE:${product.price}</li>
+            <li>IMAGE:${product.image}</li>
+        <ul>
     </div>`;
 
 }
