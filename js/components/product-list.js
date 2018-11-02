@@ -16,7 +16,7 @@ function makeProduct(product) {
     return template.content;
 }
 
-const list = document.getElementById('products');
+const list = document.getElementById('product-list');
 
 const productList = {
     init(products, onSelect) {
