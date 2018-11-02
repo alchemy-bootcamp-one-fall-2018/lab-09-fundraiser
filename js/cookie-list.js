@@ -31,9 +31,12 @@ const cookieList = {
 
     },
     add(cookie) {
+    
         const dom = makeCookie(cookie);
         list.appendChild(dom);
-    }
+    },
+
+ 
 };
 
 export default cookieList;
