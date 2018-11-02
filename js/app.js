@@ -18,13 +18,13 @@ productList.init(products, /*onSelect*/ function(product){
 //     productList.remove(index);
 // });
 
-// addProduct.init(function(product){
+addProduct.init(function(product){
 
-//     //onAdd listener
+    //onAdd listener
 
-//     //tell the api service first
-//     productApi.add(product);
+     // tell the api service first
+    productApi.add(product);
 
-//     //update components
-//     productList.add(product);
-// });
+    //update components
+    productList.add(product);
+});

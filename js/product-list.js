@@ -1,14 +1,17 @@
 
 
 function makeProduct(product) {
-    const html = /*html*/`
-        <li class="product">
-            <h3 class="name" style="background: ${product.color};">
-        ${product.name}
-    </h3>
-    <img src="assets/${product.image ? product.image : 'logo.png'}">
-</li>
-`;   
+    const html = `
+        <li class="products">
+            <img src="img/${product.image ? product.image : 'Snoop-Dogg.jpg'}">
+            <h3 class="name">
+            ${product.name}
+            </h3>
+            <p>  
+            ${product.description} 
+            </p>
+         </li>
+        `;   
 
     const template = document.createElement('template');
 
@@ -17,7 +20,7 @@ function makeProduct(product) {
     return template.content;
 }
 
-const list = document.getElementById('products-list');
+const list = document.getElementById('products');
 
 const productList = {
     // add products array
@@ -36,7 +39,7 @@ const productList = {
         const listItem = dom.querySelector('li');
 
         listItem.addEventListener('click', function() {
-            // productList.onSelect(product);
+            productList.onSelect(product);
             console.log('got here');
         });
 
