@@ -33,7 +33,14 @@ const cartApi = {
         saveCart();
     },
     remove(product) {
-        
+        const orderItem = cart.find(item => {
+            return item.name === product.name;
+        });
+
+        if(orderItem) {
+            orderItem.quantity--;
+        }
+        saveCart();
     }
 };
 

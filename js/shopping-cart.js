@@ -30,7 +30,8 @@ const shoppingCart = {
             });
             dom.getElementById('remove').addEventListener('click', function() {
                 console.log('were alive');
-                cartApi
+                cartApi.remove(cart[i]);
+                shoppingCart.update(cart);
             });
             
 
