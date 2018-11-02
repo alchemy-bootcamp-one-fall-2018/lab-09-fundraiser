@@ -25,7 +25,7 @@ const mealList = {
     add(meal) {
         const dom = makeMeal(meal);
         const listItem = dom.querySelector('li');
-        console.log('listItem', listItem);
+        // console.log('listItem', listItem);
 
         listItem.addEventListener('click', function() {
             console.log('click');

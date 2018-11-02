@@ -22,6 +22,9 @@ const cartApi = {
                 name: meal.name,
                 quantity: 1
             });
-        }  
+        }
+        saveCart();
     }
 };
+
+export default cartApi;
