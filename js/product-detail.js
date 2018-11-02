@@ -1,5 +1,5 @@
 const section = document.getElementById('product-detail');
-
+console.log(section);
 const productDetail = {
     init(onRemove) {
         const removeButton = section.querySelector('button');
