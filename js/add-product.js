@@ -1,7 +1,7 @@
 const addItem = {
     init(onAdd) {
         const form = document.getElementById('add-form');
-        
+
         form.addEventListener('submit', function(event) {
             event.preventDefault();
             const elements = form.elements;
@@ -12,7 +12,7 @@ const addItem = {
                 description: elements.description.value
             };
 
-            onAdd(fruit);
+            onAdd(item);
 
             form.reset();
             document.activeElement.blur();
