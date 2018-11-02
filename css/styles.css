@@ -50,3 +50,11 @@ label {
 input {
     width: 50%;
 }
+
+.pickList li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 2%;
+    border: 2px solid seagreen;
+    background-color: white;
+}
