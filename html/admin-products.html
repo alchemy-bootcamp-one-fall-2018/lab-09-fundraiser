@@ -12,29 +12,39 @@
             <h2>Add Item</h2>
             <form id="add-form">
 
-                <div>
-                    <label id="item-image" name="item-image">
-                        <!-- TODO image goes here -->
-                    </label>
+                <fieldset>
+                    <legend>
+                        ADD ITEM
+                    </legend>
+                        <!-- <label id="item-image" name="item-image">
+                        TODO: image goes here -->
+                        <div>
+                            <label for="item-name">Item:</label>
+                            <input required type="text" name="item-name" id="item-name">
+                        </div>
+                       
+                        <div>
+                            <label for="item-description">Description:</label>
+                            <input required type="text" name="item-description" id="item-description">
+                        </div>
+
+                        <div>
+                            <label for="item-price">Price</label>
+                            <input required type="text" name="item-price" id="item-price">
+                        </div>
+
+                        <label>
+                            <button type="submit">Add</button>
+                        </label> 
+                </fieldset>
+                    
+                 </label>
                 </div>
 
-                <div>
-                    <label id="item-name" name="item-name">
-                        Item:
-                    </label>
-                </div>
-
-                <div>
-                    <label id="item-description" name="item-description">
-                        Description:
-                    </label>
-                </div>
+           
                 
-                <div>
-                    <label id="it-price" name="item-price">
-                        Price:
-                    </label>
-                </div>
+               
+                
                 
             </form>
         </section>
