@@ -38,7 +38,7 @@ const cartApi = {
         });
 
         if(orderItem) {
-            if(orderItem.quantity !== 0) {
+            if(orderItem.quantity !== 1) {
                 orderItem.quantity--;
             }
             else {
