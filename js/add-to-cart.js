@@ -4,7 +4,7 @@ let cartItems = JSON.parse(localStorage.getItem('cart'));
 const products = productsApi.getProducts();
 let total;
 
-// displayCart();
+displayCart();
 
 function addItems(buttonId) {
     let selectedProduct = products[parseInt(buttonId)];
@@ -13,11 +13,27 @@ function addItems(buttonId) {
     } else {
         cartItems = [selectedProduct];
     }
+
+    storeCart();
+    addTotal();
+}
+
+function addTotal(){
+    const cartAside = JSON.parse(localStorage.getItem('cart'));
+    if(cartAside) {
+        cartAside.forEach(function(item) {
+            total = JSON.parse(localStorage.getItem('cartTotal'));
+            total += item.price;
+        });
+    } else {
+        total = 0;
+    }
+    localStorage.setItem('cartTotal', JSON.stringify(total));
+    displayCart();
 }
 
 function storeCart() {
     localStorage.setItem('cart', JSON.stringify(cartItems));
-    displayCart();
 }
 
 function displayCart() {
@@ -28,16 +44,14 @@ function displayCart() {
     if(cartAside) {
         cartAside.forEach(function(item) {
             total = JSON.parse(localStorage.getItem('cartTotal'));
-            total += item.price;
-            
+                       
             html += `
             <p>Item: ${item.name}</p>
-            <p>Price: ${item.price}</p><br /><br /><br />     
+            <p>Price: $${item.price}</p><br /><br /><br />     
             `;
         });
         html += `<p>Total: ${total}</p>`;
-        localStorage.setItem('cartTotal', JSON.stringify(total));
-        
+
         sideItems.innerHTML = html;
     }   
 }
@@ -46,7 +60,6 @@ function displayCart() {
 const addToCart = {
     init(buttonId) {
         addItems(buttonId);
-        storeCart();
     }
 };
 
