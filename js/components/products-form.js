@@ -1,20 +1,22 @@
 const form = document.getElementById('products-form');
-const itemName = document.getElementById('item,');
+const itemName = document.getElementById('item');
+const itemDescription = document.getElementById('item-description'),
 
 const productForm = {
     init(onAdd) {
-        form.addEventListener('submit', function(product) {
-            product.preventDefault();
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
 
-            const products = form.elements;
             const listItems = {};
+            // console.log(products[1].value);
             
-            products.itemName = products.item.value;
-            console.log('item', products.itemName);
+            listItems.itemName = itemName.value;
+            listItemsn.itemDescription = itemDescription.value
+            
 
             onAdd(listItems);
 
-            form.reset();
+            // form.reset();
         });
     }
 };
