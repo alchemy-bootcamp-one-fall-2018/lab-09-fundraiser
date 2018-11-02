@@ -1,12 +1,10 @@
 const addItemInput = document.getElementById('product-detail');
-console.log(addItemInput);
 
 const productDetail = {
 
     init(onAdd) {
         addItemInput.addEventListener('submit', function(event){
             event.preventDefault();
-
 
             const elements = addItemInput.elements;
             const productData = {};
