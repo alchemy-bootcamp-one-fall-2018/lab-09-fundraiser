@@ -17,6 +17,9 @@ let meals = [
     }
 ];
 
+// console.log(meals[0].description);
+
+
 function saveMeals() {
     localStorage.setItem('meals', JSON.stringify(meals));
 }
