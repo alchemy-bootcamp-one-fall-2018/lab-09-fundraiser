@@ -1,14 +1,21 @@
-let products = [];
+let items = [];
 
-function saveProducts() {
-    localStorage.setItem('products', JSON.stringify(products));
+function saveItems() {
+    localStorage.setItem('items', JSON.stringify(items));
 }
 
-const productsApi = {
-    add(product) {
-        products.push(product);
-        saveProducts();
+const itemsApi = {
+    getAll() {
+        const json = localStorage.getItem('items');
+        if(json){
+            items = JSON.parse(json);
+        }
+        return items;
+    },
+    add(item) {
+        items.push(item);
+        saveItems();
     }
 };
 
-export default productsApi;
+export default itemsApi;

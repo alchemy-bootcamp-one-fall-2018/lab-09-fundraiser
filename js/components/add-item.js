@@ -4,7 +4,7 @@ const name = document.getElementById('item');
 const description = document.getElementById('item-description');
 const price = document.getElementById('item-price');
 
-const productForm = {
+const addItem = {
     init(onAdd) {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -23,4 +23,4 @@ const productForm = {
         });
     }
 };
-export default productForm;
+export default addItem;

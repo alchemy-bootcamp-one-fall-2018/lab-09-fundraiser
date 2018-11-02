@@ -1,9 +1,9 @@
-// TODO: add invetory UL in admin-products.html for inventory
+
 function makeItem(item) {
     const html = /*html*/`
-        <li class="inventory">
-            <h3 class="item">
-                ${item.item}
+        <li class="item">
+            <h3>
+                ${item.item} ${item.item-description}
             </h3>
             <button class="danger">Remove</button>
         </li>
@@ -18,11 +18,11 @@ const list = document.getElementById('items');
 const itemList = {
 
     
-    init(items, onRemove) {
+    init(items) {
         for(let i = 0; i < items.length; i++) {
             itemList.add(items[i]);
         }
-        itemList.onRemove = onRemove;
+        // itemList.onRemove = onRemove;
     },
     
     add(item) {
