@@ -1,3 +1,4 @@
+let cart = [];
 
 
 function makeProduct(product) {
@@ -40,7 +41,11 @@ const productList = {
 
         listItem.addEventListener('click', function() {
             productList.onSelect(product);
-            console.log('got here');
+
+            // add(product) {
+                // cart.push(product);
+                // makeProduct();
+            // };
         });
 
         // append to <ul>, this will empty the fragment
