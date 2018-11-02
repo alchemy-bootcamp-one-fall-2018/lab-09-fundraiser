@@ -1,7 +1,4 @@
 import cartApi from './cart-api.js';
-const addButton = document.getElementById('add');
-const removeButton = document.getElementById('remove');
-
 
 function makeItem(item) {
     const html = /*html*/`
