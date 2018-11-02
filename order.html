@@ -7,17 +7,29 @@
     <title>Document</title>
 </head>
 <body>
+ 
     <header class="header">
-<H1>
-Oregon food bank
-</H1>   
- </header>
-
+        Oregon Food Bank
+    </header>
+            
     <nav>
-        <a href="./">Home</a>
-        <a href="order.html">Order</a>
-    </nav>
-
+        <div>
+            <a href="./">Home</a>
+        </div>
+        <div>
+            <a href="order.html">Order</a>
+        </div>
+        <div>
+            <a href="additem.html">Add items</a>
+        </div>
+        <div>
+            <a href="adminOrders.html">Admin orders</a>
+        </div>
+        <div>
+            <a href="checkout.html">Checkout page</a>
+        </div>
+    </nav>       
+ 
     <section>
         <form id="product-form"> 
             <fieldset>
@@ -29,6 +41,8 @@ Oregon food bank
 
         <button type="submit">Submit</button>
         </form>
+        <ul id="add-items"></ul>
+
     </section>
     <script type="module" src="js/order-app.js">
     </script>
