@@ -19,8 +19,7 @@ header nav a {
     /* display: block; */
 }
 
-nav {
-     clear: both;
+header nav {
      float: right;
 }
 
@@ -32,4 +31,18 @@ aside {
 
 footer {
     margin-top: 5%;
+    clear: both;  
+}
+
+a, button a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 50%;
 }
