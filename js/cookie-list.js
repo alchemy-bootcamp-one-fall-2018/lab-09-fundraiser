@@ -5,7 +5,11 @@ function makeCookie(cookie) {
         <li class="cookie">
             <h3 class="name">
                 ${cookie.name}
-            </h3>
+                </h3>
+                <p>${cookie.description}</p>
+                <p>${cookie.price}</p>
+                <img src="${cookie.image}"/>
+            
         </li>
         `;
 
