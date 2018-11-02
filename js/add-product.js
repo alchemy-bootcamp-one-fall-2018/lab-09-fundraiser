@@ -16,4 +16,3 @@ const addProduct = {
     const product = {
         
     }
-}
