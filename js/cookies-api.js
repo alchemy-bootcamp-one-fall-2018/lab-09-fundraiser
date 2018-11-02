@@ -31,6 +31,7 @@ const cookiesApi = {
     add(cookie) {
         cookies.push(cookie);
         saveCookies();
+        console.log('Cookie added ', cookies);
     }
 };
 export default cookiesApi;
