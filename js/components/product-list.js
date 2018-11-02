@@ -1,7 +1,7 @@
 import html from '../helper-utilities/html.js';
 
 function makeProduct(product) {
-    const html = `
+    const html = /*html*/`
         <li class="product">
             <h3 class="name">
             ${product.name}
@@ -21,11 +21,10 @@ function makeProduct(product) {
 const list = document.getElementById('products');
 
 const productList = {
-    init(products, onSelect) {
+    init(products) {
         for(let i = 0; i < products.length; i++) {
             productList.add(products[i]);
-        }
-        productList.onSelect = onSelect; 
+        } 
         productList.products = products;
     },
     add(product) {
