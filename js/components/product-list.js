@@ -1,4 +1,4 @@
-import html from '../helper-utilities/html.js';
+// import html from '../helper-utilities/html.js';
 
 function makeProduct(product) {
     const html = /*html*/`
@@ -6,7 +6,7 @@ function makeProduct(product) {
             <h3 class="name">
             ${product.name}
             </h3>
-            <img src="assets/${product.image ? product.image : 'TKO.jpg'}">
+            <img src="./js/assets/${product.image ? product.image : 'TKO.jpg'}">
         </li>
         `;
 
