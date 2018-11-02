@@ -1,7 +1,7 @@
 const addProduct = {
 
     init(onAdd) {
-        const form = document.getElementById('add-product'); 
+        const form = document.getElementById('new-product'); 
 
         form.addEventListener('submit', function(event) {
             console.log('submit'); 

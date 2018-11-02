@@ -10,7 +10,9 @@ function makeProduct(product) {
         <li class="product">
             <h3 class="name">
             ${product.name}
+            ${product.description}
             </h3>
+            <img src="assets/${product.image ? product.image : 'logo.png'}">
         </li>
         `;
 
