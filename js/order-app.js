@@ -8,7 +8,7 @@ const cart = cartApi.get();
 
 shoppingCart.init(cart);
 
-productList.init(products, function(product){
+productList.init(products, function(product) {
     cartApi.add(product);
     shoppingCart.update(cart);
 });

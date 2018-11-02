@@ -29,6 +29,9 @@ const productsList = {
     add(product) {
         const dom = addProduct(product);
         list.appendChild(dom);
+    },
+    remove(index) {
+        list.querySelectorAll[index].remove();
     }
 };
 

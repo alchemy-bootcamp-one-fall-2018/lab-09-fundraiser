@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/order.css">
 </head>
 
 <body>
     <section>
         <h1>Products</h1>
         <ul id="products"></ul>
+    </section>
+
+    <section id="product-detail" class="hidden">
+        <h2>Name of Product</h2>
+        <p>Description</p>
+        <button class="danger">Remove this Product</button>
     </section>
 
     <main id="shopping-cart">
@@ -22,5 +29,5 @@
         <a href="checkout.html">Checkout</a>
     </main>
 </body>
-    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/order-app.js"></script>
 </html>
