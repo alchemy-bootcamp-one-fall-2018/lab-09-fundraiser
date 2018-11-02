@@ -20,14 +20,21 @@ function addProduct(product) {
 const list = document.getElementById('products');
 
 const productsList = {
-    init(products) {
+    init(products, onSelect) {
         for(let i = 0; i < products.length; i++) {
             productsList.add(products[i]);
         }
+        productsList.onSelect = onSelect;
         productsList.products = products;
     },
     add(product) {
         const dom = addProduct(product);
+        const listItem = dom.querySelector('li');
+
+        listItem.addEventListener('click', function() {
+            productsList.onSelect(product);
+        });
+
         list.appendChild(dom);
     },
     remove(index) {

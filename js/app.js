@@ -7,6 +7,10 @@ const products = productApi.getAll();
 
 productsList.init(products);
 
+productsList.init(products, function(product) {
+    productDetail.update(product);
+});
+
 productDetail.init(function(product) {
     const index = productApi.remove(product);
     productsList.remove(index);
