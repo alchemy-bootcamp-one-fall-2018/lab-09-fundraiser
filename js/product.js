@@ -1,4 +1,4 @@
-//import productApi from './products-api.js';
+import productApi from './products-api.js';
 
 const addCart = {
     
@@ -22,9 +22,10 @@ const addCart = {
     }
     
 };
-addCart.init();
+// addCart.init();     
 
-//export default addCart;
+export default addCart;
 
 
-//event listener is triggered when we hit the submit, which then runs the anonymous function, which is defined from lines 7-22
+//event listener is triggered when we hit the submit, which then runs the 
+//anonymous function, which is defined from lines 7-22
