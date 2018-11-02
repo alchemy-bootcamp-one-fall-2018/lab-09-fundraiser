@@ -1,6 +1,6 @@
 const addProduct = {
     init(onAdd) {
-        const form = document.getElementById(addForm);
+        const form = document.getElementById('addForm');
 
         form.addEventListener('submit', function(event) {
             event.preventDefault();
