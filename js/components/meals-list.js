@@ -15,19 +15,22 @@ function makeMeal(meals) {
 const list = document.getElementById('meals');
 
 const mealList = {
-    init(meals) {
+    init(meals, onSelect) {
         for(let i = 0; i < meals.length; i++) {
             mealList.add(meals[i]);
         }
+        mealList.onSelect = onSelect;
         mealList.meals = meals;
     },
     add(meal) {
         const dom = makeMeal(meal);
-        // const listItem = dom.querySelectorAll('li');
+        const listItem = dom.querySelector('li');
+        console.log('listItem', listItem);
 
-        // listItem.addEventListener('click', function() {
-        //     mealList.onSelect(meal);     // INCREASE CART COUNT
-        // });
+        listItem.addEventListener('click', function() {
+            console.log('click');
+            mealList.onSelect(meal);     // INCREASE CART COUNT
+        });
         list.appendChild(dom);
         // TODO: remove function
     }
