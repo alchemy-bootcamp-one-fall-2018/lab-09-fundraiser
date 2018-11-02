@@ -2,6 +2,7 @@ import productsApi from './products-api.js';
 
 let cartItems = [];
 const products = productsApi.getProducts();
+let total;
 
 function addItems(buttonId) {
     let selectedProduct = products[parseInt(buttonId)];
@@ -16,18 +17,23 @@ function storeCart() {
 
 function displayCart() {
     const cartAside = JSON.parse(localStorage.getItem('cart'));
-    const sideCart = document.getElementById('sideCart');
+    console.log(cartAside);
+    // const sideCart = document.getElementById('sideCart');
 
     let html;
-    let total = 0;
 
     cartAside.forEach(function(item) {
+        total = JSON.parse(localStorage.getItem('cartTotal'));
+        total += item.price;
+        
+        console.log('total before add', total);
         html += `
-            <p>Item: ${item.name}</p>
-            <p>Price: ${item.price}</p><br /><br /><br />     
-            <p>Total: ${total += item.price}</p>                 //add total to local storage
+        <p>Item: ${item.name}</p>
+        <p>Price: ${item.price}</p><br /><br /><br />     
         `;
     });
+    html += `<p>Total: ${total}</p>`;
+    localStorage.setItem('cartTotal', JSON.stringify(total));
     
     console.log(html);
 }
