@@ -9,7 +9,6 @@ const addProduct = {
             const product = {
                 name: elements.name.value,
                 price: elements.price.value,
-                description: elements.description.value,
                 animal: elements.animal.value
             };
 

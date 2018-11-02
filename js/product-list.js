@@ -6,7 +6,6 @@ function makeProduct(product) {
             <h3>${product.name}</h3>
             <p>${product.animal}</p>
             <p>${product.price}</p>
-            <img src="assets/${product.image}">
             <button class="danger">X</button>
         </li>
     `;
