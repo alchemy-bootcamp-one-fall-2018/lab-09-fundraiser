@@ -4,7 +4,7 @@ import productDetail from './product-detail.js';
 import productList from './product-admin-list.js';
 
 const products = productsApi.getAll();
-
+ 
 productList.init(products, function(product) {
     productDetail.update(product); 
 }); 
