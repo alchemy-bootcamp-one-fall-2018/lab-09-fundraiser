@@ -1,18 +1,25 @@
-var donation20 = document.getElementById('20-donation');
-var donation40 = document.getElementById('40-donation');
-var donation60 = document.getElementById('60-donation');
+const addCart = {
+    
+    init(onAdd){
+        const productForm = document.getElementById('donation-form');
+        
+        productForm.addEventListener('submit', function(event) {
+            event.preventDefault();
 
-const form = document.getElementById('donation-form');
+            const elements = productForm.elements;
+            
+            const donationValue = {
 
-const cart = [];
+                total: elements.value
 
+            };
+            onAdd(donationValue);
 
-for(i=0; i< donationArray.length; i++) {
-    if(donationArray[i].value) {
-        cart.push(donationArray[i])
-    } 
+            productForm.reset();
+        });
+    }
 
+};
 
-
-}
+export default addCart;
 
