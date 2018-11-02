@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/addProducts.css">
     <title>Add Products Admin</title>
 </head>
 <body>
@@ -17,34 +16,42 @@
         <a href="./orderreport.html">Order Report</a>
         <a href="./addProducts.html">Admin</a>
     </header>
-    <section>
-        <form id="add-form">
-            <label for="name" id="name-label">
-                Name of Product:
-                <input type="text" name="name" id="name">
-            </label>
-            <label for="description" id="desc-label">
-                Description:
-                <input type="text" name="description" id="description">
-            </label>
-            <label for="price" id="price-label">
-                Price:
-                <input type="text" name="price" id="price">
-            </label>
-            <label>
-                <button class="action">Add</button>
-            </label>
-        </form>
-    </section>
-    <script type="module" src="js/app.js"></script>
-    <script src="js/add-product.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/cart-api.js"></script>
-    <script src="js/html.js"></script>
-    <script src="js/item-detail.js"></script>
-    <script src="js/order-app.js"></script>
-    <script src="js/product-list.js"></script>
-    <script src="js/products-api.js"></script>
-    <script src="js/shopping-cart.js"></script>
+    <main>
+        <section>
+            <form id="add-form">
+                <label for="name" id="name-label">
+                    Name of Product:
+                    <input type="text" name="name" id="name">
+                </label>
+                <label for="description" id="desc-label">
+                    Description:
+                    <input type="text" name="description" id="description">
+                </label>
+                <label for="price" id="price-label">
+                    Price:
+                    <input type="text" name="price" id="price">
+                </label>
+                <label>
+                    <button class="action">Add</button>
+                </label>
+            </form>
+        </section>
+
+        <section id="item-list">
+            <h2>Products</h2>
+            <ul id="products"></ul>
+        </section>
+
+        <section class="hidden" id="item-detail">
+            <h2>Name of Item</h2>
+            <p>Description</p>
+            <button class="danger">Remove This</button>
+        </section>
+    </main>
+
+
+
+    <script type="module" src="../js/app.js"></script>
+    
 </body>
 </html>

@@ -10,6 +10,6 @@ itemList.init(products, /*onSelect*/ function(item) {
 });
 
 addItem.init(function(item) {
-    productsApi.init(item);
+    productsApi.add(item);
     itemList.add(item);
 });

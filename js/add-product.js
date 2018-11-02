@@ -7,9 +7,9 @@ const addItem = {
             const elements = form.elements;
             const item = {
                 name: elements.name.value,
-                color: elements.color.value,
-                image: elements.image.value,
-                description: elements.description.value
+                // // image: elements.image.value,
+                description: elements.description.value,
+                price: elements.price.value
             };
 
             onAdd(item);
