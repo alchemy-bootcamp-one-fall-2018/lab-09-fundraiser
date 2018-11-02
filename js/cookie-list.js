@@ -23,16 +23,22 @@ function makeCookie(cookie) {
 const list = document.getElementById('cookies');
 
 const cookieList = {
-    init(cookies) {
+    init(cookies, onSelect) {
         for(let i = 0; i < cookies.length; i++) {
             cookieList.add(cookies[i]);
         }
         cookieList.cookies = cookies;
-
+        cookieList.onSelect = onSelect;
     },
     add(cookie) {
     
         const dom = makeCookie(cookie);
+        const listItem = dom.querySelector('li');
+        
+        listItem.addEventListener('click', function() {
+            cookieList.onSelect(cookie);
+        });
+        
         list.appendChild(dom);
     },
 
