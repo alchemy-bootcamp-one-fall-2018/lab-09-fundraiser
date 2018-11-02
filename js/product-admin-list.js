@@ -1,11 +1,5 @@
 /* eslint-disable indent */
 function makeProduct(product) {
-    console.log('make product', product); 
-    // const product = {
-    //     name: 'Tote',
-    //     image: 'tote.png',
-    //     description: 'Tote'
-    // }; 
     const html = `
         <li class="product">
             <img src="assets/${product.image ? product.image : 'logo.png'}">
