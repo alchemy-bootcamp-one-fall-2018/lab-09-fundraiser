@@ -18,7 +18,6 @@ const productList = {
     init(products, onSelect) {
         for(let i = 0; i < products.length; i++) {
             productList.add(products[i]);
-
         }
         productList.onSelect = onSelect;
         productList.products = products;

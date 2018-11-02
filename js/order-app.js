@@ -1,9 +1,9 @@
-import productApi from './products-api.js';
+import productsApi from './products-api.js';
 import cartApi from './cart-api.js';
 import productList from './product-list.js';
 import shoppingCart from './shopping-cart.js';
 
-const products = productApi.getAll();
+const products = productsApi.getAll();
 const cart = cartApi.get();
 
 shoppingCart.init(cart);
