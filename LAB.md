@@ -95,6 +95,7 @@ Static content with main button for "order now!"
     *  _css specific to components_
     * _shared css_
 * `js`
+    * _app file for each page_
     * _components_
     * _data-apis_
     * _helper utilities_
