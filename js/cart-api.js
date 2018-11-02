@@ -38,7 +38,13 @@ const cartApi = {
         });
 
         if(orderItem) {
-            orderItem.quantity--;
+            if(orderItem.quantity !== 0) {
+                orderItem.quantity--;
+            }
+            else {
+                const index = cart.indexOf(product);
+                cart.splice(index, 1);
+            }
         }
         saveCart();
     }
