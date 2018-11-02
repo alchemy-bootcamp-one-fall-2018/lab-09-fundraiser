@@ -2,27 +2,32 @@ let products = [
     {
         name: 'T-Shirt',
         image: '',
-        description: 'black t-shirt'
+        description: 'black t-shirt',
+        price: '$5'
     },
     {
         name: 'Hard hat',
         image: '',
-        description: 'A very hard hat'
+        description: 'A very hard hat',
+        price: '$10'
     },
     {
         name: 'Exec Pen',
         image: '',
-        description: 'VIP'
+        description: 'VIP',
+        price: '$3'
     },
     {
         name: 'Umbrella',
         image: '',
-        description: 'outdoor protection'
+        description: 'outdoor protection',
+        price: '$10'
     },
     {
         name: 'Backpack',
         image: '',
-        description: 'Holds stuff'
+        description: 'Holds stuff',
+        price: '$20'
     },   
 ];
 
