@@ -5,7 +5,7 @@ var productList = [
         type: 'survival',
         description: 'It is a backpack',
         price: 40,
-        image: ''
+        image: '../assets/backpack.jpg'
     },
 
     {
@@ -14,7 +14,7 @@ var productList = [
         type: 'food',
         description: 'It is a case of waters in bottles',
         price: 10,
-        image: ''
+        image: '../assets/bottled_water.jpg'
     },
 
     {
@@ -23,7 +23,7 @@ var productList = [
         type: 'hygiene',
         description: 'A pack of 5 razors',
         price: 15,
-        image: ''
+        image: '../assets/razor.jpg'
     },
 
     {
@@ -32,7 +32,7 @@ var productList = [
         type: 'clothing',
         description: 'One hoodie to keep warm',
         price: 20,
-        image: ''
+        image: '../assets/hoodie.jpg'
     }
 ];
 
