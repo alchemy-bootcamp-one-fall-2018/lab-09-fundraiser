@@ -7,8 +7,6 @@ let cartItemCount;
 
 function addItems(buttonId) {
     let selectedProduct = products[parseInt(buttonId)];
-    // console.log(selectedProduct);
-    selectedProduct.cartId = cartItemCount - 1;
     if(cartItems) {
         cartItems.push(selectedProduct);
     } else {
@@ -16,8 +14,9 @@ function addItems(buttonId) {
     }
     
     storeCart();
-    cartItemCount = cartItems.length;
-    console.log(cartItemCount);
+    cartItemCount = JSON.parse(localStorage.getItem('cart')).length;
+    selectedProduct['cartId'] = cartItemCount - 1;
+
     addTotal();
 }
 
