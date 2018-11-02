@@ -1,8 +1,8 @@
 const form = document.getElementById('products-form');
 // const image = document.getElementById('image');
-const name = document.getElementById('item');
-const description = document.getElementById('item-description');
-const price = document.getElementById('item-price');
+const name = document.getElementById('name');
+const description = document.getElementById('description');
+const price = document.getElementById('price');
 
 const addItem = {
     init(onAdd) {

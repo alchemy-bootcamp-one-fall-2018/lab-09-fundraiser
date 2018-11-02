@@ -15,7 +15,17 @@ const itemsApi = {
     add(item) {
         items.push(item);
         saveItems();
-    }
+    },
+    remove(item) {
+        const index = items.indexOf(item);
+        if(index !== -1) {
+            items.splice(index, 1);
+            saveItems();
+        }
+    } 
+
+
+    
 };
 
 export default itemsApi;
