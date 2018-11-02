@@ -1,30 +1,30 @@
 import addProduct from './add-product.js';
-// import productList from './product-list.js';
+import productList from './product-list.js';
 import productApi from './products-api.js';
-// import productDetail from './product-detail';
+// import productDetail from './product-detail.js';
 
 const products = productApi.getAll();
 console.log(products);
 
 
-// productList.init(products, /*onSelect*/ function(product){
-//     productDetail.update(product);
-// });
+productList.init(products, /*onSelect*/ function(product){
+    // productDetail.update(product);
+    console.log(product);
+});
 
 // productDetail.init(/*onRemove*/ function(product){
-//     const index = productApi.remove(product);
-//     //tell the product list to re-render
+// const index = productApi.remove(product);
+// // tell the product list to re-render
 //     productList.remove(index);
 // });
 
-addProduct.init(function(product){
+// addProduct.init(function(product){
 
-    //onAdd listener
+//     //onAdd listener
 
-    //tell the api service first
-    productApi.add(product);
+//     //tell the api service first
+//     productApi.add(product);
 
-    //update components
-    productList.add(product);
-});
-
+//     //update components
+//     productList.add(product);
+// });

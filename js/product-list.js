@@ -17,7 +17,7 @@ function makeProduct(product) {
     return template.content;
 }
 
-const list = document.getElementById('products');
+const list = document.getElementById('products-list');
 
 const productList = {
     // add products array
@@ -36,7 +36,8 @@ const productList = {
         const listItem = dom.querySelector('li');
 
         listItem.addEventListener('click', function() {
-            productList.onSelect(product);
+            // productList.onSelect(product);
+            console.log('got here');
         });
 
         // append to <ul>, this will empty the fragment

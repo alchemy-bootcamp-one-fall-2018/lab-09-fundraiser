@@ -4,15 +4,19 @@ const addProduct = {
     // pass the date or callback functions
     // setup event listeners
     init(onAdd) {
-        const form = document.getElementById('')
+        const form = document.getElementById('');
     
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
 
-        const elements = form.elements;
-    }
+            const elements = form.elements;
+        });
 
-    const product = {
+    // const product = {
         
+    // }
     }
+};
+
+export default addProduct;
