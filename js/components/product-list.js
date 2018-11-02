@@ -1,4 +1,3 @@
-// import html from '../helper-utilities/html.js';
 
 function makeProduct(product) {
     const html = /*html*/`
@@ -20,10 +19,11 @@ function makeProduct(product) {
 const list = document.getElementById('products');
 
 const productList = {
-    init(products) {
+    init(products, onSelect) {
         for(let i = 0; i < products.length; i++) {
             productList.add(products[i]);
         } 
+        productList.onSelect = onSelect;
         productList.products = products;
     },
     add(product) {
