@@ -1,14 +1,21 @@
-cont form = document.getElementById('products-form');
+const form = document.getElementById('products-form');
+const itemName = document.getElementById('item,');
 
 const productForm = {
     init(onAdd) {
         form.addEventListener('submit', function(product) {
             product.preventDefault();
 
-            const elements = form.elements;
-            const products = {};
+            const products = form.elements;
+            const listItems = {};
             
-            products.name=products.
+            products.itemName = products.item.value;
+            console.log('item', products.itemName);
+
+            onAdd(listItems);
+
+            form.reset();
         });
     }
-}
+};
+export default productForm;
