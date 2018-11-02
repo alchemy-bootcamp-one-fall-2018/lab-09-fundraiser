@@ -6,7 +6,6 @@ import addToCart from './add-to-cart.js';
 const listOrders = {
     init() {
         const pickList = document.querySelector('#orderCatalog .pickList');
-        console.log(pickList);
         const products = productsApi.getProducts();
 
         if(pickList){

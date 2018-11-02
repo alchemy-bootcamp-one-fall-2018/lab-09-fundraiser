@@ -6,23 +6,34 @@ const products = productsApi.getProducts();
 function addItems(buttonId) {
     let selectedProduct = products[parseInt(buttonId)];
     cartItems.push(selectedProduct);
-    console.log(cartItems);
     storeCart();
 }
 
 function storeCart() {
     localStorage.setItem('cart', JSON.stringify(cartItems));
+    displayCart();
 }
 
 function displayCart() {
-    //get items stored in local storage
-    //display line by line item name and price
-    //total
+    const cartAside = JSON.parse(localStorage.getItem('cart'));
+    const sideCart = document.getElementById('sideCart');
+
+    let html;
+    let total = 0;
+
+    cartAside.forEach(function(item) {
+        html += `
+            <p>Item: ${item.name}</p>
+            <p>Price: ${item.price}</p><br /><br /><br />     
+            <p>Total: ${total += item.price}</p>                 //add total to local storage
+        `;
+    });
+    
+    console.log(html);
 }
 
 const addToCart = {
     init(buttonId) {
-        console.log(buttonId);
         addItems(buttonId);
     }
 };
