@@ -16,13 +16,13 @@ function makeProduct(product) {
 
 const list = document.getElementById('products');
 
-const productList = {
+const customerProductList = {
     init(products, onAdd) {
         for(let i = 0; i < products.length; i++) {
-            productList.add(products[i]);
+            customerProductList.add(products[i]);
 
         }
-        productList.onAdd = onAdd;
+        customerProductList.onAdd = onAdd;
     },
     add(product) {
         const dom = makeProduct(product);
@@ -30,11 +30,11 @@ const productList = {
         const listItem = dom.querySelector('li');
 
         addButton.addEventListener('click', function() {
-            productList.onAdd(product);
+            customerProductList.onAdd(product);
             listItem.add();
         });
         list.appendChild(dom);
     }
 };
     
-export default productList;
+export default customerProductList;

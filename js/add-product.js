@@ -1,3 +1,4 @@
+
 const addProduct = {
     init(onAdd) {
         const form = document.getElementById('product-form');
