@@ -4,15 +4,15 @@ let cookies = [
         id:'samoa',
         name:'Samoa Cookies',
         description:'Caramel cookies with coconut',
-        price:'4.00',
-        image:'samoa.png'
+        price:'$4.00',
+        image:'../assets/images/samoa.png'
     },
     {
         id:'thinmint',
         name:'Thin Mints Cookies',
         description:'Chocolate cookie with mint flavor',
-        price:'3.50',
-        image:'thinmints.png'
+        price:'$3.50',
+        image:'../assets/images/thinmints.png'
     }
 ];
 
