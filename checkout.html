@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/checkout.css">
 </head>
 
 <body>
     
     <main>
+
+        <section class="limit-items">
+            <ul id="products" class="limit-items"></ul>
+        </section>
+
         <section id="shopping-cart">
             <h2>Shopping Cart</h2>
             <ul id="cart-list"></ul>
@@ -29,12 +35,12 @@
                 </label>
                 <label>
                     Shipping Address
-                    <input type="text">
+                    <input type="text" id="address">
                 </label>
 
                 <label>
                     Check here if billing address is different
-                    <input type="checkbox">
+                    <input type="checkbox" id="add-checkbox">
                 </label>
 
                 <label>
@@ -46,7 +52,7 @@
             </form>
         </section>
 
-        <a href="">Buy</a>
+        <a href="" >Buy</a>
     </main>
 </body>
     <script type="module" src="./js/order-app.js"></script>

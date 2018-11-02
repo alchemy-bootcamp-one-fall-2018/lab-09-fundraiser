@@ -23,4 +23,6 @@ const shoppingCart = {
     }
 };
 
+const address = document.getElementById('address');
+
 export default shoppingCart;
