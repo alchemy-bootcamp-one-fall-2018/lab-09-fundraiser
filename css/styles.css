@@ -34,7 +34,11 @@ footer {
     clear: both;  
 }
 
-a, button a:visited {
+a:hover {
+    color: purple;
+}
+
+a, button a:visited, button a:hover {
     text-decoration: none;
     color: black;
 }
