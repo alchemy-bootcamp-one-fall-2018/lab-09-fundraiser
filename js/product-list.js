@@ -37,5 +37,5 @@ const productList = {
         list.appendChild(dom);
     }
 };
-
+    
 export default productList;
