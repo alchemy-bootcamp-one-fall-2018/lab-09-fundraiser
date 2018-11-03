@@ -4,7 +4,10 @@ function makeItem(item) {
         <h3 class="name"">
             ${item.name}
         </h3>
-        <img src="">
+        <p>
+            ${item.price}
+        </p>
+        <img src=${item.image} style="width: 100px">
     </li>
     `;
     const template = document.createElement('template');
@@ -14,36 +17,26 @@ function makeItem(item) {
 
 const list = document.getElementById('products');
 const itemList = {
-    init(products, onSelect, onRemove) {
+    init(products, onSelect) {
         for(let i = 0; i < products.length; i++) {
             itemList.add(products[i]);
         }
         itemList.onSelect = onSelect;
         itemList.products = products;
-        // itemList.onRemove = onRemove;
     },
 
     
     add(item) {
         const dom = makeItem(item);
-        // const removeButton = dom.querySelector('button');
         const listItem = dom.querySelector('li');
-
-        // removeButton.addEventListener('click', function() {
-        //     itemList.onRemove(item);
-        //     listItem.remove();
-        // });
 
         listItem.addEventListener('click', function() {
             itemList.onSelect(item);
-        
-        
         });
 
         list.appendChild(dom);
     },
     remove(index) {
-        console.log(index);
         list.querySelectorAll('li')[index].remove();
     }
 };

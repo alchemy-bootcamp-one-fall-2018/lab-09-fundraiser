@@ -13,7 +13,10 @@ const itemDetail = {
         itemDetail.item = item;
         section.querySelector('h2').textContent = item.name;
         section.querySelector('p').textContent = item.description;
+        section.querySelector('img').src = item.image;
+        section.querySelector('div').textContent = item.price;
         section.classList.remove('hidden');
+
     }
 };
 

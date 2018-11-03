@@ -1,32 +1,32 @@
 let products = [
     {
         name: 'T-Shirt',
-        image: '',
-        description: 'black t-shirt',
+        image: '../assets/shirt.png',
+        description: 'A comfy black t-shirt, made of 100% cotton and polyester.  Sizes XS - XXL',
         price: '$5'
     },
     {
         name: 'Hard hat',
-        image: '',
-        description: 'A very hard hat',
-        price: '$10'
+        image: '../assets/hardhat.png',
+        description: 'Hard hat, great for construction work or other.  Adjustable strap for all head sizes.',
+        price: '$7'
     },
     {
         name: 'Exec Pen',
-        image: '',
-        description: 'VIP',
+        image: '../assets/pen.png',
+        description: 'Solid smooth and fancy pen, a gripped end for no slip.',
         price: '$3'
     },
     {
         name: 'Umbrella',
-        image: '',
-        description: 'outdoor protection',
+        image: '../assets/umbrellas.png',
+        description: 'For outdoor use. 50 inches in diameter.',
         price: '$10'
     },
     {
         name: 'Backpack',
-        image: '',
-        description: 'Holds stuff',
+        image: '../assets/backpack.png',
+        description: 'Nice big backpack for kids or adults for all uses.',
         price: '$20'
     },   
 ];
