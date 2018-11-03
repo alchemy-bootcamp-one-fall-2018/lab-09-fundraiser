@@ -1,4 +1,5 @@
 import cartApi from './cart-api.js';
+import customersApi from './customer-api.js';
 
 let cart = cartApi.get();
 const orderSummary = document.getElementById('summary');
@@ -42,6 +43,7 @@ const orderForm = {
 
 orderForm.init(function(customer) {
     console.log(customer);
+    customersApi.add(customer);
 });
 
 export default orderForm;
