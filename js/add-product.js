@@ -10,7 +10,8 @@ const addProduct = {
             const product = {
                 name: elements.name.value,
                 price: elements.price.value,
-                animal: elements.animal.value
+                animal: elements.animal.value,
+                image: elements.image.value
             };
 
             onAdd(product);

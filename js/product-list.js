@@ -4,6 +4,7 @@ function makeProduct(product) {
             <h3>${product.name}</h3>
             <h4>${product.animal}</h4>
             <p>${product.price}</p>
+            <img src="${product.image}">
         </li>
     `;
 

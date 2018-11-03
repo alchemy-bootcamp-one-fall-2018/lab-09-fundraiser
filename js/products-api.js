@@ -2,8 +2,20 @@ let products = [
     {
         name: 'Collar',
         price: '$10.00',
-        description: 'reflective collar to keep your doggo safe',
-        animal: 'dog'
+        animal: 'For: Dogs',
+        image: 'collar.jpeg'
+    },
+    {
+        name: 'Cat Harness',
+        price: '$15.00',
+        animal: 'For: Cats',
+        image: 'cat-harness.jpeg'
+    },
+    {
+        name: 'Bird Feeder',
+        price: '$20.00',
+        animal: 'For: Birds',
+        image: 'bird-feeder.jpeg'
     }
 ];
 
@@ -32,5 +44,6 @@ const productsApi = {
         }
     }
 };
+
 
 export default productsApi;
