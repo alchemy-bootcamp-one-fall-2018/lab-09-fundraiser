@@ -30,6 +30,9 @@ const cartApi = {
 
         saveCart();
     }
+
+
+    // if else or some sort of loop
 };
 
 export default cartApi; 
