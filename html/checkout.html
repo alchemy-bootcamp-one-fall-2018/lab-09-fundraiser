@@ -6,6 +6,8 @@
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>OHS Fundraiser</title>
      <link rel="stylesheet" href="../css/styles.css">
+     <link rel="stylesheet" href="../css/checkout.css">
+
  </head>
  <body>
      <header>
@@ -32,31 +34,60 @@
             <form id="order-form">
                 <h2>Customer Information</h2>
                 <fieldset>
+                    <legend>Name and Contact</legend>
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" placeholder="first and last name" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
                 </fieldset>
 
                 <fieldset>
                     <legend>Billing Address</legend>
-
-                    <label for="street-address">Street Address</label>
-                    <input type="text" id="street-address" name="street-address" >
-
-                    <label for="city">City</label>
-                    <input type="text" id="city" name="city">
                     
-                    <label for="state">State</label>
-                    <input type="text" id="state" name="state">
+                    <div>
+                        <label for="street-address">Street Address</label>
+                        <input type="text" id="street-address" name="street-address" >
+                    </div>
 
-                    <label for="zip-code">Zip Code</label>
-                    <input type="text" id="zip-code" name="zip-code">
+                    <div>
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
+                        </div>
+                        <div>
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state">
+                    </div>
+                    
+                    <div>
+                        <label for="zip-code">Zip Code</label>
+                        <input type="text" id="zip-code" name="zip-code">
+                    </div>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="shipping-address">
                     <legend>Shipping Address</legend>
 
                     <label for="address-check">Check here if shipping address is the same as billing address</label>
-                    <input type="checkbox" id="address-check" name="address-check">
+                    <input type="checkbox" id="address-check" name="address-check"><br><br>
+
+                    <div>
+                        <label for="street-address">Street Address</label>
+                        <input type="text" id="street-address" name="street-address" >
+                    </div>
+
+                    <div>
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
+                        </div>
+                        <div>
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state">
+                    </div>
+                    
+                    <div>
+                        <label for="zip-code">Zip Code</label>
+                        <input type="text" id="zip-code" name="zip-code">
+                    </div>
 
                 </fieldset>
                 <button type="submit">Place Order</button>

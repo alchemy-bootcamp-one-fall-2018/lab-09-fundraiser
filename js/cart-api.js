@@ -36,7 +36,6 @@ const cartApi = {
         const orderItem = cart.find(item => {
             return item.name === product.name;
         });
-
         if(orderItem) {
             if(orderItem.quantity !== 1) {
                 orderItem.quantity--;
@@ -49,7 +48,5 @@ const cartApi = {
         saveCart();
     }
 };
-
-
 
 export default cartApi;
