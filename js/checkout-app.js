@@ -46,5 +46,3 @@ orderForm.init(function(customer) {
 getCart.display(cart);
 
 export default orderForm;
-
-console.log(cart);
