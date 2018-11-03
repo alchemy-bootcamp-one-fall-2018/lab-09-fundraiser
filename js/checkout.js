@@ -14,8 +14,6 @@ const getCart = {
     }
 };
 
-getCart.display(cart);
-
 const form = document.getElementById('order-form');
 
 const orderForm = {
@@ -40,12 +38,11 @@ const orderForm = {
     }
 };
 
-
-
 orderForm.init(function(customer) {
     customersApi.add(customer);
 });
 
+getCart.display(cart);
 
 export default orderForm;
 
