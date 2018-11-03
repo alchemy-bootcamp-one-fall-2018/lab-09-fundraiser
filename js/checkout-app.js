@@ -39,6 +39,7 @@ const orderForm = {
 };
 
 orderForm.init(function(customer) {
+    customersApi.getAll();
     customersApi.add(customer);
 });
 
