@@ -8,13 +8,13 @@ function makeItem(item){
     <button id="remove">Remove</button>
     `;
 
-    const template = document.getElementById('products');
+    const template = document.createElement('template');
     template.innerHTML = html;
     return template.content;
 
 }
 
-const list = document.getElementById('products');
+const list = document.getElementById('product-list');
 
 const shoppingCart = {
     init(cart) {
