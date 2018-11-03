@@ -28,17 +28,44 @@
             <ul id="summary"></ul>
         </section>
         <!-- add the rest of customer fields -->
-        <section id="order-form">
-            <h2>Customer Information</h2>
-            <fieldset>
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="first and last name" required>
-            </fieldset>
-            <button type="submit">Place Order</button>
+        <section>
+            <form id="order-form">
+                <h2>Customer Information</h2>
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="first and last name" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Billing Address</legend>
+
+                    <label for="street-address">Street Address</label>
+                    <input type="text" id="street-address" name="street-address" >
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city">
+                    
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state">
+
+                    <label for="zip-code">Zip Code</label>
+                    <input type="text" id="zip-code" name="zip-code">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Shipping Address</legend>
+
+                    <label for="address-check">Check here if shipping address is the same as billing address</label>
+                    <input type="checkbox" id="address-check" name="address-check">
+
+                </fieldset>
+                <button type="submit">Place Order</button>
+            </form>
         </section>
 
      </main>
 
+     <!-- <script type="module" src="../js/app.js"></script> -->
      <script type="module" src="../js/checkout.js"></script>
     </body>
  </html>

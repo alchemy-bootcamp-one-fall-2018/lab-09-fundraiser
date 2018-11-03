@@ -30,12 +30,8 @@ const shoppingCart = {
                 cartApi.remove(cart[i]);
                 shoppingCart.update(cart);
             });
-            
 
             list.appendChild(dom);
-            // removeButton.addEventListener('click', function() {
-            //     list.removeChild(dom);
-            // });
         }
     },
     update(cart) {
