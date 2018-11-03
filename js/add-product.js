@@ -3,12 +3,12 @@ const addProduct = {
 
     init(onAdd) {
         const addItemInput = document.getElementById('product-detail');
-        addItemInput.addEventListener('submit', function(event){
+        addItemInput.addEventListener('submit', function(event) {
             event.preventDefault();
 
             const elements = addItemInput.elements;
 
-            const productData = {
+            const product = {
 
                 id: elements.idItem.value,
                 name: elements.nameItem.value,
@@ -17,7 +17,7 @@ const addProduct = {
                 image: elements.imageItem.value
             };
 
-            onAdd(productData);
+            onAdd(product);
             addItemInput.reset();
         });
     }

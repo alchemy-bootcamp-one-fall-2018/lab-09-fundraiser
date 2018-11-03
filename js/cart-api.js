@@ -40,6 +40,7 @@ const cartApi = {
         else {
             cart.splice(cart.indexOf(product.name), 1);
         }
+        saveCart();
     }
 };
 
