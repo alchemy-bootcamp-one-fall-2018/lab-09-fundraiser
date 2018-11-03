@@ -15,7 +15,6 @@ const cartApi = {
     }, 
     add(product) {
         const orderItem = cart.find(item => {
-
             return item.name === product.name;
         });
         if(orderItem) {
@@ -29,10 +28,19 @@ const cartApi = {
         }
 
         saveCart();
+    },
+
+    remove(product) {
+        const orderItem = cart.find(item => {
+            return item.name === product.name;
+        });
+        if(orderItem >= 1) {
+            orderItem.quantity--;
+        }
+        else {
+            cart.splice(cart.indexOf(product.name), 1);
+        }
     }
-
-
-    // if else or some sort of loop
 };
 
 export default cartApi; 

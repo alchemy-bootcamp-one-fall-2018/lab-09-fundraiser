@@ -1,14 +1,12 @@
 import cartApi from './cart-api.js';
 
-function makeItem(item) {
+
+function makeItem(item){
     const html = /*html*/` 
-    <li> 
-    ${item.name}${item.price}${item.quantity}
+    <li> ${item.name}${item.price}${item.quantity} </li>
     <button id="add">Add</button>
     <button id="remove">Remove</button>
-    </li>
     `;
-
 
     const template = document.getElementById('products');
     template.innerHTML = html;
@@ -16,7 +14,7 @@ function makeItem(item) {
 
 }
 
-// why is list undefined?
+const list = document.getElementById('products');
 
 const shoppingCart = {
     init(cart) {
@@ -43,5 +41,6 @@ const shoppingCart = {
         shoppingCart.init(cart);
     }
 };
+
 
 export default shoppingCart;
