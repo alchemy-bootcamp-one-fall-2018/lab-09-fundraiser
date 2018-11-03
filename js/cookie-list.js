@@ -5,13 +5,14 @@ function makeCookie(cookie) {
         <li class="cookie">
             <h3 class="name">
                 ${cookie.name}
-                </h3>
-                <p>${cookie.description}</p>
-                <p>${cookie.price}</p>
-                <img src="${cookie.image}"/>
-            
+            </h3>
+            <p>${cookie.description}</p>
+            <p>${cookie.price}</p>
+            <img src="${cookie.image}"/>
+
         </li>
-        `;
+        <button id="${cookie.id}">Remove</button>
+                `;
 
     const template = document.createElement('template');
 
@@ -21,6 +22,7 @@ function makeCookie(cookie) {
 }
 
 const list = document.getElementById('cookies');
+
 
 const cookieList = {
     init(cookies, onSelect) {
@@ -34,14 +36,23 @@ const cookieList = {
     
         const dom = makeCookie(cookie);
         const listItem = dom.querySelector('li');
-        
         listItem.addEventListener('click', function() {
             cookieList.onSelect(cookie);
         });
         
         list.appendChild(dom);
     },
+    
+    remove(cookie) {
+        const removeButton = document.getElementById(cookie.id);
+        console.log('***', removeButton);
+        
+        removeButton.addEventListener('click', function() {
+            cookieList.onSelect(cookie);  
+        });    
+    }
 
+ 
  
 };
 

@@ -26,7 +26,17 @@ const cartApi = {
             });
         }
         saveCart();
-    }
+    },
+    remove(cookie) {
+        const orderItem = cart.find(item => {
+            return item.name === cookie.name;
+        });
+        if(orderItem) {
+            orderItem.quantity--;
+        }
+       
+        saveCart();
+    }    
 };
 
 export default cartApi;
