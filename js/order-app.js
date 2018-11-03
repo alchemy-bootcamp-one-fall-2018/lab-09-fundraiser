@@ -13,7 +13,3 @@ productList.init(products, function(product) {
     shoppingCart.update(cart);
 });
 
-// function removeProduct() {
-//     const remove = document.getElementById('remove');
-    
-// }
