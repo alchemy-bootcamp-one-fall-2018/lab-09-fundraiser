@@ -1,27 +1,35 @@
-import html from './html.js';
+import cartApi from './cart-api.js';
 
-
-function makeItem(item){
-    return html` 
-    <li> ${item.name}${item.quantity} </li>
+function makeItem(item) {
+    const html = /*html*/` 
+    <li> 
+    ${item.name}${item.price}${item.quantity}
     <button id="add">Add</button>
     <button id="remove">Remove</button>
+    </li>
     `;
+
+
+    const template = document.getElementById('products');
+    template.innerHTML = html;
+    return template.content;
+
 }
 
-const list = document.getElementById('products');
+// why is list undefined?
 
 const shoppingCart = {
     init(cart) {
         for(let i = 0; i < cart.length; i++){
             const dom = makeItem(cart[i]);
             dom.getElementById('add').addEventListener('click', function() {
-                cart.push([i]);
-                cart.update();
+                cartApi.add(cart[i]);
+                shoppingCart.update(cart);
             }); 
 
             dom.getElementById('remove').addEventListener('click', function(){
-
+                cartApi.remove(cart[i]);
+                shoppingCart.update(cart);
             });
 
             list.appendChild(dom);
@@ -36,6 +44,4 @@ const shoppingCart = {
     }
 };
 
-
 export default shoppingCart;
-

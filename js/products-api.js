@@ -1,16 +1,16 @@
 let products = [
     { 
-        id: 'carrot',
-        name: 'Carrot',
-        description: 'long orange goodness',
-        price: 5,
+        id: 'beans',
+        name: 'Beans',
+        description: 'bulk beans',
+        price: 25,
     },
 
     { 
-        id: 'canned goods',
-        name: 'canned foods',
-        description: 'random types of canned goods',
-        price: 10,
+        id: 'grains',
+        name: 'Grains',
+        description: 'bulk grain',
+        price: 25,
     }
 ];
 function saveProducts() {
