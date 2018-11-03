@@ -5,7 +5,7 @@ function saveCart() {
 }
 const cartApi = {
 
-    getAll() {
+    get() {
         const json = localStorage.getItem('cart');
 
         if(json) {

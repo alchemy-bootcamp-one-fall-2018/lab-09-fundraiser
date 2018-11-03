@@ -1,4 +1,4 @@
-const addItemTable = document.getElementById('products');
+// const addItemTable = document.getElementById('products');
 
 function addItem(product) {
 
@@ -17,21 +17,44 @@ function addItem(product) {
     template.innerHTML = html;
     return template.content;
 }
+const list = document.getElementById('products');
 
 const itemTable = {
-    init(product){
+    init(product, onSelect) {
         for(let i = 0; i < product.length; i++) {
-            const tr = addItem(product[i]);
-            addItemTable.appendChild(tr);
-
+            itemTable.add(product[i]);
         }
+        itemTable.onSelect = onSelect;
+        itemTable.products = product;
     },
-    update(product) {
-        while(addItemTable.lastElementChild) {
-            addItemTable.lastElementChild.remove();
-        }
-        itemTable.init(product);
+    add(product) {
+        const dom = addItem(product);
+        const listItem = dom.querySelector('li');
+
+        listItem.addEventListener('click', function(){
+            itemTable.onSelect(product);
+        });
+
+        list.appendChild(dom);
+        
+    },
+
+    remove(index) {
+        list.querySelectorAll('li')[index].remove();
     }
 };
+
+//             const tr = addItem(product[i]);
+//             addItemTable.appendChild(tr);
+
+//         }
+//     },
+//     update(product) {
+//         while(addItemTable.lastElementChild) {
+//             addItemTable.lastElementChild.remove();
+//         }
+//         itemTable.init(product);
+//     }
+// };
 
 export default itemTable;
