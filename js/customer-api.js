@@ -5,6 +5,13 @@ function saveCustomers() {
 }
 
 const customersApi = {
+    getAll() {
+        const json = localStorage.getItem('customers');
+        if(json) {
+            customers = JSON.parse(json);
+        }
+        return customers;
+    },
     add(customer) {
         customers.push(customer);
         saveCustomers();

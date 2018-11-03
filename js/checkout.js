@@ -10,7 +10,6 @@ const getCart = {
             const item = document.createElement('li');
             item.textContent = cart[i].name + ' ' + cart[i].price + ' ' + cart[i].quantity;
             orderSummary.appendChild(item);
-            console.log(orderSummary);
         }
     }
 };
@@ -41,12 +40,13 @@ const orderForm = {
     }
 };
 
+
+
 orderForm.init(function(customer) {
-    console.log(customer);
     customersApi.add(customer);
 });
 
-export default orderForm;
 
+export default orderForm;
 
 console.log(cart);

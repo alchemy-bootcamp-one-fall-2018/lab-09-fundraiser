@@ -1,8 +1,7 @@
-// import orderForm from './checkout.js';
 import customersApi from './customer-api.js';
 
+let customers = customersApi.getAll(); 
 const customerOrders = document.getElementById('customer-orders');
-let customers = customersApi.get();
 
 const getCustomers = {
     display(customers) {
