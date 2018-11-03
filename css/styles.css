@@ -2,11 +2,14 @@
     box-sizing: border-box;
 }
 
-nav li {
+nav li  {
     list-style: none;
     display:inline;
+    
 }
-
+nav li a {
+    color:white;
+}
 body {
     margin: 0 auto;
     
@@ -22,4 +25,7 @@ header  {
 
 h1 {
     text-align: center;
+}
+#donation-form {
+    width:33%;
 }

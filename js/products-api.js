@@ -19,9 +19,9 @@ const productsApi = {
     
     add(product){
         products.push(product);
-
         saveProduct();
     }
 };
+// need to do a remove case 
 
 export default productsApi;

@@ -11,10 +11,6 @@
 </head>
 <body>
     <header class= ”header-container”>
-        <div class=”logo”>
-            <!-- <a href=”index.html” title=”x”>
-            <img src=”imgs/wolf-howling.png” width="180"></a> -->
-          </div>
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -66,11 +62,40 @@
         </fieldset>
         <button type="Submit">Submit</button>
     </form>
+    <section id="add-product">
+        <h2>Add a Package</h2>
+        <form id="add-form">
+            <label>
+                Donataion Amount:
+                <input required name="donation">
+            </label>
+            <label>
+                Description:
+                <input required name="description">
+            </label>
+            <!-- <label>
+                Image:
+                <input name="image">
+            </label> -->
+            <label>
+                <button class="action">Add</button>
+            </label>
+        </form>
+    </section>
+
+<!--This is communicating with the product-details.js-->
+    <section id="product-list">
+        <h2>Name of Package:</h2>
+        <p>Description:</p>
+        <button class="danger">Remove this Package</button>
+    </section>
 
 </body>
 
 
 
 
-<script src= "./js/app.js"></script>
+
+
+<script type="module"src="./js/app.js"></script>
 </html>

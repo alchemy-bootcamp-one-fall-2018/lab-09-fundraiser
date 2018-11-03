@@ -1,8 +1,10 @@
-import productApi from './products-api.js';
+// import productsApi from './products-api.js';
+
+//this where a user can select item/items and add to a cart and then go immediately next to a cart where they place an order 
 
 const addCart = {
     
-    init(){
+    init(onAdd){
         const productForm = document.getElementById('donation-form');
         productForm.addEventListener('submit', function(event) {
             event.preventDefault();
