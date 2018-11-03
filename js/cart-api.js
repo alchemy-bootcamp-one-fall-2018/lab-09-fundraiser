@@ -40,12 +40,14 @@ const cartApi = {
                 orderItem.quantity--;
             }
             else {
-                const index = product.indexOf(product);
+                const index = cart.indexOf(product);
                 cart.splice(index, 1);
             }
+            
         }
         saveCart();
     }
+    
 };
 
 export default cartApi; 
