@@ -1,4 +1,4 @@
-// import addCart from './product.js';
+import addCart from './product.js';
 import productList from './product-list.js';
 import productsApi from './products-api.js'; 
 import productDetail from './products-details.js'; 
@@ -18,7 +18,7 @@ productList.init(products, function(product) {
 //     productlist.remove(updateProducts);
 // });
 
-addProduct.init(function(product) {
+addCart.init(function(product) {
     
     // tell the api service first
     productsApi.add(product); 
