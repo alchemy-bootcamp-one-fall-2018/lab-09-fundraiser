@@ -9,6 +9,7 @@ function makeProduct(product) {
             <p class="description">
             ${product.description}
             </p>
+            <button id="add"> Add </button>
         </li>
         `;
 
@@ -35,7 +36,7 @@ const productList = {
         // console.log('productList.add', product); 
         const dom = makeProduct(product); 
 
-        const listItem = dom.querySelector('li'); 
+        const listItem = dom.getElementById('add'); 
 
         listItem.addEventListener('click', function() {
                 productList.onSelect(product); 
@@ -45,6 +46,7 @@ const productList = {
     },
     remove(index) {
         list.querySelectorAll('li')[index].remove();
+
     }
 }; 
 

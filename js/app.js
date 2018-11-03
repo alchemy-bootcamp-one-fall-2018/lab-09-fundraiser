@@ -9,10 +9,10 @@ productList.init(products, function(product) {
     productDetail.update(product); 
 }); 
 
-// productDetail.init(function(product) {
-//     const index = productsApi.remove(product); 
-//     productList.remove(index);
-// }); 
+productDetail.init(function(product) {
+    const index = productsApi.remove(product); 
+    productList.remove(index);
+}); 
 
 addProduct.init(function(product) {
 
