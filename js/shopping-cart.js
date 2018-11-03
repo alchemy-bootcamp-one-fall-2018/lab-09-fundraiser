@@ -9,8 +9,7 @@ function makeItem(item){
     `;
 }
 
-
-const list = document.getElementById('cart-list');
+const list = document.getElementById('products');
 
 const shoppingCart = {
     init(cart) {

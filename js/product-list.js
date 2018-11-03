@@ -4,7 +4,7 @@ function addItem(product) {
 
     const html = /*html*/`
     <li> 
-
+    
         <p>ID:${product.id}</p>
         <p>NAME:${product.name}</p>
         <p>DESCRIPTION:${product.description}</p>
