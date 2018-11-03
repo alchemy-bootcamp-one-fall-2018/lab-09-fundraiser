@@ -23,10 +23,15 @@
         </nav>
     </header>
     <main>
-
-            <section>
-                Place Your Order Here  
-            </section>
+        
+        <section>
+            Place Your Order Here  
+        </section>
+        <section
+            id="shopping-cart">
+            <h3>Shopping Cart</h3>
+            <ul id="cart-list"></ul>
+        </section>
 
             <section
                 id="product-list">
@@ -39,16 +44,13 @@
                 </ul>
             </section>
 
-            <section
-                id="shopping-cart">
-                <h3>Shopping Cart</h3>
-                <ul id="cart-list"></ul>
-            </section>
 
             <section class="hidden" id="product-detail">
-            <h2>Name of Product</h2>
-            <p>description</p>
-            <button class="danger">Remove this Product</button>
+            
+            <div id="remove">
+                <button onclick="removeProduct()">Remove Product</button>
+            </div>
+            
             </section>
             <main>
 

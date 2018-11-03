@@ -1,8 +1,12 @@
 import html from './html.js';
+import cartApi from './cart-api.js';
 
 function makeProduct(product) {
     return html`
-    <li>${product.name} ${(product.quantity)}</li>
+    <li>${product.name} ${(product.quantity)}
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+    </li>
     `;
 }
 
@@ -12,6 +16,14 @@ const shoppingCart = {
     init(cart) {
         for(let i = 0; i < cart.length; i++) {
             const dom = makeProduct(cart[i]);
+            dom.getElementById('add').addEventListener('click', function(){
+                cartApi.add(cart[i]);
+                shoppingCart.update(cart);
+            });
+            dom.getElementById('remove').addEventListener('click', function(){
+                cartApi.remove(cart[i]);
+                shoppingCart.update(cart);
+            });
             list.appendChild(dom);
         }
     },

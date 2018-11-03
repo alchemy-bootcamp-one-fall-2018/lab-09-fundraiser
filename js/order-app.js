@@ -12,3 +12,8 @@ productList.init(products, function(product) {
     cartApi.add(product);
     shoppingCart.update(cart);
 });
+
+// function removeProduct() {
+//     const remove = document.getElementById('remove');
+    
+// }

@@ -29,6 +29,21 @@ const cartApi = {
         }
 
         saveCart();
+    },
+
+    remove(product) {
+        const removeItem = cart.find(item => {
+            return item.name === product.name;
+        });
+        const index = cart.indexOf(product);
+        if(removeItem) {
+            removeItem.quantity--;
+        }
+        else if(index !== -1) {
+            cart.splice(index, 1);
+            saveCart();
+            return index;
+        }
     }
 };
 
