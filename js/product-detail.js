@@ -11,6 +11,7 @@ const productDetail = {
     },
     update(product) {
         productDetail.product = product;
+        //name? or donation?
         section.querySelector('h2').textContent = product.name;
         section.querySelector('p').textContent = product.description;
         section.classList.remove('hidden');
