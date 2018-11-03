@@ -14,12 +14,10 @@ function addItems(buttonId) {
         cartItems = [selectedProduct];
     }
         
-    storeCart();
-    
     cartItemCount = cartItems.length;
     selectedProduct['cartId'] = cartItemCount - 1;
+    storeCart();
     addTotal();
-    console.log(selectedProduct);
 }
 
 function addTotal(){
@@ -53,8 +51,6 @@ const addToCart = {
         if(cartAside) {
             cartAside.forEach(function(item) {
                 total = JSON.parse(localStorage.getItem('cartTotal'));
-                //cartItemCount = JSON.parse(localStorage.getItem('cart')).length;
-                
                 
                 html += `
                 <p>Item: ${item.name}</p>
@@ -77,12 +73,19 @@ const addToCart = {
     },
 
     removeItem(button) {
+        let count = 0;
         cartItems = JSON.parse(localStorage.getItem('cart'));
         total -= cartItems[button.id].price;
         localStorage.setItem('cartTotal', JSON.stringify(total));
         cartItems.splice(button.id, 1);
+        
+        cartItems.forEach(function(item) {
+            item.cartId = count;
+            count++;
+        });
+        
         localStorage.setItem('cart', JSON.stringify(cartItems));
-        this.displayCart();
+        addToCart.displayCart();
     }
 };
 
