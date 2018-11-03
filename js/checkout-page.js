@@ -2,25 +2,32 @@
 
 const form = document.getElementById('billingInfo');
 let input = [];
-let customers = {};
-let tempCust = [];
+let customers = JSON.parse(localStorage.getItem('customers'));
+let tempCust = {};
 
 function storeCustInfo() {
     input.forEach(function(element) {
-        customers[element.name] = element.value;
+        tempCust[element.name] = element.value;
     });
-    tempCust.push(customers);
-    localStorage.setItem('customers', JSON.parse(customers));
+    if(customers) {
+        customers.push(tempCust);
+    } else {
+        customers = [tempCust];
+    }
+    localStorage.setItem('customers', JSON.stringify(customers));
+    tempCust = {};
 }
 
 const custInfo = {
     init() {
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            input = document.querySelectorAll('input');
-            console.log(input);
-            storeCustInfo();
-        });
+        if(form){
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                input = document.querySelectorAll('input');
+                console.log(input);
+                storeCustInfo();
+            });
+        }   
     }
 };
 
