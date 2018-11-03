@@ -44,17 +44,5 @@ const itemTable = {
     }
 };
 
-//             const tr = addItem(product[i]);
-//             addItemTable.appendChild(tr);
-
-//         }
-//     },
-//     update(product) {
-//         while(addItemTable.lastElementChild) {
-//             addItemTable.lastElementChild.remove();
-//         }
-//         itemTable.init(product);
-//     }
-// };
 
 export default itemTable;

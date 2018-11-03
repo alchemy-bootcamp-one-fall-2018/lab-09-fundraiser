@@ -8,6 +8,7 @@ const customer = customerApi.getAll();
 const products = productApi.getAll();
 const cart = cartApi.get();
 
+
 shoppingCart.init(cart);
 
 itemTable.init(products, function(product){
