@@ -8,7 +8,9 @@ const checkbox = document.getElementById('sameAddress');
 const showBillingField = document.getElementById('billingAddress');
 
 function storeCustInfo(cart) {
+    const cartTotal = JSON.parse(localStorage.getItem('cartTotal'));
     tempCust['cart'] = cart;
+    tempCust['cartTotal'] = cartTotal;
     input.forEach(function(element) {
         if(element.value) {
             tempCust[element.name] = element.value;

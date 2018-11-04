@@ -24,7 +24,7 @@ const orderReport = {
             customers.forEach(function(customer) {
                 var node = document.createElement('li');
                 node.innerHTML = `
-                    <p>${customer.fName}</p>
+                    <p><pre>${customer.fName}  Total: $${customer.cartTotal}</pre></p>
                     <button class="details" id="${customer.custId}">Details</button>
                      `;
               
