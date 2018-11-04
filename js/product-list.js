@@ -4,8 +4,10 @@ function makeProduct(product) {
             <h3 class="name" style="background: ${product.color};">
                 ${product.name}
             </h3>
-        //     <img src="assets/${product.image ? product.image : 'logo.png'}">
-        // </li>
+            <img src="assets/${product.image ? product.image : 'logo.png'}">
+        <p class="description"> ${product.description}</p>
+        
+        </li>
     `;
 
     //  Create template element to convert string to DOM
