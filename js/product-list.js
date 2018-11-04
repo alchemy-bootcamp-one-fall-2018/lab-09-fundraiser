@@ -22,25 +22,29 @@ function makeProduct(product) {
 const list = document.getElementById('products');
 
 const productList = {
+    // init
+    // should include:
+    // 1. initial fruits array
+    // 1. onRemove callback
 
     init(products, onSelect) {
         for(let i = 0; i < products.length; i++) {
             productList.add(products[i]);
         }
         productList.onSelect = onSelect;
-        productList.fruits = products;
+        productList.products = products;
     },
     add(product) {
         const dom = makeProduct(product);
 
-        // do work of finding elements _before_ appending
+        
         const listItem = dom.querySelector('li');
 
         listItem.addEventListener('click', function() {
             productList.onSelect(product);
         });
 
-        // append to <ul>, this will empty the fragment
+        // send to <ul>, this will empty the fragment
         list.appendChild(dom);
     },
     remove(index) {

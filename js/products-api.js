@@ -9,6 +9,7 @@ function saveProduct() {
 }
 
 const productsApi = {
+   //this is set, if you change it all products disappear, change it back they reappear
     getProducts() {
         const json = localStorage.getItem('products');
         if(json) {
@@ -20,8 +21,17 @@ const productsApi = {
     add(product){
         products.push(product);
         saveProduct();
+    },
+   
+    remove(product) {
+        const index = products.indexOf(product);
+        if(index !== -1) {
+            products.splice(index, 1);
+            saveProduct();
+            return index;
+        }
     }
 };
-// need to do a remove case 
+ 
 
 export default productsApi;

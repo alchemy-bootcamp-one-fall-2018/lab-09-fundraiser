@@ -12,11 +12,11 @@ productList.init(products, function(product) {
 });
 
 
-// productDetail.init(function(product) {
-//     const updatedProducts = productsApi.remove(product);
-//     //updatedProducts here is index in martys code 
-//     productlist.remove(updateProducts);
-// });
+productDetail.init(function(product) {
+    const index = productsApi.remove(product);
+    //calling this index now instead of updatedProducts 
+    productList.remove(index);
+});
 
 addCart.init(function(product) {
     
