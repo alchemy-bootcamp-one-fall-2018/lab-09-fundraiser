@@ -15,53 +15,14 @@
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="product.html">PRODUCTS</a></li>
+                <li><a href="shop.html">SHOP</a></li>
                 <li><a href= "checkout.html">CHECKOUT</a></li>
-                <li><a href= "orders.html"><i class="fa fa-heart-o">ORDERS</i></a></li>
+                <li><a href= "orders.html"></a>ORDERS</li>
             </ul>
         </nav>
     </header>
 
-    <h1>PRODUCTS</h1>
-
-    <form id="donation-form">
-
-        <fieldset id="20-fieldset">
-            <legend>$20</legend>
-            <label for="20-donation">check to select this donation</label>
-            <input type="checkbox" name="donation" id="20-donation" value="20">
-     
-            <p>With a donation of $20, you can contribute to saving X number of wolves! </p>
-             <p>This helps blah blah blah fjdkfjksd jfksl
-            fksdfjsdklfjskl fkjflsdk!!!</p>
-             <p>This helps blah blah blah fjdkfjksd jfksl
-            fksdfjsdklfjskl fkjflsdk!!!</p>
-        </fieldset>
-     
-        <fieldset id="40-fieldset">
-            <legend>$40</legend>
-            <label for="40-donation">check to select this donation</label>
-            <input type="checkbox" name="donation" id="40-donation" value="40">
-     
-            <p>With a donation of $40, you can contribute to saving X number of wolves! </p>
-             <p>This helps blah blah blah fjdkfjksd jfksl
-            fksdfjsdklfjskl fkjflsdk!!!</p>
-             <p>This helps blah blah blah fjdkfjksd jfksl
-            fksdfjsdklfjskl fkjflsdk!!!</p>
-        </fieldset>
-     
-        <fieldset id="60-fieldset">
-            <legend>$60</legend>
-            <label for="60-donation">check to select this donation</label>
-            <input type="checkbox" name="donation" id="60-donation" value="60">
-     
-            <p>With a donation of $60, you can contribute to saving X number of wolves! </p>
-             <p>This helps blah blah blah fjdkfjksd jfksl
-            fksdfjsdklfjskl fkjflsdk!!!</p>
-             <p>This helps blah blah blah fjdkfjksd jfksl
-            fksdfjsdklfjskl fkjflsdk!!!</p>
-        </fieldset>
-        <button type="Submit">Submit</button>
-    </form>
+    <h1>ADD & REMOVE PRODUCTS TO SELL IN SHOP</h1>
     <section id="add-product">
         <h2>Add a Package</h2>
         <form id="add-form">
@@ -73,18 +34,23 @@
                 Description:
                 <input required name="description">
             </label>
-            <!-- <label>
+            <label>
                 Image:
                 <input name="image">
-            </label> -->
+            </label>
             <label>
                 <button class="action">Add</button>
             </label>
         </form>
     </section>
 
-<!--This is communicating with the product-details.js-->
     <section id="product-list">
+        <h2>Products</h2>
+        <ul id="products"></ul>
+    </section>
+
+<!--This is communicating with the product-details.js-->
+    <section id="product-detail">
         <h2>Name of Package:</h2>
         <p>Description:</p>
         <button class="danger">Remove this Package</button>

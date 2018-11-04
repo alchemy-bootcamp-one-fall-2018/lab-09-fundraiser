@@ -1,7 +1,7 @@
 import addCart from './product.js';
 import productList from './product-list.js';
 import productsApi from './products-api.js'; 
-import productDetail from './products-details.js'; 
+import productDetail from './product-detail.js'; 
 // import cartApi from './cart-api.js';
 
 

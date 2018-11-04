@@ -1,32 +1,36 @@
-// import productsApi from './products-api.js';
 
-//this where a user can select item/items and add to a cart and then go immediately next to a cart where they place an order 
 
-const addCart = {
+//this where a admin can add item/items to sell
+
+const addProduct = {
     
     init(onAdd){
-        const productForm = document.getElementById('donation-form');
-        productForm.addEventListener('submit', function(event) {
+        const form = document.getElementById('add-form');
+        form.addEventListener('submit', function(event) {
             event.preventDefault();
             
-            const elements = productForm.elements;
-            console.log(elements);
+            const elements = form.elements;
+            //console.log(elements);
             
-            const donationValue = {
+            const product = {
                 
-                total: elements.donation.value
+                name: elements.name.value,
+                description: elements.description.value,
+                image: elements.image.value
+               
+                
                 
             };
-            onAdd(donationValue);
+            onAdd(product);
             
-            productForm.reset();
+            form.reset();
         });
     }
     
 };
 // addCart.init();     
 
-export default addCart;
+export default addProduct;
 
 
 //event listener is triggered when we hit the submit, which then runs the 
