@@ -1,15 +1,15 @@
 import customerInfo from './customer-listener.js';
 import customerApi from './customer-api.js';
+import customerTable from './admin-info.js';
 
-// used to print to html??
-//const customer = customerApi.getAll();
+const customer = customerApi.getAll();
 
 customerInfo.init(function(customer) {
     customerApi.add(customer);
 
 });
 
-
+customerTable.init(customer);
 
 
 

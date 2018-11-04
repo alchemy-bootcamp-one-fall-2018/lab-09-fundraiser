@@ -1,5 +1,5 @@
-import cartApi from './cart-api.js';
 
+import cartApi from './cart-api.js';
 
 function makeItem(item){
     const html = /*html*/` 

@@ -44,5 +44,4 @@ const itemTable = {
     }
 };
 
-
 export default itemTable;

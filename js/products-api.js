@@ -1,3 +1,4 @@
+
 let products = [
     { 
         id: 'beans',
@@ -16,7 +17,6 @@ let products = [
 function saveProducts() {
     localStorage.setItem('products', JSON.stringify(products));
 }
-
 
 const productApi = {
     getAll() {
