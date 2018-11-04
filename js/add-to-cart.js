@@ -26,7 +26,6 @@ function storeCart() {
 const addToCart = {
     init(buttonId) {
         addToCart.addItems(buttonId);
-        console.log('addToCart init called');
     },
 
     addItems(buttonId) {

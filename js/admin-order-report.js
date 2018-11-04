@@ -6,10 +6,13 @@ const customers = JSON.parse(localStorage.getItem('customers'));
 
 function displayDetails() {
     const detailsButton = document.querySelectorAll('.details');
+    const asideDetail = document.getElementById('custDetail');
+
 
     detailsButton.forEach(function(button) {
         button.addEventListener('click', function() {
-            console.log(button.id);
+            asideDetail.style.display = 'block';
+            asideDetail.innerHTML = customers[button.id].fName;
         });
     });
 }
@@ -26,9 +29,9 @@ const orderReport = {
                      `;
               
                 custOrders.appendChild(node);
-                displayDetails();
             });          
         }
+        displayDetails();
     }
 };
 
