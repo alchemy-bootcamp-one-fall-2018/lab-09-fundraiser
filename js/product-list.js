@@ -29,6 +29,7 @@ const itemList = {
     add(item) {
         const dom = makeItem(item);
         const listItem = dom.querySelector('li');
+        console.log(listItem);
 
         listItem.addEventListener('click', function() {
             itemList.onSelect(item);
@@ -40,5 +41,6 @@ const itemList = {
         list.querySelectorAll('li')[index].remove();
     }
 };
+
 
 export default itemList;

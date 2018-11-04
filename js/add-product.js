@@ -7,7 +7,7 @@ const addItem = {
             const elements = form.elements;
             const item = {
                 name: elements.name.value,
-                image: elements.image.value,
+                image: ('/assets/' + elements.image.value),
                 description: elements.description.value,
                 price: elements.price.value
             };
