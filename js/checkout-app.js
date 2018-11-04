@@ -30,6 +30,10 @@ const orderForm = {
             customer.city = elements.city.value;
             customer.state = elements.state.value;
             customer.zipCode = elements['zip-code'].value;
+            customer.shippingStreetAddress = elements['street-address2'].value;
+            customer.shippingCity = elements.city2.value;
+            customer.shippingState = elements.state2.value;
+            customer.shippingZipCode = elements['zip-code2'].value;
 
             onAdd(customer);
 
