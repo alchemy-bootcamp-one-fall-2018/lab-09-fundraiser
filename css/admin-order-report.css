@@ -1,9 +1,25 @@
 #custDetail {
     display: none;
+    float: right;
+    width: 30%;
+    text-align: left;
+    padding: 2%;
+}
+
+#custDetail p {
+    width: 90%;
+}
+
+#orders {
+    float: left;
+    width: 50%;
+    text-align: left;
+    margin-left: 5%;
 }
 
 .details {
     display: inline-block;
+    margin-left: 20%;
 }
 
 p, pre {
@@ -11,3 +27,6 @@ p, pre {
     display: inline-block;
 }
 
+span {
+    font-weight: bold;
+}

@@ -4,7 +4,7 @@ var productList = [
         name: 'Backpack',
         type: 'survival',
         description: 'It is a backpack',
-        price: 40,
+        price: 40.00,
         image: '../assets/backpack.jpg'
     },
 
@@ -13,7 +13,7 @@ var productList = [
         name: 'Bottled Water',
         type: 'food',
         description: 'It is a case of waters in bottles',
-        price: 10,
+        price: 10.00,
         image: '../assets/bottled_water.jpg'
     },
 
@@ -22,7 +22,7 @@ var productList = [
         name: 'Razor',
         type: 'hygiene',
         description: 'A pack of 5 razors',
-        price: 15,
+        price: 15.00,
         image: '../assets/razor.jpg'
     },
 
@@ -31,7 +31,7 @@ var productList = [
         name: 'Sweat Shirt',
         type: 'clothing',
         description: 'One hoodie to keep warm',
-        price: 20,
+        price: 20.00,
         image: '../assets/hoodie.jpg'
     }
 ];

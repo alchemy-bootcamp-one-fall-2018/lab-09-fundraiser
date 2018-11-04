@@ -1,16 +1,14 @@
 'use strict';
 
-//display details on click
 //product page
+//add quantity option
+//increase quantity when adding same item to cart
+//include 0's after decimal point for price
 
-//import productsApi from './products-api.js';
 import listOrders from './order-page.js';
 import custInfo from './checkout-page.js';
 import orderReport from './admin-order-report.js';
-//import addToCart from './add-to-cart.js';
 
 listOrders.init();
 custInfo.init(JSON.parse(localStorage.getItem('cart')));
 orderReport.init();
-
-
