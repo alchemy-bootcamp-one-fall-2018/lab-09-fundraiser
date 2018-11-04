@@ -7,6 +7,20 @@ p {
     margin-bottom: 20px;
 }
 
+#checkout {
+    background: white;
+    border: none;
+}
+
+#checkout:hover {
+    background:lightgreen;
+    border: none;
+}
+
+.checkout:hover {
+    background-color: lightgreen;
+}
+
 button {
     font-size: 0.8em;
     padding: 3px;

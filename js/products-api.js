@@ -3,25 +3,25 @@ let products = [
         name: 'Collar',
         price: '$10.00',
         animal: 'For: Dogs',
-        image: 'collar.jpeg'
+        image: '../assets/collar.jpeg'
     },
     {
         name: 'Cat Harness',
         price: '$15.00',
         animal: 'For: Cats',
-        image: 'cat-harness.jpeg'
+        image: '../assets/cat-harness.jpeg'
     },
     {
         name: 'Bird Feeder',
         price: '$20.00',
         animal: 'For: Birds',
-        image: 'bird-feeder.jpeg'
+        image: '../assets/bird-feeder.jpeg'
     },
     {
         name: 'Mouse Toy',
         price: '$80.00',
         animal: 'For: Cats',
-        image: 'mouse.jpeg'
+        image: '../assets/mouse.jpeg'
     }
 ];
 
@@ -50,6 +50,5 @@ const productsApi = {
         }
     }
 };
-
 
 export default productsApi;

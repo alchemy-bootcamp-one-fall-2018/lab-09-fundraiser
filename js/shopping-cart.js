@@ -21,12 +21,10 @@ const shoppingCart = {
         for(let i = 0; i < cart.length; i++) {
             const dom = makeItem(cart[i]);
             dom.getElementById('add').addEventListener('click', function() {
-                console.log('made it', cart[i]);
                 cartApi.add(cart[i]);
                 shoppingCart.update(cart);
             });
             dom.getElementById('remove').addEventListener('click', function() {
-                console.log('were alive');
                 cartApi.remove(cart[i]);
                 shoppingCart.update(cart);
             });

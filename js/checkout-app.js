@@ -38,8 +38,6 @@ const orderForm = {
             onAdd(customer);
 
             form.reset();
-
-            console.log(customer);
         });
     }
 };
