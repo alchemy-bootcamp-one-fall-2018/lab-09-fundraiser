@@ -1,11 +1,12 @@
 function makeProduct(product) {
     const html = /*html*/`
         <li class="product">
-            <h3 class="name" style="background: ${product.color};">
+            <h3 class="name" style="background: ${product.price};">
                 ${product.name}
             </h3>
             <img src="assets/${product.image ? product.image : 'logo.png'}">
-        <p class="description"> ${product.description}</p>
+            <p class="description"> ${product.description}  
+            </p>
         
         </li>
     `;
@@ -26,7 +27,7 @@ const list = document.getElementById('products');
 const productList = {
     // init
     // should include:
-    // 1. initial fruits array
+    // 1. initial products array
     // 1. onRemove callback
 
     init(products, onSelect) {

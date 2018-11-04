@@ -23,6 +23,7 @@ const addProduct = {
                 
                 name: elements.name.value,
                 description: elements.description.value,
+                //price: elements.price.value <--clears the queue
                 image: elements.image.value
                
                 

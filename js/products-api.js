@@ -1,6 +1,6 @@
 let products = [
     {
-        donation: 20, //this is dummy content to see
+        // donation: 20 this is dummy content to see
     }
 ];
 function saveProduct() {
