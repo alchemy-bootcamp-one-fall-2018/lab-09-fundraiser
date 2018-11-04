@@ -5,7 +5,14 @@
 const addProduct = {
     
     init(onAdd){
-        const form = document.getElementById('add-form');
+        let form = document.getElementById('add-form');
+        
+        //add .toUpperCase  to form also use the innerHTML
+        // let name = form.document.querySelector.innerHTML.toUpperCase();
+        // console.log(name); 
+        // console.log(form);  
+        //becareful you could target the image doing this and git a bunch of 404s
+
         form.addEventListener('submit', function(event) {
             event.preventDefault();
             
