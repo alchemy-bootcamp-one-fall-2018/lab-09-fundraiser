@@ -1,3 +1,13 @@
 #custDetail {
     display: none;
 }
+
+.details {
+    display: inline-block;
+}
+
+p {
+    width: 20%;
+    display: inline-block;
+}
+
