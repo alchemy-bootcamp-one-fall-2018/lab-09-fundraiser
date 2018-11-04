@@ -5,21 +5,6 @@ const products = productsApi.getProducts();
 let total;
 let cartItemCount;
 
-function addItems(buttonId) {
-    let selectedProduct = products[parseInt(buttonId)];
-   
-    if(cartItems) {
-        cartItems.push(selectedProduct);
-    } else {
-        cartItems = [selectedProduct];
-    }
-        
-    cartItemCount = cartItems.length;
-    selectedProduct['cartId'] = cartItemCount - 1;
-    storeCart();
-    addTotal();
-}
-
 function addTotal(){
     const cartAside = JSON.parse(localStorage.getItem('cart'));
     if(cartAside) {
@@ -40,7 +25,23 @@ function storeCart() {
 
 const addToCart = {
     init(buttonId) {
-        addItems(buttonId);
+        addToCart.addItems(buttonId);
+        console.log('addToCart init called');
+    },
+
+    addItems(buttonId) {
+        let selectedProduct = products[parseInt(buttonId)];
+       
+        if(cartItems) {
+            cartItems.push(selectedProduct);
+        } else {
+            cartItems = [selectedProduct];
+        }
+            
+        cartItemCount = cartItems.length;
+        selectedProduct['cartId'] = cartItemCount - 1;
+        storeCart();
+        addTotal();
     },
 
     displayCart() {
@@ -48,7 +49,7 @@ const addToCart = {
         const sideItems = document.querySelector('.sideItems');  
         let html = '';
         
-        if(cartAside) {
+        if(cartAside && sideItems) {
             cartAside.forEach(function(item) {
                 total = JSON.parse(localStorage.getItem('cartTotal'));
                 

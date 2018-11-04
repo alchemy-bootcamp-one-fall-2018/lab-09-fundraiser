@@ -2,7 +2,6 @@
 
 import productsApi from './products-api.js';
 import addToCart from './add-to-cart.js';
-//import custInfo from './checkout-page.js';
 
 function checkout() {
     const checkoutButton = document.getElementById('checkout');
