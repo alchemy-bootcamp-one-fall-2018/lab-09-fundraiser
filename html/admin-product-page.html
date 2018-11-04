@@ -22,26 +22,29 @@
         <ul class="pickList"></ul>
     </section>
     
-    <form>
+    <form id="addItemForm">
         <fieldset>
             <legend>Add Item</legend>
 
             <label for="itemName">Item Name</label>
             <input type="text" name="itemName" id="itemName" required>
 
-            <label for="itemType">Product Type</label>
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price" required>
+
+            <!-- <label for="itemType">Product Type</label>
             <select>
                 <option name="itemType" value="food">Food</option>
                 <option name="itemType" value="clothing">Clothing</option>
                 <option name="itemType" value="hygiene">Hygiene</option>
                 <option name="itemType" value="survival">Survival</option>
-            </select>
+            </select> -->
             
             <label for="imageUrl">Image URL</label>
-            <input type="url" name="imageUrl" id="imageUrl" required>
+            <input type="text" name="imageUrl" id="imageUrl" required>
 
             <label for="description">Description</label>
-            <textarea rows="4" cols="50" id="description"></textarea>
+            <textarea name="description" rows="4" cols="50" id="description"></textarea>
         </fieldset>
         <button type="submit">Add Product</button>
     </form>

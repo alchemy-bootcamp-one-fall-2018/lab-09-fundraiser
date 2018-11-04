@@ -37,8 +37,24 @@ var productList = [
 ];
 
 const productsApi = {
+    init() {
+        localStorage.setItem('currentProducts', JSON.stringify(productList));
+    },
+    
+    storeNewProduct(newProduct) {
+        var products = JSON.parse(localStorage.getItem('newProduct'));
+
+        if(products) {
+            products.push(newProduct);
+        } else {
+            products = [newProduct];
+        }
+
+        localStorage.setItem('currentProducts', JSON.stringify(products));
+    },
+    
     getProducts() {
-        return productList;
+        return JSON.parse(localStorage.getItem('currentProducts'));
     }
 };
 

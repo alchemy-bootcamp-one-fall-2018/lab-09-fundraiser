@@ -13,14 +13,16 @@ function removeProduct(index) {
         count++;
     });
 
+    productsApi.storeProducts(products);
     displayAdminProducts();
 }
 
 function displayAdminProducts() {
     const pickList = document.querySelector('#adminCatalog .pickList');
     const products = productsApi.getProducts();
-    
+
     if(pickList){
+        pickList.innerHTML = '';
         products.forEach(function(product) {
             var node = document.createElement('li');
             node.innerHTML = `
@@ -42,6 +44,24 @@ function displayAdminProducts() {
             });
         });
     }
+}
+addItem();
+
+function addItem() {
+    const form = document.getElementById('addItemForm');
+    const inputs = document.querySelectorAll('input, textarea');
+    var newProduct = {};
+    //const options = document.querySelectorAll('option');
+
+
+
+    form.addEventListener('submit', function() {
+        inputs.forEach(function(input) {
+            newProduct[input.name] = input.value;
+        });
+        
+    });
+
 }
 
 const adminProducts = {
