@@ -1,9 +1,10 @@
 function makeProduct(product) {
     const html = /*html*/`
         <li class="product">
-            <h3 class="name" style="background: ${product.price};">
+            <h3 class="name" style="background: ${product.color};">
                 ${product.name}
             </h3>
+            <h3>${product.price}</h3>
             <img src="assets/${product.image ? product.image : 'logo.png'}">
             <p class="description"> ${product.description}  
             </p>
