@@ -11,5 +11,5 @@ import custInfo from './checkout-page.js';
 
 listOrders.init();
 
-//custInfo.init();
+custInfo.init(JSON.parse(localStorage.getItem('cart')));
 

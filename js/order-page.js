@@ -9,8 +9,6 @@ function checkout() {
 
     if(checkoutButton) {
         checkoutButton.addEventListener('click', function(){
-            const cart = JSON.parse(localStorage.getItem('cart')); 
-            custInfo.init(cart);
             window.location = '../html/checkout-page.html';
         });
     }
