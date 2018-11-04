@@ -1,0 +1,9 @@
+#cover-image {
+    background-repeat: no-repeat;
+}
+#logo {
+    position: relative;
+}
+button {
+    border-radius: 12px;
+}
