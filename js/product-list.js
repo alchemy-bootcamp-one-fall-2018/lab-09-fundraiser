@@ -46,10 +46,15 @@ const productList = {
                 // cart.push(product);
                 // makeProduct();
             // };
+
+            cart.push(product);
+            makeProduct();
+
+             // append to <ul>, this will empty the fragment
+            list.appendChild(dom);
         });
 
-        // append to <ul>, this will empty the fragment
-        list.appendChild(dom);
+       
     },
     remove(index) {
         list.querySelectorAll('li')[index].remove();
