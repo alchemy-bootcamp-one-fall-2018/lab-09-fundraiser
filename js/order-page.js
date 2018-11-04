@@ -2,6 +2,19 @@
 
 import productsApi from './products-api.js';
 import addToCart from './add-to-cart.js';
+import custInfo from './checkout-page.js';
+
+function checkout() {
+    const checkoutButton = document.getElementById('checkout');
+
+    if(checkoutButton) {
+        checkoutButton.addEventListener('click', function(){
+            const cart = JSON.parse(localStorage.getItem('cart')); 
+            custInfo.init(cart);
+            window.location = '../html/checkout-page.html';
+        });
+    }
+}
 
 const listOrders = {
     init() {
@@ -32,7 +45,10 @@ const listOrders = {
             });
         });
 
+        checkout();
     }
 };
+
+
 
 export default listOrders;

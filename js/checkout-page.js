@@ -19,12 +19,11 @@ function storeCustInfo() {
 }
 
 const custInfo = {
-    init() {
+    init(cart) {
         if(form){
             form.addEventListener('submit', function(event) {
                 event.preventDefault();
                 input = document.querySelectorAll('input');
-                console.log(input);
                 storeCustInfo();
             });
         }   
