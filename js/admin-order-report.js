@@ -5,8 +5,13 @@ const customers = JSON.parse(localStorage.getItem('customers'));
 
 
 function displayDetails() {
-    
+    const detailsButton = document.querySelectorAll('.details');
 
+    detailsButton.forEach(function(button) {
+        button.addEventListener('click', function() {
+            console.log(button.id);
+        });
+    });
 }
 
 const orderReport = {
@@ -17,7 +22,7 @@ const orderReport = {
                 var node = document.createElement('li');
                 node.innerHTML = `
                     <p>${customer.fName}</p>
-                    <button class="details">Details</button>
+                    <button class="details" id="${customer.custId}">Details</button>
                      `;
               
                 custOrders.appendChild(node);
