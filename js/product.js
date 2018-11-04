@@ -21,6 +21,12 @@ const addProduct = {
                 
                 
             };
+            // wanted to turn name all caps --feature not working 
+            //var uppercased = document.querySelector('.name');
+            // var property = window.getComputedStyle(uppercased).getPropertyValue('text-transform');
+            // if(property === 'uppercase') {
+            //     uppercased.style.letterSpacing = '5px';
+            // }  
             onAdd(product);
             
             form.reset();
