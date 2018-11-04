@@ -1,12 +1,14 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
     background-color: #faf0e6;
-
+    width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -15,42 +17,47 @@ a {
     border: 3px solid gray;
     padding: 4px;
     background-color: white;
+    line-height: 2.5em;
+    margin: 0px 0.3%;
 }
 
 main {
-    padding-left: 40px;
-    padding-right: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
     padding-top: 40px;
+    line-height: 2em;
 }
 
 header {
     background-color: orange;
     margin: 0;
-    padding: 30px 20px;
     border-bottom: 4px solid black;
-    display: flex;
-}
+    text-align: center;
+    padding: 30px 20px;
+    width: 100%;
 
-nav {
-    display: inline-block;
 }
 
 ul {
     list-style-type: none;
+    width: 100vw;
     display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
 }
 
 li {
     border: 1px solid black;
     padding: 3px;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 3%;
     width: 20%;
-    justify-content: space-around;
-    margin-right: 3%;
+    min-width: 150px;
     background-color: white;
-}
-
-li:first-child {
-    margin-left: -1%;
+    text-align: center;
+    justify-items: space-between;
 }
 
 img {

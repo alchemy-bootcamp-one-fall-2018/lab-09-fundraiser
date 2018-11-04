@@ -16,6 +16,12 @@ let products = [
         price: '$20.00',
         animal: 'For: Birds',
         image: 'bird-feeder.jpeg'
+    },
+    {
+        name: 'Mouse Toy',
+        price: '$80.00',
+        animal: 'For: Cats',
+        image: 'mouse.jpeg'
     }
 ];
 

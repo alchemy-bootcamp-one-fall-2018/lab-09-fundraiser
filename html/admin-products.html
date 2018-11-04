@@ -6,6 +6,8 @@
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>OHS Fundraiser</title>
      <link rel="stylesheet" href="../css/styles.css">
+     <link rel="stylesheet" href="../css/admin-add.css">
+
  </head>
  <body>
      <header>
@@ -26,18 +28,25 @@
          <h2>Add a Product</h2>
 
             <form id="product-form">
-                <label>
-                    Product name
-                    <input required name="name">
-                </label>
-                <label for="price">
-                    Price
-                    <input type="text" id="price" name="price">
-                </label>
-                <label>
-                    Image
-                    <input name="image" type="text">
-                </label>
+                <div>
+                    <label>
+                        Product name
+                        <input required name="name">
+                    </label>
+                </div>
+                <div>
+                    <label for="price">
+                        Price
+                        <input type="text" id="price" name="price">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Image
+                        <input name="image" type="text">
+                    </label>
+                </div>
+                <div>
                 <label>Animal</label>
                     <select id="animal" name="animal">
                         <option value="" hidden disabled selected>Select an animal</option>
@@ -45,6 +54,7 @@
                         <option value="For: Cats">Cat</option>
                         <option value="For: Birds">Bird</option>                
                     </select>
+                </div>
                 <button>Submit</button>
             </form>
         </section>

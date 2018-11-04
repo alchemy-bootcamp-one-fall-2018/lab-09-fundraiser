@@ -8,7 +8,7 @@ const getCart = {
     display(cart) {
         for(let i = 0; i < cart.length; i++) {
             const item = document.createElement('li');
-            item.textContent = cart[i].name + ' ' + cart[i].price + ' ' + cart[i].quantity;
+            item.textContent = cart[i].name + ' ' + cart[i].price + ' ' + '(' + cart[i].quantity + ')';
             orderSummary.appendChild(item);
         }
     }
