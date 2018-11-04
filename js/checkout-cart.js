@@ -14,8 +14,7 @@ function makeItem(item){
 
 }
 
-const list = document.getElementById('product-list');
-
+const list = document.getElementById('checkout-page');
 
 const shoppingCart = {
     init(cart) {

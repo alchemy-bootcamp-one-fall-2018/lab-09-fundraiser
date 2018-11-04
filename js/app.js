@@ -2,6 +2,7 @@ import addProduct from './add-product.js';
 import itemTable from './product-list.js';
 import productApi from './products-api.js';
 
+
 const products = productApi.getAll();
 
 
