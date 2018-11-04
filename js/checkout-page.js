@@ -15,8 +15,10 @@ function storeCustInfo(cart) {
         }
     });
     if(customers) {
+        tempCust['custId'] = customers.length;
         customers.push(tempCust);
     } else {
+        tempCust['custId'] = 0;
         customers = [tempCust];
     }
     localStorage.setItem('customers', JSON.stringify(customers));

@@ -3,6 +3,12 @@
 const custOrders = document.getElementById('custOrders');
 const customers = JSON.parse(localStorage.getItem('customers'));
 
+
+function displayDetails() {
+    
+
+}
+
 const orderReport = {
 
     init() {
@@ -13,14 +19,12 @@ const orderReport = {
                     <p>${customer.fName}</p>
                     <button class="details">Details</button>
                      `;
-                     
+              
                 custOrders.appendChild(node);
-
-            });
-            
+                displayDetails();
+            });          
         }
     }
-
 };
 
 export default orderReport;
