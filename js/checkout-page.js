@@ -30,6 +30,7 @@ const custInfo = {
                 event.preventDefault();
                 input = document.querySelectorAll('input');
                 storeCustInfo(cart);
+                form.reset();
             });
         }   
     }
