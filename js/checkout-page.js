@@ -27,6 +27,15 @@ function storeCustInfo(cart) {
     tempCust = {};
 }
 
+function resetPage() {
+    const sideItems = document.querySelector('.sideItems'); 
+
+    form.reset();
+    localStorage.removeItem('cart');
+    localStorage.removeItem('cartTotal');
+    sideItems.innerHTML = '<h3 class="green">Order Submitted!</h3>';
+}
+
 const custInfo = {
     init(cart) {
         if(form){
@@ -34,7 +43,7 @@ const custInfo = {
                 event.preventDefault();
                 input = document.querySelectorAll('input');
                 storeCustInfo(cart);
-                form.reset();
+                resetPage();
             });
         }   
     }

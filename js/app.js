@@ -1,6 +1,5 @@
 'use strict';
 
-//clear cart on submit form
 //display details on click
 //product page
 
