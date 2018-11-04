@@ -13,49 +13,38 @@
     
     <main>
 
-        <section class="limit-items">
-            <ul id="products" class="limit-items"></ul>
-        </section>
-
-        <section id="shopping-cart">
-            <h2>Shopping Cart</h2>
-            <ul id="cart-list"></ul>
-            <p id="total">Total: </p>
+        <section id="order-summary">
+            <h2>Order Summary</h2>
+            <ul id="summary"></ul>
         </section>
         
         <section>
             <form id="customer-info">
                 <label>
-                    First Name
-                    <input type="text">
-                </label>
-                <label>
-                    Last Name
-                    <input type="text">
+                    Full Name
+                    <input type="text" name="name">
                 </label>
                 <label>
                     Shipping Address
-                    <input type="text" id="address">
+                    <input type="text" id="address" name="address">
                 </label>
 
                 <label>
-                    Check here if billing address is different
-                    <input type="checkbox" id="add-checkbox">
+                    Same as Billing Address
+                    <input type="checkbox" id="add-checkbox" onclick="SetBilling(this.checked);" checked="checked">
                 </label>
 
                 <label>
                     Billing Address
-                    <input type="text" class="billing-address">
+                    <input type="text" id="billing-address">
                 </label>
 
-            <button type="submit">Submit</button>    
+            <button type="submit">Submit Order</button>    
             </form>
         </section>
-
-        <a href="" >Buy</a>
     </main>
 </body>
 
-    <script type="module" src="./js/order-app.js"></script>
+    <script type="module" src="./js/checkout-app.js"></script>
 
     </html>

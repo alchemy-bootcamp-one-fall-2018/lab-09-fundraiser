@@ -1,8 +1,10 @@
 import html from './html.js';
+import cartApi from './cartApi.js';
 
 function makeProduct(product) {
-    return html`
+    return html `
         <li>${product.name} (${product.quantity})</li>
+        <button id="remove">Remove</button>
     `;
 }
 
@@ -12,7 +14,19 @@ const shoppingCart = {
     init(cart) {
         for(let i = 0; i < cart.length; i++) {
             const dom = makeProduct(cart[i]);
+            dom.getElementById('remove').addEventListener('click', function() {
+                cartApi.remove(cart[i]);
+                shoppingCart.update(cart);
+            });
             list.appendChild(dom);
+            const total = document.getElementById('total');
+
+            var totalItems = 0;
+            for(let i = 0; i < cart.length; i++) {
+                totalItems += cart[i].quantity;
+
+            }
+            total.textContent = 'Total items: ' + totalItems;
         }
     },
     update(cart) {
@@ -22,16 +36,6 @@ const shoppingCart = {
         shoppingCart.init(cart);
     }
 };
-
-const addressCheckbox = document.getElementById('add-checkbox');
-// const addressShipping = document.getElementById('address');
-
-if(addressCheckbox.checked) {
-    console.log(12);
-    // addressShipping = '';
-
-}
-
 
 
 export default shoppingCart;

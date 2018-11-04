@@ -1,7 +1,4 @@
-let cart = [{
-    name: 'Bison',
-    quantity: 1
-}];
+let cart = [];
 
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -31,6 +28,19 @@ const cartApi = {
         }
         saveCart();
 
+    },
+    remove(product) {
+        const orderProduct = cart.find(item => {
+            return item.name === product.name;
+        });
+        if(orderProduct !== 1) {
+            orderProduct.quantity--;
+        } 
+        else {
+            const index = cart.indexOf(product);
+            cart.splice(index, 1);
+        }
+        saveCart();
     }
 };
 
