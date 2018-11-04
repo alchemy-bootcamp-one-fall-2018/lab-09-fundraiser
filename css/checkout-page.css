@@ -5,3 +5,7 @@
 button {
     margin-top: 2%;
 }
+
+#billingAddress {
+    display: none;
+}
