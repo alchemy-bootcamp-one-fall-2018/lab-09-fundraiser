@@ -5,6 +5,7 @@ function addProduct(product) {
             <h3 class="name">${product.name}</h3>
             <h3 class="detail">${product.detail}</h3>
             <h3 class="price">${product.price}</h3>
+            <img src="${product.image}">
         </li>
         `;
         

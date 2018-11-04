@@ -1,3 +1,8 @@
 .avoid-clicks {
     pointer-events: none;
   }
+
+img {
+    width: 300px;
+    height: 200px;
+}

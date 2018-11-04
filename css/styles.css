@@ -54,3 +54,21 @@
     border: 1px solid transparent;
     border-radius: 4px;
  }
+
+ .index-nav {
+    position: absolute;
+    display: flex;
+    width: 90vw;
+    justify-content: flex-end;
+    height: 10vh;
+    align-items: center;
+
+ }
+
+ .navbar {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    
+ }
+

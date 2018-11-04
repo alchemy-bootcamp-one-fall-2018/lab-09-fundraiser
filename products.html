@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/products.css">
 </head>
+
 <body>
+    <nav>
+        <a href="./index.html" class="navbar">Home</a>
+        <a href="./customer-report.html" class="navbar">Order Admin</a>
+        <a href="./order.html" class="navbar">Purchase</a>
+    </nav>
     <section>
         <h1>Products</h1>
         <ul id="products" class="avoid-clicks"></ul>
@@ -24,10 +31,15 @@
                 Detail:
                 <input type="text" name="detail" id="detail">
             </label>
-            
+
             <label for="">
                 Price:
                 <input type="number" name="price">
+            </label>
+
+            <label for="">
+                Image:
+                <input type="text" name="image">
             </label>
 
             <button type="submit">Submit</button>
@@ -36,5 +48,6 @@
 
 </body>
 
-    <script type="module" src="./js/app.js"></script>
+<script type="module" src="./js/app.js"></script>
+
 </html>
