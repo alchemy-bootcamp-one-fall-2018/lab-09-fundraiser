@@ -22,3 +22,5 @@ const shoppingCart = {
         shoppingCart.init(cart);
     }
 };
+
+export default shoppingCart;

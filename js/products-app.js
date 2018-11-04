@@ -10,7 +10,7 @@ const itemDetail = {
 
     // },
     update(item) {
-        console.log(section);
+        // console.log(section);
         itemDetail.item = item;
         section.querySelector('h3').textContent = item.name;
         section.querySelector('p').textContent = item.description;

@@ -1,13 +1,16 @@
 function makeItem(item) {
     const html = `
      <li class="item">
-        <h3 class="name"">
-            ${item.name}
-        </h3>
-        <p>
-            ${item.price}
-        </p>
-        <img src=${item.image} style="width: 100px">
+        <div class="click-target">
+            <h3 class="name"">
+                ${item.name}
+            </h3>
+            <p>
+                ${item.price}
+            </p>
+            <img src=${item.image} style="width: 100px">
+        </div>
+        <button>+</button> <button>-</button>
     </li>
     `;
     const template = document.createElement('template');
@@ -28,7 +31,7 @@ const itemList = {
     
     add(item) {
         const dom = makeItem(item);
-        const listItem = dom.querySelector('li');
+        const listItem = dom.querySelector('.click-target');
         console.log(listItem);
 
         listItem.addEventListener('click', function() {
