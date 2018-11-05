@@ -10,7 +10,8 @@ const addProduct = {
             const elements = form.elements; 
 
             const product = {
-                name: elements.name.value,
+                
+                name: elements.name.value, 
                 image: elements.image.value,
                 description: elements.description.value
             }; 
