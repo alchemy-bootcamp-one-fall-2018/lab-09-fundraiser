@@ -24,6 +24,21 @@ const cartApi = {
             });
         }
         saveCart();
+    },
+    remove(meal) {
+        const orderItem = cart.find(item => {
+            return item.name === meal.name;
+        });
+        if(orderItem) {
+            if(orderItem.quantity !== 1) {
+                orderItem.quantity--;
+            }
+            else {
+                const index = cart.indexOf(meal);
+                cart.splice(index, 1);
+            }
+        }
+        saveCart();
     }
 };
 

@@ -36,6 +36,14 @@ const mealsApi = {
     add(meal) {
         meals.push(meal);
         saveMeals();
+    },
+    remove(meal) {
+        const index = meals.indexOf(meal);
+        if(index !== -1) {
+            meals.splice(index, 1);
+            saveMeals();
+            return index;
+        }
     }
 };
 

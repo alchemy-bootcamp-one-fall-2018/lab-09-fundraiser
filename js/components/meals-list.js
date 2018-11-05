@@ -36,7 +36,9 @@ const mealList = {
             mealList.onSelect(meal);     // INCREASE CART COUNT
         });
         list.appendChild(dom);
-        // TODO: remove function
+    },
+    remove(index) {
+        list.querySelectorAll('li') [index].remove();
     }
 };
 
