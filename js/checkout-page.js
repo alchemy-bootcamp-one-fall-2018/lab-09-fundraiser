@@ -37,11 +37,11 @@ function resetPage() {
 }
 
 const custInfo = {
-    init(cart) {
+    init() {
         
         if(form){
             form.addEventListener('submit', function(event) {
-                cart = JSON.parse(localStorage.getItem('cart'));
+                const cart = JSON.parse(localStorage.getItem('cart'));
                 event.preventDefault();
                 input = document.querySelectorAll('input');
                 storeCustInfo(cart);

@@ -1,6 +1,8 @@
 'use strict';
 
 
+//add rest of products to productList array
+//reset form in admin product page
 //remove type undefined off admin checkout
 //add quantity option
 
@@ -15,6 +17,6 @@ import productsApi from './products-api.js';
 
 productsApi.init();
 listOrders.init();
-custInfo.init(JSON.parse(localStorage.getItem('cart')));
+custInfo.init();
 orderReport.init();
 adminProducts.init();
