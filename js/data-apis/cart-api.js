@@ -1,7 +1,10 @@
 let cart = [];
+
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
+    // console.log(cart); // add cart string data to console after click
 }
+
 const cartApi = {
     get() {
         const json = localStorage.getItem('cart');
@@ -19,7 +22,10 @@ const cartApi = {
         }
         else {
             cart.push({
+                id: meal.id,
                 name: meal.name,
+                description: meal.description,
+                cost: meal.cost,
                 quantity: 1
             });
         }
@@ -39,6 +45,7 @@ const cartApi = {
             }
         }
         saveCart();
+
     }
 };
 

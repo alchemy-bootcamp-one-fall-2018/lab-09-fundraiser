@@ -2,15 +2,17 @@ import cartApi from '../data-apis/cart-api.js';
 
 
 function makeItem(item) {
-    const html = /*html*/`        
-    <li>${item.name}<strong>(${item.quantity})</strong></li>
-        <button id="add" type="submit">Add</button>
-        <button id="remove" type="remove">Remove</button>
+    const html = /*html*/`
+    <li>${item.name} x (${item.quantity}) <strong>$${item.quantity * item.cost}</strong>
+        <button class="add-remove" id="add" type="submit">+</button>
+        <button class="add-remove" id="remove" type="remove">-</button></li>
     `;
+
     const template = document.createElement('template');
     template.innerHTML = html;
     return template.content;
 }
+
 
 const list = document.getElementById('cart-list');
 
@@ -24,6 +26,7 @@ const shoppingCart = {
             });
             dom.getElementById('remove').addEventListener('click', function() {
                 cartApi.remove(cart[i]);
+                shoppingCart.update(cart);
             });
             list.appendChild(dom);
         }

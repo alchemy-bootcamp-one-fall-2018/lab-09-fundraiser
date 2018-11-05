@@ -1,9 +1,12 @@
-const section = document.getElementById('items-selected');
+// const section = document.getElementById('item-descriptions');
+
+// TODO: IS THIS CODE NECESSARY?
+
 const mealDetail = {
     update(meal) {
         mealDetail.meal = meal;
-        section.querySelector('h2').textContent = meal.name;
-        section.querySelector('p').textContent = meal.description;
+        document.querySelector('h2').textContent = meal.name;
+        document.querySelector('p').textContent = meal.description;
     }
 };
 

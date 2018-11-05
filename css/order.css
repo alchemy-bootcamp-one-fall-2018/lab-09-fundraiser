@@ -4,6 +4,7 @@
 
 nav a {
     font-weight: bold;
+    color: purple;
 }
 nav a:hover {
     color: green;
@@ -49,22 +50,66 @@ button a:hover {
     color: yellow;
 }
 
+button.add-remove:hover {
+    color: black;
+}
+
+button.add-remove {
+    background-color: rgba(0, 128, 0, 0.603);
+    border-radius: 1em;
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin: 0px 10px 0px 10px;
+    /* font-family: monospace; */
+    /* background-color: red; */
+    cursor: pointer;
+}
+
 ul#meals {
     list-style-type: none;
     padding-left: 0px;
+    display: flex;
+    justify-content: space-around;
 }
 ul#meals li:hover {
     color: red;
+    cursor: pointer;
+    opacity: .7;
 }
 
 ul#cart-list {
     list-style: circle inside;
     padding-left: 0px;
+    /* cursor: pointer; */
 }
 ul#cart-list li {
     margin: 10px auto;
 }
 
 hr {
-    border: 2px solid green;
+    border: 1px dashed green;
+}
+
+p.green {
+    color: green;
+}
+
+#test {
+    background-color: purple;
+}
+
+
+/* ------------- mobile style ----------------- */
+@media screen and (max-width: 400px) {
+    ul#meals {
+        font-size: 9px;
+    }
+    img {
+        width: 50%;
+    }
+    button.add-remove {
+        font-size: 15px;
+    }
 }

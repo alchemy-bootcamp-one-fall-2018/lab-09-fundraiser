@@ -1,7 +1,27 @@
 let orders = [
     {
-        name: 'Susan Somers',
-        address: '1212 Happy Pl'
+        customer: {
+            name: 'Suzanne Somers',
+            address: '1212 Happy Pl'
+        },
+        meals: [
+            {
+                name: 'order1',
+                quantity: 2
+            }
+        ]
+    },
+    {
+        customer: {
+            name: 'Janelle Monáe',
+            address: '#42 Jollopy Ave'
+        },
+        meals: [
+            {
+                name: 'order2',
+                quantity: 3
+            }
+        ]
     }
 ];
 
