@@ -1,3 +1,18 @@
 .limit-items li:nth-of-type(1 + 1) {
     display: none;
 }
+
+.index-nav {
+    position: absolute;
+    display: flex;
+    width: 95vw;
+    justify-content: flex-end;
+    height: 5vh;
+    align-items: center;
+ }
+
+.navbar {
+    padding: 10px;
+    color: #2e6da4;
+    text-decoration: none;
+}
