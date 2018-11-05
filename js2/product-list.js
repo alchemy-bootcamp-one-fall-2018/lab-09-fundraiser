@@ -5,6 +5,7 @@ function makeProduct(product) {
             <p>${product.description}</p>
             <p>${product.price}</p>
             <img src=${product.image} style="width: 100px">
+            <button class="danger">Remove This</button>
         </li>
     `;
 
@@ -16,15 +17,25 @@ function makeProduct(product) {
 const list = document.getElementById('product-list');
 
 const productList = {
-    init(products) {
+    init(products, onRemove) {
         for(let i = 0; i < products.length; i++) {
-            productList.create(products[i]);
+            productList.addDom(products[i]);
         }
+
+        productList.onRemove = onRemove;
     },
-    create(product) {
+    addDom(product) {
         const li = makeProduct(product);
+        
+        const removeButton = li.querySelector('button');
+        const listItem = li.querySelector('li');
+        removeButton.addEventListener('click', function() {
+            productList.onRemove(product);
+            listItem.remove();
+        });
+
         list.appendChild(li);
-    }      
+    }    
 };
 
 export default productList;
