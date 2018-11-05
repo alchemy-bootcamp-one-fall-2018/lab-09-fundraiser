@@ -3,7 +3,7 @@ import cartApi from './cart-api.js';
 
 function makeItem(item){
     const html = /*html*/` 
-    <li> ${item.name}${item.price}${item.quantity} </li>
+    <li> Item:${item.name}Quantity:${item.quantity} </li>
     <button id="add">Add</button>
     `;
 
