@@ -1,12 +1,21 @@
-const orders = [];
+import cartApi from './cart-api.js';
+
+const cart = cartApi.get();
+
+
+
+const ordersData = [];
 
 function saveOrders() {
-    localStorage.setItem('orders', JSON.stringify(orders));
+    localStorage.setItem('orders', JSON.stringify(ordersData));
 }
 
 const orderApi = {
     add(order) {
-        orders.push(order);
+        let newOrder = {};
+        newOrder.customer = order;
+        newOrder.products = cart;    
+        ordersData.push(newOrder);
         saveOrders();
     }
 };
