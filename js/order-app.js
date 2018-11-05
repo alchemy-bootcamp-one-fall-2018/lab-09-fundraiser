@@ -11,4 +11,7 @@ shoppingCart.init(cart);
 productList.init(products, function(product) {
     cartApi.add(product);
     shoppingCart.update(cart);
+}, function(product) {
+    cartApi.remove(product);
+    shoppingCart.update(cart);
 });

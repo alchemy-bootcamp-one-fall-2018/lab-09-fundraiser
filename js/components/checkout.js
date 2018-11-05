@@ -1,5 +1,3 @@
-// getting form data
-
 const form = document.getElementById('billing');
 
 const itemForm = {
@@ -22,15 +20,13 @@ const itemForm = {
 
             customer.zip = elements.zip.value;
             
-            // console.log(customer.address);
-            
             onAdd(customer);
             
             form.reset();
         });
         
         const checkbox = document.getElementById('same');
-        //need to gather customer shipping address here
+
         checkbox.addEventListener('change', function() {
             if(checkbox.value === 'checked') {
                 const shipAddress = document.getElementById('s-address');

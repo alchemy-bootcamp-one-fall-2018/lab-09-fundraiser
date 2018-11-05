@@ -6,9 +6,7 @@ function saveCustomer() {
 
 const customerApi = {
     add(customer) {
-        // 1. add to our array
         customers.push(customer);
-        // 2. save array to localStorage
         saveCustomer();
     }
 };
