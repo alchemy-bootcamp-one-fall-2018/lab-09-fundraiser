@@ -30,8 +30,9 @@ aside {
 }
 
 footer {
-    margin-top: 5%;
     clear: both;  
+    margin-top: 5%;
+    border: 1px solid red;
 }
 
 a:hover {

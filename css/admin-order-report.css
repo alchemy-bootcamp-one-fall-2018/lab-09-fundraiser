@@ -30,3 +30,7 @@ p, pre {
 span {
     font-weight: bold;
 }
+
+td, tr, th {
+    padding: 2%;
+}

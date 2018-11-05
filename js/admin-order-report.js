@@ -50,10 +50,11 @@ const orderReport = {
     init() {
         if(custOrders && customers) {
             customers.forEach(function(customer) {
-                var node = document.createElement('li');
+                var node = document.createElement('tr');
                 node.innerHTML = `
-                    <pre>${customer.fName}  Total: $${customer.cartTotal}</pre>
-                    <button class="details" id="${customer.custId}">Details</button>
+                    <td>${customer.fName}</td>
+                    <td>$${customer.cartTotal}</td>
+                    <td><button class="details" id="${customer.custId}">Details</button></td>
                      `;
               
                 custOrders.appendChild(node);
