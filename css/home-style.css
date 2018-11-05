@@ -1,0 +1,19 @@
+img {
+    width: 50%;   
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h2 {
+    font-size: 50pt; 
+    text-align: center; 
+}
+
+.anchor {
+    text-align: center; 
+}
