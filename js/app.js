@@ -1,13 +1,9 @@
 'use strict';
 
 
-//add rest of products to productList array
-//reset form in admin product page
+//remove option on admin order report
 //remove type undefined off admin checkout
 //add quantity option
-
-
-
 
 import listOrders from './order-page.js';
 import custInfo from './checkout-page.js';

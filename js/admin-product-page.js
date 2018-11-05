@@ -51,7 +51,6 @@ function addItem() {
     const form = document.getElementById('addItemForm');
     const inputs = document.querySelectorAll('input, textarea');
     var newProduct = {};
-    //const options = document.querySelectorAll('option');
 
     if(form) {
         form.addEventListener('submit', function(event) {
@@ -61,6 +60,7 @@ function addItem() {
             });
             productsApi.storeNewProduct(newProduct);
             displayAdminProducts();
+            form.reset();
         });
     }
 }
