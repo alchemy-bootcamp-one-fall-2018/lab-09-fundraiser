@@ -19,6 +19,11 @@ const customerInfo = {
             customerDetails.reset();
         });
     }
+
+    
 };
+
+
+
 
 export default customerInfo;
