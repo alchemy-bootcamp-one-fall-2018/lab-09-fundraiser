@@ -25,6 +25,6 @@ const productsApi = {
     }
 };
 
-console.log(products);
+// console.log(products);
 
 export default productsApi;

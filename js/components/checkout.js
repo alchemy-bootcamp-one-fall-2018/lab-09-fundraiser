@@ -22,7 +22,7 @@ const itemForm = {
 
             customer.zip = elements.zip.value;
             
-            console.log(customer.address);
+            // console.log(customer.address);
             
             onAdd(customer);
             
