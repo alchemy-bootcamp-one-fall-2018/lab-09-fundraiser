@@ -4,7 +4,7 @@ import cartApi from './cart-api.js';
 let cart = cartApi.get();
 let customers = customerApi.getAll();
 
-const customerOrders = document.getElementById('customer-list');
+const customerOrders = document.getElementById('customer-information');
 
 const getCustomers = {
     display(customers) {
@@ -26,3 +26,4 @@ const getCustomers = {
 };
 
 getCustomers.display(customers);
+

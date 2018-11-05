@@ -2,12 +2,12 @@ let customer = [];
 
 
 function saveCustomer() {
-    localStorage.setItem('customer', JSON.stringify(customer));
+    localStorage.setItem('customer-information', JSON.stringify(customer));
 }
 
 const customerApi = {
-    get() {
-        const json = localStorage.getItem('customer');
+    getAll() {
+        const json = localStorage.getItem('customer-information');
         if(json) {
             customer = JSON.parse(json);
         }        
