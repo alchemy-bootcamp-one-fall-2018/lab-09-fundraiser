@@ -32,7 +32,6 @@ const itemList = {
     add(item) {
         const dom = makeItem(item);
         const listItem = dom.querySelector('.click-target');
-        console.log('cool');
 
         listItem.addEventListener('click', function() {
             itemList.onSelect(item);
