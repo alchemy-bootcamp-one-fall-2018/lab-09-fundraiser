@@ -10,7 +10,10 @@ shoppingCart.init(cart);
 
 cookieList.init(cookies, function(cookie) {
     cartApi.add(cookie);
-    // cartApi.remove(cookie);
+
+    shoppingCart.update(cart);
+}, function(cookie) {
+    cartApi.remove(cookie);
     shoppingCart.update(cart);
 });
 

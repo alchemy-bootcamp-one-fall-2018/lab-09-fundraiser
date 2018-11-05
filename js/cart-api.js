@@ -33,8 +33,14 @@ const cartApi = {
         });
         if(orderItem) {
             orderItem.quantity--;
+            if(orderItem.quantity === 0) {
+                const index = cart.findIndex(item => {
+                    return item.name === cookie.name;
+                });
+                cart.splice(index, 1);
+                
+            }
         }
-       
         saveCart();
     }    
 };

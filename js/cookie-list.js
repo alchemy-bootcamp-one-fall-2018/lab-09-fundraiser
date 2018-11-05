@@ -11,7 +11,7 @@ function makeCookie(cookie) {
             <img src="${cookie.image}"/>
 
         </li>
-        <button id="${cookie.id}">Remove</button>
+        <button id="${cookie.id}"> Remove</button>
                 `;
 
     const template = document.createElement('template');
@@ -25,35 +25,27 @@ const list = document.getElementById('cookies');
 
 
 const cookieList = {
-    init(cookies, onSelect) {
+    init(cookies, onIncrement, onDecrement) {
         for(let i = 0; i < cookies.length; i++) {
             cookieList.add(cookies[i]);
         }
         cookieList.cookies = cookies;
-        cookieList.onSelect = onSelect;
+        cookieList.onIncrement = onIncrement;
+        cookieList.onDecrement = onDecrement;
     },
     add(cookie) {
     
         const dom = makeCookie(cookie);
         const listItem = dom.querySelector('li');
         listItem.addEventListener('click', function() {
-            cookieList.onSelect(cookie);
+            cookieList.onIncrement(cookie);
         });
-        
+        const buttonRemove = dom.querySelector('button');
+        buttonRemove.addEventListener('click', function() {
+            cookieList.onDecrement(cookie);
+        });
         list.appendChild(dom);
     },
-    
-    remove(cookie) {
-        const removeButton = document.getElementById(cookie.id);
-        console.log('***', removeButton);
-        
-        removeButton.addEventListener('click', function() {
-            cookieList.onSelect(cookie);  
-        });    
-    }
-
- 
- 
 };
 
 export default cookieList;
