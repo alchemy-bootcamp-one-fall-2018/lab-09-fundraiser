@@ -15,25 +15,26 @@ const getCart = {
 };
 
 const form = document.getElementById('customer-info');
+const elements = form.elements;
 
 const orderForm = {
     init(onAdd) {
+        
         form.addEventListener('submit', function(event) {
             event.preventDefault();
-
-            const elements = form.elements;
+            
             const customer = {};
-
+            
             customer.name = elements.name.value;
             customer.streetAddress = elements['address'].value;
-
+            
             onAdd(customer);
-
+            
             form.reset();
-
+            
         });
         
-    }
+    }, 
 };
 
 orderForm.init(function(customer) {
@@ -41,19 +42,19 @@ orderForm.init(function(customer) {
     customersApi.add(customer);
 });
 
-getCart.display(cart);
+const addCheckbox = document.getElementById('add-checkbox');
+addCheckbox.addEventListener('change', function() {
+    console.log(elements.addCheckbox.checked);
+    const billing = document.getElementById('billing-address');
 
-
-function setBilling(checked) {
-    if(checked) {
-        document.getElementById('address').style.display = 'none';
-        document.getElementById('billing-address').value = ''; 
-    } else {
-        document.getElementById('address').style.display = 'block';
-        document.getElementById('billing-address').value = document.getElementById('address').value; 
+    if(elements.addCheckbox.checked) {
+        billing.style.display = 'none';
+    } else if(!elements.addCheckbox.checked) {
+        billing.style.display = 'block';
     }
-}
+  
+});
 
-setBilling();
+getCart.display(cart);
 
 export default orderForm;
