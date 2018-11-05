@@ -1,6 +1,10 @@
 .avoid-clicks {
     pointer-events: none;
-  }
+}
+
+body {
+    background-color: #EAEBED;
+}
 
 img {
     width: 300px;

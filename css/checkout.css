@@ -5,7 +5,11 @@
     justify-content: flex-end;
     height: 5vh;
     align-items: center;
- }
+}
+
+body {
+    background-color: #EAEBED;
+}
 
 .navbar {
     padding: 10px;
