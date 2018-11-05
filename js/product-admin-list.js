@@ -21,7 +21,7 @@ function makeProduct(product) {
     
 }
 
-const list = document.getElementById('products');
+const list = document.getElementById('new-product');
 
 const productList = {
     init(products, onSelect) {
