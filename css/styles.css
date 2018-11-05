@@ -16,7 +16,6 @@ header img {
 header nav a {
     color: white;
     width: 10%;
-    /* display: block; */
 }
 
 header nav {
@@ -32,6 +31,10 @@ aside {
 footer {
     clear: both;  
     margin-top: 5%;
+}
+
+footer nav a {
+    margin-left: 2%;
 }
 
 a:hover {

@@ -2,7 +2,6 @@
 
 
 //remove option on admin order report
-//remove type undefined off admin checkout
 //add quantity option
 
 import listOrders from './order-page.js';
