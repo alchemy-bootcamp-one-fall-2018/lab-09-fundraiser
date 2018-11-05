@@ -4,7 +4,7 @@ const addProduct = {
         const form = document.getElementById('new-product'); 
 
         form.addEventListener('submit', function(event) {
-            console.log('submit'); 
+//            console.log('submit'); 
             event.preventDefault(); 
 
             const elements = form.elements; 
