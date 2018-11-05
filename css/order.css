@@ -6,3 +6,71 @@ img {
     width: 300px;
     height: 200px;
 }
+
+.index-nav {
+    position: absolute;
+    display: flex;
+    width: 95vw;
+    justify-content: flex-end;
+    height: 5vh;
+    align-items: center;
+ }
+
+.navbar {
+    padding: 10px;
+    color: #2e6da4;
+    text-decoration: none;
+    /* overflow: hidden;
+    background-color: #2e6da4;
+    position: fixed;
+    top: 0;
+    width: 100%; */
+ }
+
+ /* .navbar a {
+     float: right;
+     display: block;
+     color: #f2f2f2;
+     text-align: right;
+     padding: 14px 16px;
+     text-decoration: none;
+ } */
+
+ .products-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 40px;
+ }
+
+ h1 {
+    margin-bottom: 0px;
+ }
+
+ #products {
+     padding: 10px;
+ }
+
+ #shopping-cart {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+ }
+
+ #cart-list {
+    margin-left: -200px;
+ }
+
+ .name {
+
+ }
+
+ .detail {
+
+ }
+
+ .price {
+
+ }
