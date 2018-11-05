@@ -12,4 +12,3 @@ mealList.init(meals, function(meal) {
     cartApi.add(meal);
     shoppingCart.update(cart);
 });
-

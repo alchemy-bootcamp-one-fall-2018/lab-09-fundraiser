@@ -1,7 +1,11 @@
+
+
 function makeMeal(meals) {
     const html = /*html*/`
         <li class="meals">
            <h3 class="name">${meals.name}</h3>
+           <p>${meals.description}</p>
+           <img src="assets/meal-list/${meals.id}.jpg">
         </li>
 `;
     const template = document.createElement('template');
