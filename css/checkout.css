@@ -45,8 +45,8 @@ h2 {
     #customer-info {
         align-items: center;
     }
-    
-    #address {
-        display: inline-block;
+
+    .shipping-address {
+        display: flex;
     }
 }
