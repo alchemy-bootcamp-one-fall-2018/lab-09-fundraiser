@@ -23,9 +23,6 @@ h2 {
     padding-top: 20px;
     text-align: center;
 }
-.checkout-main {
-
-}
 
 #summary li {
     padding-bottom: 20px;
@@ -37,4 +34,9 @@ h2 {
 
 #customer-info label {
     padding: 20px 0px;
+}
+
+#customer-info {
+    display: flex;
+    flex-direction: column;
 }

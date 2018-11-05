@@ -4,7 +4,7 @@ function addProduct(product) {
         <li class="product">
             <h3 class="name">${product.name}</h3>
             <p class="detail">${product.detail}</p>
-            <h4 class="price">${product.price}</h4>
+            <h4 class="price">$${product.price}</h4>
             <img src="${product.image}">
         </li>
         `;
