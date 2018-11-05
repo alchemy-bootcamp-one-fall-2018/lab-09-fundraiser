@@ -10,7 +10,7 @@ function addTotal(){
     if(cartAside) {
         cartAside.forEach(function(item) {
             total = JSON.parse(localStorage.getItem('cartTotal'));
-            total += item.price;
+            total += parseInt(item.price);
         });
     } else {
         total = 0;

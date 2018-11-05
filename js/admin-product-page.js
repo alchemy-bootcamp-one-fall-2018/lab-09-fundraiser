@@ -21,7 +21,7 @@ function displayAdminProducts() {
     const pickList = document.querySelector('#adminCatalog .pickList');
     const products = productsApi.getProducts();
 
-    if(pickList){
+    if(pickList && products){
         pickList.innerHTML = '';
         products.forEach(function(product) {
             var node = document.createElement('li');
@@ -45,7 +45,6 @@ function displayAdminProducts() {
         });
     }
 }
-addItem();
 
 function addItem() {
     const form = document.getElementById('addItemForm');
@@ -53,20 +52,19 @@ function addItem() {
     var newProduct = {};
     //const options = document.querySelectorAll('option');
 
-
-
-    form.addEventListener('submit', function() {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
         inputs.forEach(function(input) {
             newProduct[input.name] = input.value;
         });
-        
+        productsApi.storeNewProduct(newProduct);
     });
-
 }
 
 const adminProducts = {
     init() {
         displayAdminProducts();
+        addItem();
     }
 };
 

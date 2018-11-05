@@ -38,15 +38,18 @@ var productList = [
 
 const productsApi = {
     init() {
-        localStorage.setItem('currentProducts', JSON.stringify(productList));
+        console.log(localStorage.getItem('currentProducts'));
     },
     
     storeNewProduct(newProduct) {
-        var products = JSON.parse(localStorage.getItem('newProduct'));
+        var products = JSON.parse(localStorage.getItem('currentProducts'));
+        console.log('products', products);
 
         if(products) {
+            newProduct['id'] = products.length;
             products.push(newProduct);
         } else {
+            newProduct['id'] = 0;
             products = [newProduct];
         }
 
