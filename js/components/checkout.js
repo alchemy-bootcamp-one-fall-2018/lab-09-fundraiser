@@ -13,7 +13,7 @@ const itemForm = {
             customer.email = elements.email.value;
 
             customer.address = elements.address.value;
-
+            
             customer.city = elements.city.value;
 
             customer.state = elements.state.value;
