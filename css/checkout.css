@@ -1,3 +1,66 @@
-section#hide-section {
-    display: none;
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+nav a {
+    font-weight: bold;
+}
+nav a:hover {
+    color: green;
+    font-weight: bold;
+}
+
+div.nav {
+    justify-content: space-evenly;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+h1.green {
+    font-weight: bolder;
+    color: green;
+}
+
+main {
+    display: block;
+    text-align: center;
+}
+
+ul#cart-list {
+    list-style: circle inside;
+    padding-left: 0px;
+}
+ul#cart-list li {
+    margin: 10px auto;
+}
+
+form {
+    display: block;
+}
+
+fieldset {
+    padding: 25px;
+}
+
+input {
+    height: 20px;
+    font-size: 16px;
+    margin: 14px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    border-radius: 12px;
+    width: 7em;
+    height: 3em;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    background-color: green;
+    margin: 10px auto;
 }
