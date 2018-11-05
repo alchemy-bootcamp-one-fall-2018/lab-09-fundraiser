@@ -26,10 +26,7 @@ function makeProduct(product) {
 const list = document.getElementById('products');
 
 const productList = {
-    // init
-    // should include:
-    // 1. initial products array
-    // 1. onRemove callback
+
 
     init(products, onSelect) {
         for(let i = 0; i < products.length; i++) {

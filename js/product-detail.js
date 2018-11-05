@@ -3,6 +3,7 @@ const section = document.getElementById('product-detail');
 const productDetail = {
     init(onRemove) {
         const removeButton = section.querySelector('button');
+        
         removeButton.addEventListener('click', function() {
             onRemove(productDetail.product);
             productDetail.product = null;
