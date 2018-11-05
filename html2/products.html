@@ -24,7 +24,27 @@
         </section>
         <section>
           <h2>Add Product</h2>
-          <button type="submit">Add</button>
+          <form id="add-form">
+              <label for="name" id="name-label">
+                  Name of Product:
+                  <input type="text" name="name" id="name">
+              </label>
+              <label for="description" id="desc-label">
+                  Description:
+                  <input type="text" name="description" id="description">
+              </label>
+              <label for="price" id="price-label">
+                  Price:
+                  <input type="text" name="price" id="price">
+              </label>
+              <label>
+                  Image:
+                  <input type="text" name="image" id="image">
+              </label>
+              <label>
+                  <button class="submit">Add</button>
+              </label>
+          </form>
         </section>
     </main>
     <script type="module" src="/js2/admin-app.js"></script>

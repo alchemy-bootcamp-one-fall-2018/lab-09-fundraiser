@@ -31,6 +31,10 @@ let products = [
     },   
 ];
 
+function saveProducts() {
+    localStorage.setItem('products', JSON.stringify(products));
+}
+
 const productsApi = {
     getAll() {
         const json = localStorage.getItem('products');
@@ -38,6 +42,10 @@ const productsApi = {
             products = JSON.parse(json);
         }
         return products;
+    },
+    add(product) {
+        products.push(product);
+        saveProducts();
     }
 };
 

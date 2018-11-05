@@ -3,6 +3,8 @@ function makeProduct(product) {
         <li class="product">
             <h3>${product.name}</h3>
             <p>${product.description}</p>
+            <p>${product.price}</p>
+            <img src=${product.image} style="width: 100px">
         </li>
     `;
 
