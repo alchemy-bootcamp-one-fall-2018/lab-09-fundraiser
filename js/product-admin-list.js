@@ -24,7 +24,7 @@ const list = document.getElementById('products');
 
 const productList = {
     init(products, onSelect) {
-        console.log('hello', products); 
+//        console.log('hello', products); 
         for(let i = 0; i < products.length; i++) {
             productList.add(products[i]);
         }
