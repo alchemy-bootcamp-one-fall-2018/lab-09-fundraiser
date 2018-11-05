@@ -35,10 +35,10 @@ const cartApi = {
         });
         if(orderProduct !== 1) {
             orderProduct.quantity--;
-        } 
-        else {
-            const index = cart.indexOf(product);
-            cart.splice(index, 1);
+            if(orderProduct.quantity === 0) {
+                const index = cart.indexOf(product);
+                cart.splice(index, 1);
+            }
         }
         saveCart();
     }
