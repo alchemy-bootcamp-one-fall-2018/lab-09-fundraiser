@@ -3,6 +3,7 @@ import customersApi from './customer-api.js';
 
 let cart = cartApi.get();
 const orderSummary = document.getElementById('summary');
+const orderMessage = document.getElementById('checkout-message');
 
 const getCart = {
     display(cart) {
@@ -40,6 +41,8 @@ const orderForm = {
                 onAdd(customer);
 
                 form.reset();
+
+                orderMessage.textContent = 'Checkout complete. Thank you for your order!'
             });
         }
     },

@@ -8,7 +8,6 @@ const customerOrders = document.getElementById('customer-orders');
 const getCustomers = {
     display() {
         const customers = customersApi.getAll();
-        console.log(customers);
         for(let i = 0; i < customers.length; i++) {
 
             const li = document.createElement('li');
@@ -16,10 +15,9 @@ const getCustomers = {
             customerOrders.appendChild(li);  
             
             for(let k = 0; k < customers[i].cart.length; k++) {
-                const item = document.createElement('li');
-                item.textContent += customers[i].cart[k].name;
+                const item = document.createElement('ul');
+                item.textContent += customers[i].cart[k].name + ' ' + customers[i].cart[k].quantity;
                 customerOrders.appendChild(item);
-                console.log(customers[i].cart[k]);
             }
         }
 

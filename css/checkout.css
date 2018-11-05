@@ -1,5 +1,12 @@
 body {
     font-size: 1em;
+    margin-bottom: 250px;
+}
+
+#checkout-message {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: navy;
 }
 
 li {
