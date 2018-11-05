@@ -28,6 +28,21 @@ const cartApi = {
         }
 
         saveCart(); 
+    }, 
+    //this is how we remove the product to keep from going into the negatives for the quantity
+    remove(product) {
+        const orderItem = cart.find(item => {
+            return item.name === product.name; 
+        }); 
+        if(orderItem) {
+            orderItem.quantity--;
+            if(orderItem.quantity === 0) {
+                const index = cart.findIndex(item => {
+                    return item.name === product.name; 
+                });
+                cart.splice(index, 1); 
+            }
+        }
     }
 }; 
 
