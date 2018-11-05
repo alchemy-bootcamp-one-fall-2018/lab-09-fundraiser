@@ -1,0 +1,40 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+nav a {
+    font-weight: bold;
+}
+nav a:hover {
+    color: green;
+    font-weight: bold;
+}
+
+div.nav {
+    justify-content: space-evenly;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+h1.green {
+    font-weight: bolder;
+    color: green;
+}
+main {
+    display: block;
+    text-align: center;
+}
+
+section ul#order-list {
+    list-style-type: none;
+    padding-left: 0px;
+}
+section ul#order-list li {
+    margin: 10px auto;
+}
+
+li:hover {
+    color: red;
+}

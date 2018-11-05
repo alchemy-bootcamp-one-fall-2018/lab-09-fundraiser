@@ -1,0 +1,70 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+nav a {
+    font-weight: bold;
+}
+nav a:hover {
+    color: green;
+    font-weight: bold;
+}
+
+div.nav {
+    justify-content: space-evenly;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+h1.green {
+    font-weight: bolder;
+    color: green;
+}
+
+main {
+    display: block;
+    text-align: center;
+}
+
+button {
+    border-radius: 12px;
+    width: 7em;
+    height: 3em;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    background-color: green;
+    margin: 10px auto;
+}
+button:hover {
+    background-color: green;
+}
+
+button a {
+    color: white;
+}
+button a:hover {
+    color: yellow;
+}
+
+ul#meals {
+    list-style-type: none;
+    padding-left: 0px;
+}
+ul#meals li:hover {
+    color: red;
+}
+
+ul#cart-list {
+    list-style: circle inside;
+    padding-left: 0px;
+}
+ul#cart-list li {
+    margin: 10px auto;
+}
+
+hr {
+    border: 2px solid green;
+}

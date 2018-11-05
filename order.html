@@ -5,39 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Products</title>
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-        <header>
-                <nav>
-                    <a href="./index.html">Home</a>
-                    <div>
-                        <a href="./order.html">Order</a>
-                        <a href="./checkout.html">Checkout</a>
-                    </div>
-                    <div>
-                        <a href="./products.html">Products</a>
-                        <a href="./orders.html">Orders</a>
-                    </div>
-                </nav>
-                <h1>Place an order</h1>
-            </header>
+    <div class="nav">
+    <header>
+            <nav>
+            <a href="./index.html">Home</a>
+                <a href="./order.html">Order</a>
+                <a href="./checkout.html">Checkout</a>
+                <a href="./products.html">Products</a>
+                <a href="./orders.html">Orders</a>
+            </nav>
+            <h1 class="green">Place an order</h1>
+        </header>
+    </div>
         <main>
-            <section id="shopping-cart">
-                <h2>Shopping Cart</h2>
-                <ul id="cart-list"></ul>
+        <section id="order">
+                <p>Please select a meal option below:</p>
             </section>
-            
             <section id="meal-list">
                 <ul id="meals">
                 </ul>
             </section>
-            <section id="items-selected">
+            <hr>
+            <section id="item-descriptions">
                 <ul></ul>
                 <h2></h2>
                 <p></p>
             </section>
+            <section id="shopping-cart">
+                <h2>Shopping Cart</h2>
+                <ul id="cart-list"></ul>
+                <p>Order Total:<span id="order-total"></span></p>
+            </section>
+            <hr>
             <section id="checkout-button">
-                <p>Order Total</p>
                 <button><a href="checkout.html">Checkout</a></button>  
             </section>
         </main>

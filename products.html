@@ -5,38 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Products</title>
+    <link rel="stylesheet" href="./css/products.css">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-        <header>
+    <div class="nav">
+            <header>
                 <nav>
-                    <a href="./index.html">Home</a>
-                    <div>
-                        <a href="./order.html">Order</a>
-                        <a href="./checkout.html">Checkout</a>
-                    </div>
-                    <div>
-                        <a href="./products.html">Products</a>
-                        <a href="./orders.html">Orders</a>
-                    </div>
+                <a href="./index.html">Home</a>
+                    <a href="./order.html">Order</a>
+                    <a href="./checkout.html">Checkout</a>
+                    <a href="./products.html">Products</a>
+                    <a href="./orders.html">Orders</a>
                 </nav>
-                <h1>Add Product</h1>
+                <h1 class="green">Add Products</h1>
             </header>
+        </div>
         <main>
             <section>
                 <form>
+                <fieldset>
                     <label>
-                        Name
+                        Name:
                     </label>
                     <input type="text" id="product-name">
+                    <hr>
                     <label>
-                        Description
+                        Description:
                     </label>
                     <input type="text" id="meal-description">
+                    <hr>
                     <label>
-                        Cost
+                        Cost:
                     </label>
                     <input type="number" id="cost">
+                    <hr>
                     <button id="add-product">Add Product</button>
+                </fieldset>
                 </form>
             </section>
             <section id="product-list-admin">

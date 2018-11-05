@@ -3,21 +3,22 @@ let meals = [
     {
         name: 'Vegetarian',
         description: 'Eat lots of veggies',
-        cost: '$10'
+        cost: 10,
+        id: 1
     },
     {
         name: 'Meat Delight',
         description: 'Eat your meats',
-        cost: '$20'
+        cost: 20,
+        id: 2
     },
     {
         name: 'Gluten Free',
         description: 'Grain free',
-        cost: '$15'
+        cost: 15,
+        id: 3
     }
 ];
-
-// console.log(meals[0].description);
 
 
 function saveMeals() {
