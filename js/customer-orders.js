@@ -1,6 +1,7 @@
 import customersApi from './customer-api.js';
 import cartApi from './cartApi.js';
 
+
 let cart = cartApi.get();   
 let customers = customersApi.getAll(); 
 
@@ -25,15 +26,3 @@ const getCustomers = {
 };
 
 getCustomers.display(customers);
-
-// function setBilling(checked) {
-//     if(checked) {
-//         document.getElementById('address').style.display = "none";
-//         document.getElementById('billing-address').value = ''; 
-//     } else {
-//         document.getElementById('address').style.display = "block";
-//         document.getElementById('billing-address').value = document.getElementById('address').value; 
-//     }
-// }
-
-// setBilling();

@@ -30,7 +30,7 @@ const orderForm = {
             onAdd(customer);
 
             form.reset();
-            
+
         });
         
     }
@@ -44,16 +44,16 @@ orderForm.init(function(customer) {
 getCart.display(cart);
 
 
-// function setBilling(checked) {
-//     if(checked) {
-//         document.getElementById('address').style.display = "none";
-//         document.getElementById('billing-address').value = ''; 
-//     } else {
-//         document.getElementById('address').style.display = "block";
-//         document.getElementById('billing-address').value = document.getElementById('address').value; 
-//     }
-// }
+function setBilling(checked) {
+    if(checked) {
+        document.getElementById('address').style.display = 'none';
+        document.getElementById('billing-address').value = ''; 
+    } else {
+        document.getElementById('address').style.display = 'block';
+        document.getElementById('billing-address').value = document.getElementById('address').value; 
+    }
+}
 
-// setBilling();
+setBilling();
 
 export default orderForm;
