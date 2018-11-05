@@ -1,11 +1,11 @@
 'use strict';
 
-//add a new product to local storage product list on 'Add Product' click
-//parse price as int when new product is added
 
+//remove type undefined off admin checkout
 //add quantity option
-//increase quantity when adding same item to cart
-//include 0's after decimal point for price
+
+
+
 
 import listOrders from './order-page.js';
 import custInfo from './checkout-page.js';

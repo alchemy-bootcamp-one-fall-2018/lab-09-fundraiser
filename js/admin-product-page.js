@@ -3,17 +3,17 @@
 import productsApi from './products-api.js';
 
 function removeProduct(index) {
+
     var products = productsApi.getProducts();
     let count = 0;
-
+    
     products.splice(index, 1);
 
     products.forEach(function(product){
         product.id = count;
         count++;
     });
-
-    productsApi.storeProducts(products);
+    localStorage.setItem('currentProducts', JSON.stringify(products));
     displayAdminProducts();
 }
 
@@ -41,6 +41,7 @@ function displayAdminProducts() {
         removeProdButton.forEach(function(button) {
             button.addEventListener('click', function() {
                 removeProduct(button.id);
+            
             });
         });
     }
@@ -52,13 +53,16 @@ function addItem() {
     var newProduct = {};
     //const options = document.querySelectorAll('option');
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        inputs.forEach(function(input) {
-            newProduct[input.name] = input.value;
+    if(form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            inputs.forEach(function(input) {
+                newProduct[input.name] = input.value;
+            });
+            productsApi.storeNewProduct(newProduct);
+            displayAdminProducts();
         });
-        productsApi.storeNewProduct(newProduct);
-    });
+    }
 }
 
 const adminProducts = {

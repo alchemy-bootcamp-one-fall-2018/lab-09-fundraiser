@@ -38,8 +38,10 @@ function resetPage() {
 
 const custInfo = {
     init(cart) {
+        
         if(form){
             form.addEventListener('submit', function(event) {
+                cart = JSON.parse(localStorage.getItem('cart'));
                 event.preventDefault();
                 input = document.querySelectorAll('input');
                 storeCustInfo(cart);
