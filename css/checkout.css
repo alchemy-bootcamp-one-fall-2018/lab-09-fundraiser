@@ -40,3 +40,9 @@ h2 {
     display: flex;
     flex-direction: column;
 }
+
+@media (min-width: 700px) {
+    #customer-info {
+        align-items: center;
+    }
+}

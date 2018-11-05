@@ -30,6 +30,7 @@ const orderForm = {
             onAdd(customer);
 
             form.reset();
+            
         });
         
     }
