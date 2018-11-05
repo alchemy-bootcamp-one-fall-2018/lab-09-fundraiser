@@ -14,8 +14,6 @@ const getCustomers = {
             li.textContent += customers[i].name + ' ' + customers[i].shippingStreetAddress + ' ' + customers[i].shippingCity + ' ' + customers[i].shippingState + ' ' + customers[i].shippingZipCode;
             customerOrders.appendChild(li);
 
-
-
             for(let i = 0; i < cart.length; i++) {
                 const li = document.createElement('ul');
                 li.textContent += cart[i].name + ' ' + cart[i].price + ' ' + cart[i].quantity;      
