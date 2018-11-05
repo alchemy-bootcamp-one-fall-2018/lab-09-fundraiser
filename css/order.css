@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+}
+
+p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+#checkout {
+    background: white;
+    border: none;
+}
+
+#checkout:hover {
+    background:lightgreen;
+    border: none;
+}
+
+.checkout:hover {
+    background-color: lightgreen;
+}
+
+button {
+    font-size: 0.8em;
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 8px;
+    border: 1px solid gray;
+}
+
+button[type="submit"]:hover {
+    background-color: lightgreen;
+}
+
+button[type="remove"]:hover {
+    background-color: #FF6666;
+}
+
+.checkout {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2.5em;
+    padding-bottom: 20px;
+}
+

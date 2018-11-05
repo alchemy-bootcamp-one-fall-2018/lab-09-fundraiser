@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    background-color: #faf0e6;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+}
+
+h1 {
+    font-size: 4em;
+    text-align: left;
+    margin-left: 30px;
+    font-family: "exo";
+    font-weight: bold;
+    color:white;
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 50vw;
+}
+
+.logo {
+    width: 25%;
+    display: block;
+    position: relative;
+    float: right;
+    margin-right: 30px; 
+    margin-top: -150px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    padding: 1px;
+    background-color: white;
+    line-height: 2.5em;
+    width: 100%;
+}
+
+main {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 40px;
+    line-height: 2em;
+}
+
+header {
+    background-color: orange;
+    margin: 0;
+    border-bottom: 4px solid black;
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+li {
+    border: 1px solid black;
+    padding: 3px;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 3%;
+    width: 20%;
+    min-width: 150px;
+    background-color: white;
+    text-align: center;
+    justify-items: space-between;
+}
+
+img {
+    max-width: 100%;
+    width: 150px;
+}
+

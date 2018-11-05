@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>OHS Fundraiser</title>
+     <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+     <link rel="stylesheet" href="../css/styles.css">
+     <link rel="stylesheet" href="../css/admin-add.css">
+ </head>
+ <body>
+     <header>
+         <h1>Oregon Humane Society Fundraiser</h1>
+         <img class="logo" src="https://www.oregonhumane.org/wp-content/themes/oregonhumanesociety/assets/img/logo-oregon-humane-society.svg" alt="Oregon Humane Society logo">
+
+        <nav>
+            <a href="../">Home</a>
+            <a href="../html/order.html">Order</a>
+            <a href="../html/checkout.html">Checkout</a>
+            <a href="../html/admin-products.html">Admin Products</a>
+            <a href="../html/admin-orders.html">Admin Orders</a>
+        </nav>
+     </header>
+
+     <main>
+         <section id="add-product">
+         <h2>Add a Product</h2>
+
+            <form id="product-form">
+                <div>
+                    <label>
+                        Product name
+                        <input required name="name">
+                    </label>
+                </div>
+                <div>
+                    <label for="price">
+                        Price
+                        <input type="text" id="price" name="price">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Image
+                        <input name="image" type="text">
+                    </label>
+                </div>
+                <div>
+                <label>Animal</label>
+                    <select id="animal" name="animal">
+                        <option value="" hidden disabled selected>Select an animal</option>
+                        <option value="For: Dogs">Dog</option>
+                        <option value="For: Cats">Cat</option>
+                        <option value="For: Birds">Bird</option>                
+                    </select>
+                </div>
+                <button>Submit</button>
+            </form>
+        </section>
+
+        <section id="product-list">
+            <h2>Products</h2>
+            <ul id="products"></ul>
+        </section>
+    </main>
+
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>
