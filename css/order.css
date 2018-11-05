@@ -51,11 +51,29 @@ img {
  }
 
  #remove {
-     padding-bottom: 20px;
+     margin-bottom: 20px;
  }
  
  .checkout {
      padding-bottom: 20px;
      color: #2e6da4;
      text-decoration: none;
+ }
+
+ @media (min-width: 700px) {
+    #remove {
+        margin: 20px;
+        padding-bottom: 0px;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail {
+        width: 50vw;
+    }
+    
  }

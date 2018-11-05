@@ -66,5 +66,20 @@ img {
  }
 
  .submit {
-     padding: 20px 0px;
+     margin: 20px 0px;
+ }
+
+ @media (min-width: 700px) {
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail {
+        width: 50vw;
+    }
+    #addForm {
+        align-items: center;
+    }
  }
