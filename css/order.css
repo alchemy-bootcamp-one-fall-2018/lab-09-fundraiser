@@ -50,6 +50,7 @@ img {
 
  #products {
      padding: 10px;
+     list-style: none;
  }
 
  #shopping-cart {
@@ -61,6 +62,14 @@ img {
 
  #cart-list {
     margin-left: -200px;
+ }
+
+ #remove {
+     padding-bottom: 20px;
+ }
+ 
+ .checkout {
+     padding-bottom: 20px;
  }
 
  .name {

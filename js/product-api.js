@@ -1,12 +1,12 @@
 let products = [{
-    name: 'Trip',
-    detail: 'Best',
-    price: 45,
+    name: 'Salmon River Canyon Trip',
+    detail: 'The Salmon River Canyon is a substantial undertaking by any measure. Often referred to as “The Mount Everest of Oregon Whitewater,” the canyon boasts some of the most aesthetically pleasing navigable waterfalls in the Pacific Northwest.',
+    price: '$' + 45,
     image: 'https://www.outdoorproject.com/sites/default/files/styles/cboxshow/public/1398723622/dsc_0202.jpg?itok=OIgtCU5X'
 }, {
-    name: 'Another trip',
-    detail: 'better',
-    price: 90,
+    name: 'Crater Lake Hike',
+    detail: 'What once was Oregon’s tallest mountain, Mount Mazama, is now the deepest lake in the United States and Oregon’s only national park.',
+    price: '$' + 90,
     image: 'https://www.outdoorproject.com/sites/default/files/styles/cboxshow/public/1515263986/dsc_0002_0.jpg?itok=L9O0KLDl'
 }];
 
