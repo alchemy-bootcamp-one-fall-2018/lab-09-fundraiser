@@ -10,12 +10,21 @@ const list = document.getElementById('admin-info');
 
 const addCart = {
 
-    init(cart) {
-        for(let i = 0; i < cart.length; i++) {
-            addCart.add(cart[i]);
-            list.appendChild(cart); 
+    display(customer) {
+        for(let i = 0; i < customer.length; i++) {
+            const li = document.createElement('li');
+            li.textContent += customer[i].name;
+            list.appendChild(li);
+
+            for(let i = 0; i < cart.length; i++){
+                const li = document.createElement('li');
+                li.textContent += customer[i].name;
+                list.appendChild(li);
+            }
         }
+        customerApi.getAll();
     }
+
 };
 
-addCart.init(cart);
+addCart.display(customer);
