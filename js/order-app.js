@@ -13,3 +13,45 @@ productList.init(products, function(product) {
     shoppingCart.update(cart);
 });
 
+
+
+
+
+
+
+
+
+
+// jei is taking a guess here 
+// this is from app.js
+
+// const products = cartApi.getAll();
+
+
+
+// productList.init(products, /*onSelect*/ function(product){
+//     productDetail.update(product);
+    
+// });
+
+// productDetail.init(/*onRemove*/ function(product){
+//     const index = carttApi.remove(product);
+// // tell the product list to re-render
+//     productList.remove(index);
+// });
+
+// addProduct.init(function(product){
+
+//     //onAdd listener
+
+//      // tell the api service first
+//     cartApi.add(product);
+
+//     //update components
+//     productList.add(product);
+// });
+
+
+
+
+
