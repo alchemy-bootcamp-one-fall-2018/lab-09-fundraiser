@@ -1,15 +1,17 @@
 import customerInfo from './customer-listener.js';
 import customerApi from './customer-api.js';
-import customerTable from './admin-info.js';
+import shoppingCartTwo from './checkout-cart.js';
+import cartApi from './cart-api.js';
+import addCart from './test-print.js';
 
+const cart = cartApi.get();
 const customer = customerApi.getAll();
+
+shoppingCartTwo.init(customer);
+
+addCart.init(cart, );
 
 customerInfo.init(function(customer) {
     customerApi.add(customer);
 
 });
-
-customerTable.init(customer);
-
-
-

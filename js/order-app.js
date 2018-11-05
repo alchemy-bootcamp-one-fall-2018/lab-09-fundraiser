@@ -4,6 +4,7 @@ import productApi from './products-api.js';
 import itemTable from './product-list.js';
 import shoppingCart from './shopping-cart.js';
 
+
 const products = productApi.getAll();
 const cart = cartApi.get();
 

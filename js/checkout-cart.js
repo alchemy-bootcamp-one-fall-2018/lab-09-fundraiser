@@ -3,7 +3,7 @@ import cartApi from './cart-api.js';
 
 function makeItem(item){
     const html = /*html*/` 
-    <li> ${item.name}${item.price}${item.quantity} </li>
+    <li> ${item.name}${item.quantity} </li>
     <button id="add">Add</button>
     <button id="remove">Remove</button>
     `;
@@ -11,23 +11,23 @@ function makeItem(item){
     const template = document.createElement('template');
     template.innerHTML = html;
     return template.content;
-
+    
 }
 
 const list = document.getElementById('checkout-page');
 
-const shoppingCart = {
+const shoppingCartTwo = {
     init(cart) {
         for(let i = 0; i < cart.length; i++){
             const dom = makeItem(cart[i]);
             dom.getElementById('add').addEventListener('click', function() {
                 cartApi.add(cart[i]);
-                shoppingCart.update(cart);
+                shoppingCartTwo.update(cart);
             }); 
 
             dom.getElementById('remove').addEventListener('click', function(){
                 cartApi.remove(cart[i]);
-                shoppingCart.update(cart);
+                shoppingCartTwo.update(cart);
             });
 
             list.appendChild(dom);
@@ -38,9 +38,9 @@ const shoppingCart = {
             list.lastElementChild.remove();
 
         }
-        shoppingCart.init(cart);
+        shoppingCartTwo.init(cart);
     }
 };
 
 
-export default shoppingCart;
+export default shoppingCartTwo;

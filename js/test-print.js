@@ -1,16 +1,16 @@
 
-import customerApi from './customer-api.js';
-import cartApi from './cart-api.js';
+// import customerApi from './customer-api.js';
+// import cartApi from './cart-api.js';
 
 
-const cart = cartApi.getAll();
-const customer = customerApi.getAll();
+// const cart = cartApi.get();
+// const customer = customerApi.getAll();
 
 const list = document.getElementById('admin-info');
 
 const addCart = {
 
-    display(customer) {
+    init(customer) {
         for(let i = 0; i < customer.length; i++) {
             const li = document.createElement('li');
             li.textContent += customer[i].name;
@@ -18,7 +18,7 @@ const addCart = {
 
             for(let i = 0; i < cart.length; i++){
                 const li = document.createElement('li');
-                li.textContent += customer[i].name;
+                li.textContent += cart[i].name;
                 list.appendChild(li);
             }
         }
@@ -27,4 +27,4 @@ const addCart = {
 
 };
 
-addCart.display(customer);
+export default addCart;

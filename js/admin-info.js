@@ -1,46 +1,46 @@
+// // currently doesnt do anything
+// function addInfo(customer) {
 
-function addInfo(customer) {
-
-    const html = /*html*/`
-    <li> 
+//     const html = /*html*/`
+//     <li> 
     
-        <p>NAME:${customer.name}</p>
-        <p>EMAIL:${customer.email}</p>
-        <p>SHIPPING:${customer.shipping}</p>
-        <p>BILLING:${customer.billing}</p>
+//         <p>NAME:${customer.name}</p>
+//         <p>EMAIL:${customer.email}</p>
+//         <p>SHIPPING:${customer.shipping}</p>
+//         <p>BILLING:${customer.billing}</p>
     
-    </li>`;
-    const template = document.createElement('template');
+//     </li>`;
+//     const template = document.createElement('template');
 
-    template.innerHTML = html;
-    return template.content;
-}
+//     template.innerHTML = html;
+//     return template.content;
+// }
 
-const customerList = document.getElementById('admin-info');
+// const customerList = document.getElementById('admin-info');
 
-const customerTable = {
-    init(customer, onSelect) {
-        for(let i = 0; i < customer.length; i++) {
-            customerTable.add(customer[i]);
-        }
-        customerTable.onSelect = onSelect;
-        customerTable.customers = customer;
-    },
-    add(customer) {
-        const dom = addInfo(customer);
-        const listInfo = dom.querySelector('li');
+// const customerTable = {
+//     init(customer, onSelect) {
+//         for(let i = 0; i < customer.length; i++) {
+//             customerTable.add(customer[i]);
+//         }
+//         customerTable.onSelect = onSelect;
+//         customerTable.customers = customer;
+//     },
+//     add(customer) {
+//         const dom = addInfo(customer);
+//         const listInfo = dom.querySelector('li');
 
-        listInfo.addEventListener('click', function(){
-            customerTable.onSelect(customer);
-        });
+//         listInfo.addEventListener('click', function(){
+//             customerTable.onSelect(customer);
+//         });
 
-        customerList.appendChild(dom);
+//         customerList.appendChild(dom);
         
-    },
+//     },
 
-    remove(index) {
-        customerList.querySelectorAll('li')[index].remove();
-    }
-};
+//     remove(index) {
+//         customerList.querySelectorAll('li')[index].remove();
+//     }
+// };
 
-export default customerTable;
+// export default customerTable;

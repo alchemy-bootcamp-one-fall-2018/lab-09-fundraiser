@@ -5,7 +5,6 @@ function makeItem(item){
     const html = /*html*/` 
     <li> ${item.name}${item.price}${item.quantity} </li>
     <button id="add">Add</button>
-    <button id="remove">Remove</button>
     `;
 
     const template = document.createElement('template');
@@ -25,11 +24,6 @@ const shoppingCart = {
                 cartApi.add(cart[i]);
                 shoppingCart.update(cart);
             }); 
-
-            dom.getElementById('remove').addEventListener('click', function(){
-                cartApi.remove(cart[i]);
-                shoppingCart.update(cart);
-            });
 
             list.appendChild(dom);
         }
