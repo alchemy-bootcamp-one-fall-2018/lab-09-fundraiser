@@ -21,6 +21,8 @@ const itemForm = {
             customer.zip = elements.zip.value;
             
             onAdd(customer);
+
+            console.log(customer);
             
             form.reset();
         });
