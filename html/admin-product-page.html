@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Product</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="../assets/Homeplate_logo.png" alt="homeplate for youth logo">
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="./order-page.html">Order</a>
+                <a href="./checkout-page.html">Checkout</a>
+            </nav>      
+    </header>
+
+    <section id="adminCatalog">
+        <h2>Current Products</h2>
+        <ul class="pickList"></ul>
+    </section>
+    
+    <form id="addItemForm">
+        <fieldset>
+            <legend>Add Item</legend>
+
+            <label for="itemName">Item Name</label>
+            <input type="text" name="name" id="itemName" required>
+
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price" required>
+
+             <label for="type">Product Type</label>
+             <input type="text" name="type" id="type" required>
+            <!--<select>
+                <option name="itemType" value="food">Food</option>
+                <option name="itemType" value="clothing">Clothing</option>
+                <option name="itemType" value="hygiene">Hygiene</option>
+                <option name="itemType" value="survival">Survival</option>
+            </select> -->
+            
+            <label for="imageUrl">Image URL</label>
+            <input type="text" name="image" id="imageUrl" required>
+
+            <label for="description">Description</label>
+            <textarea name="description" rows="4" cols="50" id="description"></textarea>
+        </fieldset>
+        <button type="submit">Add Product</button>
+    </form>
+
+
+
+
+    <footer>
+            <nav>
+                <a href="./admin-product-page.html">Admin: Products Page</a>
+                <a href="./admin-order-report.html">Admin: Order Report</a>
+            </nav>
+    </footer>
+
+    <script type="module" src="../js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomePlate Chcout</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/checkout-page.css">
+</head>
+<body>
+    <header>
+        <img src="../assets/Homeplate_logo.png" alt="homeplate for youth logo">
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="./order-page.html">Order</a>
+                <a href="./checkout-page.html">Checkout</a>
+            </nav>
+    </header>
+
+    <section id="userInfo">
+        
+        <aside class="cart">
+            <h2>Cart</h2>
+            <ul class="sideItems"></ul>
+        </aside>
+
+        <form id="billingInfo">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fName">First Name:</label>
+                <input type="text" name="fName" id="fName" required>
+
+                <label for="lName">Last Name:</label>
+                <input type="text" name="lName" id="lName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </fieldset>
+
+            <fieldset id="shippingAddress">
+                <legend>Shipping Address:</legend>
+                <label for="shipStreet1">Line 1 Street</label>
+                <input type="text" name="shipStreet1" id="shipStreet1" required>
+                
+                <label for="shipStreet2">Line 2 Street</label>
+                <input type="text" name="shipStreet2" id="shipStreet2" required>
+
+                <label for="shipCity">City</label>
+                <input type="text" name="shipCity" id="shipCity" required>
+
+                <label for="shipState">State</label>
+                <input type="text" name="shipState" id="shipState" required>
+
+                <label for="shipZip">Zip Code</label>
+                <input type="text" name="shipZip" id="shipZip" required>
+
+                <label for="sameAddress"></label>
+                <input type="checkbox" name="sameAddress" id="sameAddress">Check if Billing Address is Different
+            </fieldset>
+
+            <fieldset id="billingAddress">
+                <legend>Billing Address:</legend>
+                <label for="billStreet1">Line 1 Street</label>
+                <input type="text" name="billStreet1" id="billStreet1">
+                
+                <label for="billStreet2">Line 2 Street</label>
+                <input type="text" name="billStreet2" id="billStreet2">
+
+                <label for="billCity">City</label>
+                <input type="text" name="billCity" id="billCity">
+
+                <label for="billState">State</label>
+                <input type="text" name="billState" id="billState">
+
+                <label for="billZip">Zip Code</label>
+                <input type="text" name="billZip" id="billZip">
+            </fieldset>
+
+            <button type="submit">Submit Order!</button>
+            
+        </form>
+    </section>
+
+
+    <footer>
+            <nav>
+                <a href="./admin-product-page.html">Admin: Products Page</a>
+                <a href="./admin-order-report.html">Admin: Order Report</a>
+            </nav>
+    </footer>
+
+    <script type="module" src="../js/app.js"></script>
+
+</body>
+</html>

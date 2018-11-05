@@ -1,0 +1,81 @@
+body {
+    text-align: center;
+    background-color: lightblue;
+}
+
+header {
+    background-color: blue;
+    width: 100%;
+    border: 2px solid black;
+}
+
+header img {
+    width: 70%;
+}
+
+header nav a {
+    color: white;
+    width: 10%;
+}
+
+header nav {
+     float: right;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    border: 2px solid black;
+}
+
+footer {
+    clear: both;  
+    margin-top: 5%;
+}
+
+footer nav a {
+    margin-left: 2%;
+}
+
+a:hover {
+    color: purple;
+}
+
+a, button a:visited, button a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 50%;
+}
+
+.pickList li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 2%;
+    border: 2px solid seagreen;
+    background-color: white;
+    width: 20%;
+    padding: 2%;
+}
+
+li {
+    list-style-type: none;
+}
+
+.pickList img{
+    width: 20%;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}

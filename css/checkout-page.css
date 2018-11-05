@@ -1,0 +1,11 @@
+#sameAddress {
+    width: 10%;
+}
+
+button {
+    margin-top: 2%;
+}
+
+#billingAddress {
+    display: none;
+}
