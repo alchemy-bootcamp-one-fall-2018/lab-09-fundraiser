@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="./css/product-list.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>SAVE THE WOLVES</title>
+</head>
+<body>
+    <header class= ”header-container”>
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo" />
+                <h1>SAVE THE WOLVES</h1>
+                </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="product.html">PRODUCTS</a></li>
+                    <li><a href="orders.html">ORDERS</a></li>
+                </ul>
+                </nav>
+            <div class="cart"><a href="checkout.html"><img src="assets/shopping-cart.png"></a></div>
+        </header>
+        <h2>ORDER REPORTING</h2>
+    <div id = "container">
+    <section>
+            This where all of the orders will go 
+        </section>
+
+        <section id="shopping-cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-list"></ul>
+        </section>
+
+        <section id="orders-list">
+            <h2>Select a Package to Purchase</h2>
+            <ul id="orders"></ul>
+        </section>    
+    </div> 
+            <section id="orders" class="secondary">
+            <h2>ORDERS</h2>
+            <label>
+                PRODUCT:
+                <input required id="name">
+            </label>
+            <label>
+                PRICE:
+                <input required id="price">
+            </label>
+            <label>
+                NAME:
+                <input required id="name">
+            </label>
+            <label>
+                ADDRESS:
+                <input required id="address">
+                </label>
+            <p id="response"></p>
+        </section>
+
+        <section>
+            <table>
+                <thead id="orders-header">
+                    <tr>
+                        <td><h3>PRODUCT</h3></td>
+                        <td><h3>PRICE</h3></td>
+                        <td><h3>NAME</h3></td>
+                        <td><h3>ADDRESS</h3></td>
+                    </tr>
+                </thead>
+                <tbody id="orders-body">
+                   
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html> 
+    <footer> 
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="product.html">PRODUCTS</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="checkout.html">CHECKOUT</a></li>
+                    <li><a href="orders.html"></a>ORDERS</li>
+                </ul>
+            </nav>
+        </footer>  
+</body>
+
+
+
+
+<script>src="./js/app.js"</script>
+</html>

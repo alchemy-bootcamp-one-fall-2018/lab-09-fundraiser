@@ -1,0 +1,40 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .8em;
+}
+
+thead {
+    font-weight: bold;
+}
+
+td {
+    padding: 7px 0; 
+    white-space: nowrap;
+    text-transform: uppercase;
+    color:#e5e5e5;
+}
+tr:(odd){
+    background:rgb(96, 34, 65, .5);
+    color:#e5e5e5;
+}
+
+tr:nth-child(even) {
+    background: rgb(177, 178, 177, .5);
+}
+
+.sort {
+    white-space: nowrap;
+    padding: 0 3px;
+}
+
+.sort.desc::after {
+    content: "▼"
+}
+
+.sort.asc::after {
+    content: "▲"
+}
+.character-pic {
+    width:20%;
+}

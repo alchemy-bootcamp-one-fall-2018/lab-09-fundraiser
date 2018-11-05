@@ -1,0 +1,9 @@
+#shop-container {
+    display:inline;
+    float:right;
+
+}
+#shop-container img{
+    width:25%;
+    height:auto;
+}
