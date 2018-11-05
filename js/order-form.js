@@ -6,8 +6,7 @@ const orderForm = {
 
     init(onAdd) {
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
+        form.addEventListener('submit', function() {
 
             const orderDetail = {};
 

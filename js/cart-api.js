@@ -42,7 +42,11 @@ const cartApi = {
             }
         }
         saveCart();
-    }    
+    },
+    clear() {
+        cart = [];
+        saveCart();
+    }
 };
 
 export default cartApi;

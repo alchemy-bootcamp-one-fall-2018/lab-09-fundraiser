@@ -9,5 +9,7 @@ const cart = cartApi.get();
 shoppingCart.init(cart);
 
 orderForm.init(function(order){
-    orderApi.add(order); 
+    orderApi.add(order);
+    cartApi.clear();
+    shoppingCart.update(cart);
 });
