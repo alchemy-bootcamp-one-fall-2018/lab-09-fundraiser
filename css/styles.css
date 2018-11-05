@@ -22,7 +22,8 @@ header  {
     background-position:50% 35%;
     height:375px;
 }
-header ul li{
+
+header ul li {
     display: inline-block;
     border: 3px solid #fff;
     padding: 1rem 3rem;
@@ -39,12 +40,37 @@ header ul li{
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+header ul li a {
+    text-decoration: none !important;
+}
+
+header img {
+   
+    width:200px;
+    height:200px;
+}
 header ul li hover,focus {
     background: #e5e5e5;
 
 }
+.logo {
+    display:block;
+    margin:10px;
+    float:left;
+}
+.cart { 
+   
+    max-width:50px;
+       
+}
+.cart img { 
+    padding:25px;
+    max-width:105px;
+    max-height:105px;
+}
 
 h1 {
+    color:#ffffff;
     text-align: center;
 }
 #donation-form {
