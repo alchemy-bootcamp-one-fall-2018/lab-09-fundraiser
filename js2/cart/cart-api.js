@@ -13,11 +13,15 @@ const cartApi = {
         return itemsInCart;
     },
     addToCart(item) {
-        if(itemsInCart.indexOf(item) === -1) {
+        if(itemsInCart.length === 0) {
             item.quantity = 1;
             itemsInCart.push(item);
         } else {
-            itemsInCart[itemsInCart.indexOf(item)].quantity += 1;
+            for(let i = 0; i < itemsInCart.length; i++) {
+                if(itemsInCart[i].name === item.name){
+                    itemsInCart[i].quantity += 1;
+                }
+            }
         }
         saveCart();
     }
