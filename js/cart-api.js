@@ -3,9 +3,7 @@ let cart = [];
 
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
-    
 }
-
 
 const cartApi = {
     get() {

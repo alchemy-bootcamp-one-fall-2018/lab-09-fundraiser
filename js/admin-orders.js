@@ -1,7 +1,4 @@
 import customersApi from './customer-api.js';
-import cartApi from './cart-api.js';
-// import orderForm from './checkout-app.js';
-
 
 const customerOrders = document.getElementById('customer-orders');
 

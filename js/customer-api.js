@@ -10,7 +10,6 @@ const customersApi = {
         if(json) {
             customers = JSON.parse(json);
         }
-
         return customers;
     },
     add(customer) {

@@ -42,7 +42,7 @@ const orderForm = {
 
                 form.reset();
 
-                orderMessage.textContent = 'Checkout complete. Thank you for your order!'
+                orderMessage.textContent = 'Checkout complete. Thank you for your order!';
             });
         }
     },
