@@ -3,7 +3,7 @@ import html from '../helper-utilities/html.js';
 function makeItem(item) {
     return html`
         <li>${item.name} <strong>(${item.quantity})</strong>
-        <button id="remove">Remove</button>
+        <button class="decrement">Remove</button>
         </li>
         `;
 }

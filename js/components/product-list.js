@@ -6,7 +6,10 @@ function makeProduct(product) {
             ${product.name}
             </h3>
             <img src="./js/assets/${product.image ? product.image : 'TKO.jpg'}">
-            <button id="remove">Remove</button>
+            <div class="order-buttons hidden">
+            <button class="increment">Add</button>
+            <button class="decrement">Remove</button>
+            </div>
         </li>
         `;
 
@@ -20,24 +23,39 @@ function makeProduct(product) {
 const list = document.getElementById('product-list');
 
 const productList = {
-    init(products, onIncrement, onDecrement) {
+    init(products, onSelect, onOrder) {
+        productList.products = products;
+        productList.onSelect = onSelect;
+        productList.onOrder = onOrder;
+
         for(let i = 0; i < products.length; i++) {
             productList.add(products[i]);
         } 
-        productList.onIncrement = onIncrement;
-        productList.products = products;
-        productList.remove = onDecrement;
     },
     add(product) {
         const dom = makeProduct(product);
         const listItem = dom.querySelector('li');
-        listItem.addEventListener('click', function() {
-            productList.onIncrement(product);
-        });
-        const buttonRemove = dom.querySelector('button');
-        buttonRemove.addEventListener('click', function() {
-            productList.onDecrement(product);
-        });
+        if(productList.onSelect) {
+            listItem.addEventListener('click', function() {
+                productList.onSelect(product);
+            });
+        }
+        if(productList.onOrder) {
+            listItem.classList.add('order');
+            const buttonsContainer = dom.querySelector('.order-buttons');
+            buttonsContainer.classList.remove('.hidden');
+            
+            const increment = dom.querySelector('button.increment');
+            const decrement = dom.querySelector('button.decrement');
+
+            increment.addEventListener('click', function() {
+                productList.onOrder(product, 1);
+            });
+
+            decrement.addEventListener('click', function() {
+                productList.onOrder(product, -1);
+            });
+        }
         list.appendChild(dom);
     }
 }; 
