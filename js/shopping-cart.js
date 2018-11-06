@@ -1,6 +1,6 @@
-import html from './html.js';
+// import html from './html.js';
 import cartApi from './cart-api.js';
-import customerApi from './customer-api.js';
+// import customerApi from './customer-api.js';
 
 function makeProduct(product) {
     const html =
@@ -17,7 +17,7 @@ function makeProduct(product) {
 }
 
 const list = document.getElementById('cart-list');
-const submitButton = document.getElementById('submit-order');
+// const submitButton = document.getElementById('submit-order');
 
 const shoppingCart = {
     init(cart) {

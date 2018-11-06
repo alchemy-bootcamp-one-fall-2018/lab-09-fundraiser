@@ -1,11 +1,12 @@
 import customerApi from './customer-api.js';
-import cartApi from './cart-api.js';
-// import orderAdmin from './order-admin.js';
-// import shoppingCart from './shopping-cart.js';
 
-let cart = cartApi.get();
+//most recent comment, in case later necessary
+// import cartApi from './cart-api.js';
 
-const customer = customerApi.get();
+
+// let cart = cartApi.get();
+
+
 const form = document.getElementById('customer-information');
 
 // checkout.init(cart, customer);
