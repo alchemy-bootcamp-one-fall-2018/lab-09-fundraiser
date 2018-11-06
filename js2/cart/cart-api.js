@@ -1,6 +1,7 @@
 let itemsInCart = [
     {
-        name: 'I am an item'
+        name: 'I am an item',
+        count: 1
     }
 ];
 

@@ -19,12 +19,12 @@ const list = document.getElementById('product-list');
 const productList = {
     init(products, onRemove) {
         for(let i = 0; i < products.length; i++) {
-            productList.addDom(products[i]);
+            productList.editDom(products[i]);
         }
 
         productList.onRemove = onRemove;
     },
-    addDom(product) {
+    editDom(product) {
         const li = makeProduct(product);
         
         const removeButton = li.querySelector('button');

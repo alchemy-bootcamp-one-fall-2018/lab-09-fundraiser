@@ -9,6 +9,6 @@ productList.init(products, function(product) {
 }); 
 
 addProduct.init(function(product) {
-    productList.addDom(product);
+    productList.editDom(product);
     productsApi.add(product);
 });

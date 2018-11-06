@@ -1,7 +1,12 @@
 function makeCartItem(cartItem) {
     const html = /*html*/`
         <li class="cart-item">
-            <h3>${cartItem.name}</h3>
+            <h3>
+                ${cartItem.name}
+                <span>(${cartItem.count})
+            </h3>
+            <button id="add-to-cart">+</button>
+            <button id="remove-from-cart">-</button>
         </li>
     `;
 
@@ -15,11 +20,20 @@ const list = document.getElementById('cart-list');
 const cartList = {
     init(itemsInCart) {
         for(let i = 0; i < itemsInCart.length; i++) {
-            cartList.addDom(itemsInCart[i]);
+            cartList.editDom(itemsInCart[i]);
         }
     },
-    addDom(cartItem) {
+    editDom(cartItem) {
         const li = makeCartItem(cartItem);
+
+        // const removeButton = li.getElementById('remove-from-cart');
+        // const cartListItem = li.querySelector('li');
+        // removeButton.addEventListener('click', function() {
+        //     productList.onRemove(cartItem);
+        //     cartListItem.remove();
+        //     console.log('REMOVED');
+        // });
+
         list.appendChild(li);
     }
 };
