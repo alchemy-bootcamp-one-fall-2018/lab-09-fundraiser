@@ -3,25 +3,25 @@ let products = [
         name: 'Collar',
         price: '$10.00',
         animal: 'For: Dogs',
-        image: '../assets/collar.jpeg'
+        image: 'assets/collar.jpeg'
     },
     {
         name: 'Cat Harness',
         price: '$15.00',
         animal: 'For: Cats',
-        image: '../assets/cat-harness.jpeg'
+        image: 'assets/cat-harness.jpeg'
     },
     {
         name: 'Bird Feeder',
         price: '$20.00',
         animal: 'For: Birds',
-        image: '../assets/bird-feeder.jpeg'
+        image: 'assets/bird-feeder.jpeg'
     },
     {
         name: 'Mouse Toy',
         price: '$80.00',
         animal: 'For: Cats',
-        image: '../assets/mouse.jpeg'
+        image: 'assets/mouse.jpeg'
     }
 ];
 
