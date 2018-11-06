@@ -22,6 +22,14 @@ const productsApi = {
     add(product) {
         products.push(product);
         saveProducts();
+    },
+    remove(product) {
+        const index = products.indexOf[product];
+        if(index !== -1) {
+            products.splice(index, 1);
+            saveProducts();
+            return index;
+        }
     }
 };
 

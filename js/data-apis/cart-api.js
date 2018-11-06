@@ -26,6 +26,10 @@ const cartApi = {
             });
         }
         saveCart();
+    },
+    clear() {
+        cart = [];
+        saveCart();
     }
 };
 

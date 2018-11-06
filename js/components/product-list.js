@@ -54,9 +54,13 @@ const productList = {
 
             decrement.addEventListener('click', function() {
                 productList.onOrder(product, -1);
+                console.log(decrement);
             });
         }
         list.appendChild(dom);
+    },
+    remove(index) {
+        this.list.querySelectorAll('li')[index].remove();
     }
 }; 
 
