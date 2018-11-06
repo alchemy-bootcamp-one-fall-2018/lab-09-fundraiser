@@ -1,9 +1,4 @@
-let itemsInCart = [
-    {
-        name: 'I am an item',
-        count: 1
-    }
-];
+let itemsInCart = [];
 
 function saveCart() {
     localStorage.setItem('itemsInCart', JSON.stringify(itemsInCart));
@@ -18,8 +13,12 @@ const cartApi = {
         return itemsInCart;
     },
     addToCart(item) {
-        itemsInCart.push(item);
-        console.log(itemsInCart)
+        if(itemsInCart.indexOf(item) === -1) {
+            item.quantity = 1;
+            itemsInCart.push(item);
+        } else {
+            itemsInCart[itemsInCart.indexOf(item)].quantity += 1;
+        }
         saveCart();
     }
 };

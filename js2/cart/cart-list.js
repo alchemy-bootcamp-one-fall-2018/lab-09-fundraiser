@@ -3,7 +3,7 @@ function makeCartItem(cartItem) {
         <li class="cart-item">
             <h3>
                 ${cartItem.name}
-                <span>(${cartItem.count})
+                <span>(${cartItem.quantity})
             </h3>
             <button id="add-to-cart">+</button>
             <button id="remove-from-cart">-</button>
