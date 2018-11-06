@@ -1,3 +1,4 @@
+
 let customers = [];
 
 function saveCustomers() {
@@ -14,6 +15,7 @@ const customerApi = {
 
     },
     add(customer) {
+        customerApi.getAll();
         customers.push(customer);
 
         saveCustomers();

@@ -1,7 +1,10 @@
-const customerInfo = {
 
+const customerDetails = document.getElementById('customer-info');
+
+
+
+const customerInfo = {   
     init(onAdd) {
-        const customerDetails = document.getElementById('customer-info');
         customerDetails.addEventListener('submit', function(event) {
             event.preventDefault();
 

@@ -5,15 +5,18 @@ function saveCart() {
 }
 const cartApi = {
 
+   
     get() {
         const json = localStorage.getItem('cart');
-
         if(json) {
             cart = JSON.parse(json);
         }
         return cart;
     }, 
+
+
     add(product) {
+
         const orderItem = cart.find(item => {
             return item.name === product.name;
         });
