@@ -1,0 +1,57 @@
+.index-nav {
+    position: absolute;
+    display: flex;
+    width: 95vw;
+    justify-content: flex-end;
+    height: 5vh;
+    align-items: center;
+}
+
+body {
+    background-color: #EAEBED;
+    color: #474448;
+}
+
+.navbar {
+    padding: 10px;
+    color: #2e6da4;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+#summary {
+    list-style: none;
+    padding: 0px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#summary li {
+    padding-bottom: 20px;
+}
+
+#order-summary {
+    padding-top: 20px;
+}
+
+#customer-info label {
+    padding: 20px 0px;
+}
+
+#customer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 700px) {
+    #customer-info {
+        align-items: center;
+    }
+
+    .shipping-address {
+        display: flex;
+    }
+}
