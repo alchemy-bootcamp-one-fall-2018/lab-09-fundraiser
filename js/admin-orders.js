@@ -1,28 +1,25 @@
 import customersApi from './customer-api.js';
-import cartApi from './cart-api.js';
-
-let cart = cartApi.get();   
-let customers = customersApi.getAll(); 
 
 const customerOrders = document.getElementById('customer-orders');
 
 const getCustomers = {
-    display(customers) {
+    display() {
+        const customers = customersApi.getAll();
         for(let i = 0; i < customers.length; i++) {
 
             const li = document.createElement('li');
             li.textContent += customers[i].name + ' ' + customers[i].shippingStreetAddress + ' ' + customers[i].shippingCity + ' ' + customers[i].shippingState + ' ' + customers[i].shippingZipCode;
-            customerOrders.appendChild(li);
-
-            for(let i = 0; i < cart.length; i++) {
-                const li = document.createElement('ul');
-                li.textContent += cart[i].name + ' ' + cart[i].price + ' ' + cart[i].quantity;      
-                customerOrders.appendChild(li);
+            customerOrders.appendChild(li);  
+            
+            for(let k = 0; k < customers[i].cart.length; k++) {
+                const item = document.createElement('ul');
+                item.textContent += customers[i].cart[k].name + ' ' + customers[i].cart[k].quantity;
+                customerOrders.appendChild(item);
             }
         }
-        customersApi.getAll();
+
     }
 };
 
-getCustomers.display(customers);
+getCustomers.display();
 

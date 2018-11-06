@@ -13,6 +13,7 @@ const customersApi = {
         return customers;
     },
     add(customer) {
+        customer['cart'] = JSON.parse(localStorage.getItem('cart'));
         customers.push(customer);
         saveCustomers();
     }
