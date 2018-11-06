@@ -5,6 +5,10 @@ let itemsInCart = [
     }
 ];
 
+function saveCart() {
+    localStorage.setItem('itemsInCart', JSON.stringify(itemsInCart));
+}
+
 const cartApi = {
     getAll() {
         const json = localStorage.getItem('itemsInCart');
@@ -13,6 +17,11 @@ const cartApi = {
         }
         return itemsInCart;
     },
+    addToCart(item) {
+        itemsInCart.push(item);
+        console.log(itemsInCart)
+        saveCart();
+    }
 };
 
 export default cartApi;

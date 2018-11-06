@@ -1,3 +1,5 @@
+import cartApi from '../cart/cart-api.js';
+
 function makeProduct(product) {
     const html = /*html*/`
         <li class="product">
@@ -6,6 +8,7 @@ function makeProduct(product) {
             <p>${product.price}</p>
             <img src=${product.image} style="width: 100px">
             <button class="danger">Remove This</button>
+            <button class="buy">Add to Cart</button>
         </li>
     `;
 
@@ -27,11 +30,16 @@ const productList = {
     editDom(product) {
         const li = makeProduct(product);
         
-        const removeButton = li.querySelector('button');
+        const removeButton = li.querySelector('.danger');
         const listItem = li.querySelector('li');
         removeButton.addEventListener('click', function() {
             productList.onRemove(product);
             listItem.remove();
+        });
+
+        const addButton = li.querySelector('.buy');
+        addButton.addEventListener('click', function() {
+            cartApi.addToCart(product);
         });
 
         list.appendChild(li);
