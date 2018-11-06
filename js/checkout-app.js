@@ -42,17 +42,13 @@ orderForm.init(function(customer) {
     customersApi.add(customer);
 });
 
-const addCheckbox = document.getElementById('add-checkbox');
-addCheckbox.addEventListener('change', function() {
-    console.log(elements.addCheckbox.checked);
-    const billing = document.getElementById('billing-address');
 
-    if(elements.addCheckbox.checked) {
-        billing.style.display = 'none';
-    } else if(!elements.addCheckbox.checked) {
-        billing.style.display = 'block';
-    }
-  
+elements.addCheckbox.addEventListener('change', function() {
+    const billing = document.getElementById('billing-address').style;
+
+    elements.addCheckbox.checked 
+        ? billing.display = 'none' 
+        : billing.display = 'block';
 });
 
 getCart.display(cart);
