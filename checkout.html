@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Barkery Fundraiser</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/Snoop-Dogg.jpg">
+            <h1>Checkout</h1>
+        </div>
+        <nav>
+            <a href="./">Home</a>
+            <a href="./products.html">Products</a>
+            <a href="./order.html">Order</a>
+            <a href="./checkout.html">Checkout</a>
+            <a href="./order-report.html">Order Report</a>
+            
+        </nav>
+    </header>
+
+    <section>
+        <h2>Your Cart:</h2>
+            <ul id='cart-list'>
+                
+            </ul>
+    </section>
+    <section>
+        <form id="customer-information">
+            <fieldset>
+                <h1>Billing Information</h1>
+            <label for="name">First Name: </label>
+            <input type="text" name="name1" id="first-name" value="first">
+            <label for="name">Last Name: </label>
+            <input type="text" name="name2" id="last-name" value="last">
+
+            <label for="billing">Billing Address: </label>
+            <input type="text" name="billing-address" id="billing-address">
+            <br>
+        
+
+            
+            <label for="shipping">Shipping Address: </label>
+            <input type="text" name="shipping-address" id="shipping-address">
+            <label for="checkbox">Check if same as billing address.</label>
+            <input type="checkbox" name="copy-address" id="copy-address">
+
+            <br>
+
+            <button id="submit-order">Submit Order</button>
+
+            </fieldset>
+
+        </form>
+
+    
+
+    </section>
+    <script type="module" src="js/checkout-app.js"></script>
+    <script type="module" src="js/order-app.js"></script>
+    
+    
+</body>
+</html>
