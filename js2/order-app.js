@@ -11,7 +11,9 @@ productList.init(products);
 
 const cartItems = cartApi.getAll();
 
-cartList.init(cartItems);
+cartList.init(cartItems, function(cartItem) {
+    cartApi.remove(cartItem);
+});
 
 updateCart.init(function(cartItem) {
     cartList.editDom(cartItem);

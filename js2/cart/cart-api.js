@@ -24,6 +24,15 @@ const cartApi = {
             }
         }
         saveCart();
+    },
+    remove(item) {
+        const index = itemsInCart.indexOf(item);
+        if(index !== -1) {
+            item.quantity -= 1;
+            
+            // itemsInCart.splice(index, 1);
+            saveCart();
+        }
     }
 };
 

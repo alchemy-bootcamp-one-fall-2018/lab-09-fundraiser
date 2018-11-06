@@ -1,3 +1,5 @@
+import cartApi from '../cart/cart-api.js';
+
 function makeCartItem(cartItem) {
     const html = /*html*/`
         <li class="cart-item">
@@ -18,22 +20,29 @@ function makeCartItem(cartItem) {
 const list = document.getElementById('cart-list');
 
 const cartList = {
-    init(itemsInCart) {
+    init(itemsInCart, onRemove) {
         for(let i = 0; i < itemsInCart.length; i++) {
             cartList.editDom(itemsInCart[i]);
         }
+        cartList.onRemove = onRemove;
     },
     editDom(cartItem) {
         const li = makeCartItem(cartItem);
+        
+        const addButton = li.querySelector('#add-to-cart');
+        addButton.addEventListener('click', function() {
+            cartApi.addToCart(cartItem);
+        });
 
-        // const removeButton = li.getElementById('remove-from-cart');
-        // const cartListItem = li.querySelector('li');
-        // removeButton.addEventListener('click', function() {
-        //     productList.onRemove(cartItem);
-        //     cartListItem.remove();
-        //     console.log('REMOVED');
-        // });
-
+        const removeButton = li.querySelector('#remove-from-cart');
+        const listItem = li.querySelector('li');
+        removeButton.addEventListener('click', function() {
+            if(cartItem.quantity <= 1) {
+                listItem.remove();
+            } else {
+                cartList.onRemove(cartItem);
+            }
+        });
         list.appendChild(li);
     }
 };
