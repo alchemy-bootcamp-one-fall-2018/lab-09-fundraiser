@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/homepage.css">
+</head>
+<body>
+    
+    <header class="header">
+        Oregon Food Bank
+    </header>
+
+    <nav>
+        <div>
+            <a href="./">Home</a>
+        </div>
+        <div>
+            <a href="order.html">Order</a>
+        </div>
+        <div>
+            <a href="additem.html">Add items</a>
+        </div>
+        <div>
+            <a href="adminpage.html">Admin page</a>
+        </div>
+        <div>
+            <a href="checkout.html">Checkout page</a>
+        </div>
+    </nav>   
+
+<section>
+    <form id="customer-info">
+        <label for="name">Full name:</label>
+        <input type="text" name="name" id="name" >
+
+        <label for="email">Email address:</label>
+        <input type="text" name="email" id="email" >
+
+        <label for="shipping">Shipping address:</label>
+        <input type="text" name="shipping" id="shipping" >
+
+        <label for="billing">Billing address:</label>
+        <input type="text" name="billing" id="billing" value="" >
+
+        <button type="submit">Submit Information</button>
+
+        <fieldset>
+            <label for="ship-bill">Use shipping as billing</label>
+            <input type="checkbox" name="ship-bill" id="ship-bill">
+        </fieldset>
+
+    </form>
+</section>
+
+<section>
+
+    <ul id="checkout-page">
+
+    </ul> 
+    
+</section>
+
+    <script type="module" src="js/checkout-app.js"></script>
+</body>
+
+</html>
