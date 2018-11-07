@@ -37,6 +37,9 @@ const cartApi = {
         console.log(item);
         if(index !== -1) {
             item.quantity -= 1;
+            if(item.quantity === 0) {
+                itemsInCart.splice(index, 1);
+            }
             console.log(index);
 
         }
