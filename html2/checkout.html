@@ -24,7 +24,24 @@
         </section>
         <section>
           <h2>Customer Information</h2>
-          <button type="submit">Submit Order</button>
+          <form id="billing-info">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="street">Street:</label>
+            <input type="text" id="street" name="street">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state">
+
+            <label for="zip">Zip:</label>
+            <input type="text" id="zip" name="zip">
+
+            <button type="submit">Submit Order</button>
+          </form>
         </section>
     </main>
     <script type="module" src="./../js2/checkout-app.js"></script>

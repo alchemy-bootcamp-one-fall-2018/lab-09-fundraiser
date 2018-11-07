@@ -21,7 +21,6 @@ const list = document.getElementById('cart-list');
 
 const cartList = {
     init(itemsInCart, onRemove) {
-        console.log(list.innerHTML);
         list.innerHTML = '';
         for(let i = 0; i < itemsInCart.length; i++) {
             cartList.editDom(itemsInCart[i]);
