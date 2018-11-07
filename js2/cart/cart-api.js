@@ -33,12 +33,14 @@ const cartApi = {
     },
     remove(item) {
         const index = itemsInCart.indexOf(item);
+        console.log(itemsInCart);
+        console.log(item);
         if(index !== -1) {
             item.quantity -= 1;
-            
-            // itemsInCart.splice(index, 1);
-            saveCart();
+            console.log(index);
+
         }
+        saveCart();
     }
 };
 

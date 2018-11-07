@@ -39,8 +39,11 @@ const cartList = {
         removeButton.addEventListener('click', function() {
             if(cartItem.quantity <= 1) {
                 listItem.remove();
+                cartApi.remove(cartItem);
+                console.log('foo');
             } else {
                 cartList.onRemove(cartItem);
+                console.log('bar');
             }
         });
         list.appendChild(li);
