@@ -1,4 +1,5 @@
 import cartApi from '../cart/cart-api.js';
+import cartList from '../cart/cart-list.js';
 
 function makeProduct(product) {
     const html = /*html*/`
@@ -40,6 +41,9 @@ const productList = {
         const addButton = li.querySelector('.buy');
         addButton.addEventListener('click', function() {
             cartApi.addToCart(product);
+            cartList.init(cartApi.getAll(), function(cartItem) {
+                cartApi.remove(cartItem);
+            });
         });
 
         list.appendChild(li);
