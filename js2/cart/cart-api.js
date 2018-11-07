@@ -20,6 +20,10 @@ const cartApi = {
             for(let i = 0; i < itemsInCart.length; i++) {
                 if(itemsInCart[i].name === item.name){
                     itemsInCart[i].quantity += 1;
+                } else {
+                    item.quantity = 1;
+                    itemsInCart.push(item);
+                    break;
                 }
             }
         }
