@@ -17,14 +17,16 @@ const cartApi = {
             item.quantity = 1;
             itemsInCart.push(item);
         } else {
+            let found = false;
             for(let i = 0; i < itemsInCart.length; i++) {
                 if(itemsInCart[i].name === item.name){
                     itemsInCart[i].quantity += 1;
-                } else {
-                    item.quantity = 1;
-                    itemsInCart.push(item);
-                    break;
-                }
+                    found = true;
+                } 
+            }
+            if(found === false) {
+                item.quantity = 1;
+                itemsInCart.push(item);
             }
         }
         saveCart();
