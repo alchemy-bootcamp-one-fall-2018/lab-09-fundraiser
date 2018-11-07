@@ -25,20 +25,42 @@
         <section>
           <h2>Customer Information</h2>
           <form id="billing-info">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
+              <fieldset>
+                <legend>Billing Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
 
-            <label for="street">Street:</label>
-            <input type="text" id="street" name="street">
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street">
 
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
 
-            <label for="state">State:</label>
-            <input type="text" id="state" name="state">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state">
 
-            <label for="zip">Zip:</label>
-            <input type="text" id="zip" name="zip">
+                <label for="zip">Zip:</label>
+                <input type="text" id="zip" name="zip">
+            </fieldset>
+
+            <button id="same-info">Please click here if your billing information is same as shipping information</button>
+            <fieldset>
+                <legend>Shipping Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name-shipping" name="name">
+
+                <label for="street">Street:</label>
+                <input type="text" id="street-shipping" name="street">
+
+                <label for="city">City:</label>
+                <input type="text" id="city-shipping" name="city">
+
+                <label for="state">State:</label>
+                <input type="text" id="state-shipping" name="state">
+
+                <label for="zip">Zip:</label>
+                <input type="text" id="zip-shipping" name="zip">
+            </fieldset>
 
             <button type="submit">Submit Order</button>
           </form>
