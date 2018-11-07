@@ -13,7 +13,6 @@ const cartItems = cartApi.getAll();
 
 cartList.init(cartItems, function(cartItem) {
     cartApi.remove(cartItem);
-    
 });
 
 updateCart.init(function(cartItem) {
