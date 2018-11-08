@@ -1,6 +1,6 @@
 import addProduct from './add-product.js';
 import productList from './product-list.js';
-import productApi from './products-api.js';
+import productApi from '../apis/products-api.js';
 import productDetail from './product-detail.js';
 
 const products = productApi.getAll();

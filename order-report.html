@@ -11,7 +11,7 @@
     <header>
         <div>
             <!-- <img class ="logo" -->
-            <h1>Barkey Order Report</h1>
+            <h1>Barkery Order Report</h1>
         </div>
         <nav>
             <a href="./">Home</a>
@@ -20,17 +20,21 @@
             <a href="./checkout.html">Checkout</a>
             <a href="./order-report.html">Order Report</a>
             
+            
         </nav>
     </header>
     <main>
 
-        <section> id="customer-list">
-                <h2>Select a Customer</h2>
-                <ul id="cart-list">
-                    <!-- <li></li> -->
-                    <!-- <li></li> -->
-                </ul>
+        <section id="customer-list">
+                <table id="custOrders">
+                    <tr>
+                        <th>Customer Name </th>
+                        <th> Order Total</th>
+                    </tr>
+                </table>
         </section>
+
+        <aside id="custDetail"></aside>
 
 
 
@@ -45,6 +49,6 @@
 
     <!-- <script type="module" src="js/order-app.js"></script> -->
     <!-- <script type="module" src="js/app.js"></script> -->
-    <script type="module" src="js/cart-api.js"></script>
+    <script type="module" src="js/order-app.js"></script>
 </body>
 </html>

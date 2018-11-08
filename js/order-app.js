@@ -1,5 +1,5 @@
-import productsApi from './products-api.js';
-import cartApi from './cart-api.js';
+import productsApi from '../apis/products-api.js';
+import cartApi from '../apis/cart-api.js';
 import productList from './product-list.js';
 import shoppingCart from './shopping-cart.js';
 
@@ -41,7 +41,7 @@ productList.init(products, function(product) {
 // productDetail.init(/*onRemove*/ function(product){
 //     const index = carttApi.remove(product);
 // // tell the product list to re-render
-//     productList.remove(index);
+//     productLis t.remove(index);
 // });
 
 // addProduct.init(function(product){

@@ -1,5 +1,5 @@
 import html from './html.js';
-import cartApi from './cart-api.js';
+import cartApi from '../apis/cart-api.js';
 
 function makeProduct(product) {
     return html`

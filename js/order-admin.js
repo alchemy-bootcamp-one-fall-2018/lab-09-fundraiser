@@ -1,28 +1,66 @@
-import customerApi from './customer-api.js';
-import cartApi from './cart-api.js';
+'use strict';
 
-let cart = cartApi.get();
-let customers = customerApi.getAll();
 
-const customerOrders = document.getElementById('customer-list');
+const customerOrders = document.getElementById('custOrders');
+// changed from cusrtomer-list
+const customer = JSON.parse(localStorage.getItem('customers'));
 
-const getCustomers = {
-    display(customers) {
-        for(let i = 0; i < customers.length; i ++) {
-            const li = document.createElement('li');
-            li.textContent += customers[i].name + ' ' + 
-            customers[i].streetAddress + ' ' + 
-            customerOrders.appendChild(li);
+function displayDetails() {
+    const detailsButton = document.querySelectorAll.('details');
+    // name details
+    const asideDetail = document.getElementById('custDeatil');
 
-            for(let i = 0; i < cart.length; i++) {
-                const li = document.createElement('ul');
-                li.textContent += cart[i].name + ' ' +
-                cart[i].quantity;
-                customerOrders.appendChild(li);
-            }
+    detailsButton.forEach(function(button) {
+        button.addEventListener('click', function() {
+            asideDetail.style.display = 'inline-block';
+            const customer = customers[button.id];
+
+            let html = `
+            <h3>Customer Info</h3>
+            <p><span>Name:</span> ${customer.first-name} ${customer.last-name}</p>
+            <p><span>Shipping Address:</span><br />${customer.shipping-address}<br /></p>
+            <p><span>Billing Address:</span><br />${customer.billinging-address}<br /></p>
+        `;
+
+        if(customer.billing-address) {
+            html += `<p><span>Billing Address:</span><br />${customer.billinging-address}<br /></p>
+            `;
+
+        } else {
+            html  += '<p><span>Billing Address:</span><br />Same as Shipping Adress</p>';
         }
-        customerApi.getAll();
+            html += '<h3>Ordered Products:</h3>';
+
+            cuatomer.cart.forEach(function(cartItem) {
+                html += `<p>
+                    <span>Product Name:</span> ${cartItem.name} <br />
+            
+                    <span>Product Name:</span> ${cartItem.name} </p>`;
+
+        });
+            html += `<h2>Cart Total: $${customer.cartTotal}</h2>`;
+            asideDetail.innerHTML = html;
+        });
+    });
+}
+            
+const orderReport = {
+    init() {
+        if(custoOrders && customers) {
+            customers.forEach(function(customer) {
+                var node = document.createElement('tr';
+                node.innerHTML = `
+                    <td>${customer.first-name}</td>
+                    <td>${customer.last-name}</td>
+                    <td>$${customer.cartTtotal}</td>
+                    <td><button class="details" id="${customer.custId}">Details</button></td>
+                    `;
+                custOrders.appendChild(node);
+            });
+
+        }
+        displayDetails();
     }
 };
-
-getCustomers.display(customers);
+            
+export default orderReport;
