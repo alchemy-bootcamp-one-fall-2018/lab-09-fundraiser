@@ -1,25 +1,25 @@
-let customer = [];
+let orders = [];
 
 
-function saveCustomer() {
-    localStorage.setItem('customer', JSON.stringify(customer));
+function saveOrders() {
+    localStorage.setItem('orders', JSON.stringify(orders));
 }
 
-const customerApi = {
-    get() {
-        const json = localStorage.getItem('customer');
+const orderApi = {
+    getAll() {
+        const json = localStorage.getItem('orders');
         if(json) {
-            customer = JSON.parse(json);
+            orders = JSON.parse(json);
         }        
-        return customer;
+        return orders;
     },
-    add(customer) {
+    add(order) {
      
-        customer.push(customer);
-        saveCustomer();
+        orders.push(order);
+        saveOrders();
     }
   
 };
 
 
-export default customerApi;
+export default orderApi;
