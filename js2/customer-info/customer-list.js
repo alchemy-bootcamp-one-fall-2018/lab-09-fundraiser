@@ -1,8 +1,11 @@
+// import makeCartItem from './../cart/cart-list.js';
+
+
+
 function customerTable(customer) {
     const html = /*html*/`
         <tr>
             <td>${customer.name}</td>
-            <td></td>
         <tr>
    
    `;
