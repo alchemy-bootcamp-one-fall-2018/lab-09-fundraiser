@@ -6,6 +6,7 @@ function customerTable(customer) {
     const html = /*html*/`
         <tr>
             <td>${customer.name}</td>
+            
         <tr>
    
    `;

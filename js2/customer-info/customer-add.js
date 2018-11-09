@@ -1,3 +1,7 @@
+import cartApi from '../cart/cart-api.js';
+
+const itemsInCart = cartApi.getAll();
+
 const addCustomer = {
     init(onAdd) {
         const form = document.getElementById('billing-info');
@@ -17,9 +21,10 @@ const addCustomer = {
                 streetShipping: elements['street-shipping'].value,
                 cityShipping: elements['city-shipping'].value,
                 stateShipping: elements['state-shipping'].value,
-                zipShipping: elements['zip-shipping'].value
+                zipShipping: elements['zip-shipping'].value,
+                itemsPurchased: itemsInCart
             };
-            console.log(newCustomer);
+            console.log(itemsInCart);
             onAdd(newCustomer);
             
             form.reset();

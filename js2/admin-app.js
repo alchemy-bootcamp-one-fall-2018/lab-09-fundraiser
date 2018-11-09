@@ -12,3 +12,4 @@ addProduct.init(function(product) {
     productList.editDom(product);
     productsApi.add(product);
 });
+

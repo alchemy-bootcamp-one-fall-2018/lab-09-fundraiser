@@ -8,11 +8,13 @@ const customersApi = {
     getAll() {
         const json = localStorage.getItem('customers');
         if(json) {
+            console.log('got here');
             customers = JSON.parse(json);
         }
         return customers;
     },
     add(customer) {
+        customers = customersApi.getAll();
         customers.push(customer);
         saveCustomers();
     }
