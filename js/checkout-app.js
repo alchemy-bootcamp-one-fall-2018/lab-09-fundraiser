@@ -2,7 +2,7 @@ import productsApi from '../apis/products-api.js';
 import cartApi from '../apis/cart-api.js';
 import productList from './product-list.js';
 import shoppingCart from './shopping-cart.js';
-// import orderApi from './apis/order-api.js';
+import orderApi from '../apis/order-api.js';
 const products = productsApi.getAll();
 const cart = cartApi.get();
 
@@ -33,7 +33,5 @@ submitButton.addEventListener('click', event => {
         products: cart
     };
     console.log('customer order', order);
-
+    orderApi.add(order);
 });
-
-export default checkoutApp;
