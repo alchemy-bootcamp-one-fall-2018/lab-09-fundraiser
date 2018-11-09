@@ -1,5 +1,5 @@
-import productsApi from './products-api.js';
-import cartApi from './cart-api.js';
+import productsApi from '../apis/products-api.js';
+import cartApi from '../apis/cart-api.js';
 import productList from './product-list.js';
 import shoppingCart from './shopping-cart.js';
 
@@ -16,5 +16,3 @@ productList.init(products, function(product) {
     shoppingCart.update(cart);
     customerApi.add(customer);
 });
-
-// export default orderApp.js
