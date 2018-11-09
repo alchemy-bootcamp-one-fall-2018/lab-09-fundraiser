@@ -2,10 +2,6 @@ import orderApi from '../apis/order-api.js';
 
 'use strict';
 
-<<<<<<< HEAD
-=======
-const customerOrders = document.getElementById('customer-information');
->>>>>>> 4b0ef2ba3431f75726f75bcebb1a40ff8886d47d
 
 const orders = orderApi.getAll();
 console.log("orders", orders);
@@ -15,7 +11,6 @@ console.log(orders[i].customer);
 }
 // loop
 
-<<<<<<< HEAD
 
 
 //             let html = `
@@ -27,7 +22,3 @@ console.log(orders[i].customer);
 //     })
 // });
 // }
-=======
-getCustomers.display(customers);
-
->>>>>>> 4b0ef2ba3431f75726f75bcebb1a40ff8886d47d

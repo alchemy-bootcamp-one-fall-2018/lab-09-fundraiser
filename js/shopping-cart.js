@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import html from './html.js';
 import cartApi from '../apis/cart-api.js';
-=======
-// import html from './html.js';
-import cartApi from './cart-api.js';
-// import customerApi from './customer-api.js';
->>>>>>> 4b0ef2ba3431f75726f75bcebb1a40ff8886d47d
 
 function makeProduct(product) {
     const html =
