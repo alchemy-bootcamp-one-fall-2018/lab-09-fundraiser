@@ -16,7 +16,7 @@ productList.init(products, function(product) {
 });
 const submitButton = document.getElementById('submit-order');
 submitButton.addEventListener('click', event => {
-    console.log('banana');
+
     event.preventDefault();
     let form = document.getElementById('customer-information');
     let elements = form.elements;

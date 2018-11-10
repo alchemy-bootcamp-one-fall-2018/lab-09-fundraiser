@@ -20,7 +20,11 @@ img{
     width: 400px;
     padding: .5cm;
 }
-
+li {
+    list-style: none;
+    display: inline;
+    padding: 10px;
+}
 
 
 
