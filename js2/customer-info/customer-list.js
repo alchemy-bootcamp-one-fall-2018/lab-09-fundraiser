@@ -26,7 +26,7 @@ const customerList = {
         for(let i = 0; i < customers.length; i++) {
             let itemsPurchased = '';
             for(let j = 0; j < customers[i].itemsPurchased.length; j++) {
-                itemsPurchased = itemsPurchased + '<li>' + customers[i].itemsPurchased[j].name + '</li>';
+                itemsPurchased = itemsPurchased + '<li>' + customers[i].itemsPurchased[j].name + ' (' + customers[i].itemsPurchased[j].quantity + ') ' + '</li>';
             }
             customerList.editDom(customers[i], itemsPurchased);
         }
