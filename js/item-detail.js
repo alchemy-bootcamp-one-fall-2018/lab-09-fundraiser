@@ -15,7 +15,7 @@ const itemDetail = {
         section.querySelector('p').textContent = item.description;
         section.querySelector('img').src = item.image;
         section.querySelector('div').textContent = item.price;
-        section.classList.remove('hidden');
+        // section.classList.remove('hidden');
 
     }
 };

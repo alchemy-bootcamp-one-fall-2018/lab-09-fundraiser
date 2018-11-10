@@ -3,4 +3,6 @@ import customerList from './customer-info/customer-list.js';
 
 const customerData = customersApi.getAll();
 
+
 customerList.init(customerData);
+

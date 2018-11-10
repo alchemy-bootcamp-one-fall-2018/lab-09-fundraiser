@@ -31,6 +31,14 @@ const cartApi = {
         }
         saveCart();
     },
+    get(item) {
+        cartApi.getAll();
+        for(let i = 0; i < itemsInCart.length; i++) {
+            if(itemsInCart[i].name === item){
+                return itemsInCart[i];
+            } 
+        }
+    },
     remove(item) {
         const index = itemsInCart.indexOf(item);
         console.log(itemsInCart);
