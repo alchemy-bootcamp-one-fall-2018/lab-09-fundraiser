@@ -15,7 +15,7 @@ addCustomer.init(function(customer) {
     }
     customer.itemTotal = itemTotal;
     customersApi.add(customer);
-    window.location = 
+    // window.location = 
 });
 
 var sameInfo = document.getElementById('same-info');
