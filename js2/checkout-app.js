@@ -9,7 +9,13 @@ cartList.init(cartItems, function(cartItem) {
 });
 
 addCustomer.init(function(customer) {
+    let itemTotal = 0;
+    for(let i = 0; i < customer.itemsPurchased.length; i++) {
+        itemTotal += (+customer.itemsPurchased[i].price * customer.itemsPurchased[i].quantity);
+    }
+    customer.itemTotal = itemTotal;
     customersApi.add(customer);
+    window.location = 
 });
 
 var sameInfo = document.getElementById('same-info');

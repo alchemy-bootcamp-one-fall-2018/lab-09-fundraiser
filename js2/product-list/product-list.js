@@ -2,6 +2,7 @@ import cartApi from '../cart/cart-api.js';
 import cartList from '../cart/cart-list.js';
 
 function makeProduct(product) {
+    console.log(product.price);
     const html = /*html*/`
         <li class="product">
             <h3>${product.name}</h3>
