@@ -8,10 +8,10 @@ const cart = cartApi.get();
 
 shoppingCart.init(cart);
 
-// itemList.init(products, function(item) {
-//     cartApi.add(item);
-//     shoppingCart.update(cart);
-// });
+itemList.init(products, function(item) {
+    cartApi.add(item);
+    shoppingCart.update(cart);
+});
 
 const itemsInCart = {
     init(onSelect) {
