@@ -1,0 +1,35 @@
+body {
+    background-image: url(./assets/images/landing-page.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.button {
+    display: flex;
+    position: fixed;
+    margin-left: 700px;
+    margin-top: 400px;
+    font: bold 24px Arial;
+    text-decoration: none;
+    background-color: rgba(238, 160, 43, 0.9);
+    color: #333333;
+    padding: 70px 10px 10px 70px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+nav {
+    background: darkgreen;
+    padding: 20px;
+    margin: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
