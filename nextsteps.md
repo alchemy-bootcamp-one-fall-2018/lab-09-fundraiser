@@ -1,0 +1,1 @@
+(") Reuse shopping cart, when clicking on picture in order, show item detail

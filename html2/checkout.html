@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css2/checkout.css">
+    <title>Habitat for Humanity</title>
+</head>
+<body>
+    <header>
+        <h1>Habitat for Humanity</h1>
+        <a href="./../index.html">Home Page</a>
+        <a href="/html2/checkout.html">Checkout</a>
+        <a href="/html2/order.html">Order</a>
+        <a href="/html2/orderreport.html">Order Report</a>
+        <a href="/html2/products.html">Admin</a>
+    </header>
+    
+    <main>
+        <section>
+          <h2>Shopping Cart</h2>
+          <ul id="cart-list"></ul>
+        </section>
+        <section>
+          <h2>Customer Information</h2>
+          <form id="billing-info">
+              <fieldset>
+                <legend>Billing Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street">
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state">
+
+                <label for="zip">Zip:</label>
+                <input type="text" id="zip" name="zip">
+            </fieldset>
+
+            <button id="same-info">Please click here if your Billing Information is same as Shipping Information</button>
+            <fieldset>
+                <legend>Shipping Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name-shipping" name="name-shipping">
+
+                <label for="street">Street:</label>
+                <input type="text" id="street-shipping" name="street-shipping">
+
+                <label for="city">City:</label>
+                <input type="text" id="city-shipping" name="city-shipping">
+
+                <label for="state">State:</label>
+                <input type="text" id="state-shipping" name="state-shipping">
+
+                <label for="zip">Zip:</label>
+                <input type="text" id="zip-shipping" name="zip-shipping">
+            </fieldset>
+
+            <button type="submit">Submit Order</button>
+          </form>
+        </section>
+    </main>
+    <script type="module" src="./../js2/checkout-app.js"></script>
+</body>
+</html>
