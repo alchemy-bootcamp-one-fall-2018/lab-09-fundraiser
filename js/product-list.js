@@ -42,10 +42,10 @@ const productList = {
         listItem.addEventListener('click', function() {
             productList.onSelect(product);
 
-            // add(product) {
-                // cart.push(product);
-                // makeProduct();
-            // };
+            add(product) {
+                cart.push(product);
+                makeProduct();
+            };
 
             cart.push(product);
             makeProduct();

@@ -1,6 +1,6 @@
 import html from './html.js';
 import cartApi from '../apis/cart-api.js';
-import customerApi from './customer-api.js';
+
 
 function makeProduct(product) {
     const html = `
@@ -17,7 +17,7 @@ function makeProduct(product) {
 }
 
 const list = document.getElementById('cart-list');
-const submitButton = document.getElementById('submit-order');
+// const submitButton = document.getElementById('submit-order');
 
 const shoppingCart = {
     init(cart) {
@@ -45,7 +45,7 @@ const shoppingCart = {
 
 export default shoppingCart;
     
-submitButton.addEventListener('click', function(){
-    customerApi.add(customer[i]);
-    shoppingCart.update(cart);
-});
+// submitButton.addEventListener('click', function(){
+//     orderApi.add(order[i]);
+//     shoppingCart.update(cart);
+// });

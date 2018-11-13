@@ -28,12 +28,12 @@ submitButton.addEventListener('click', event => {
         billingAddress: elements.billingAddress.value,
         shippingAddress: elements.shippingAddress.value,
     };
-    // console.log('customer data', customer);
+    console.log('customer data', customer);
 
     let order = {
         customer: customer, 
         products: cart
     };
-    // console.log('customer order', order);
+    console.log('customer order', order);
     orderApi.add(order);
 });
