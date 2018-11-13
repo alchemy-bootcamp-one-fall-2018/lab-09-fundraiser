@@ -16,6 +16,8 @@ productList.init(products, function(product) {
 });
 const submitButton = document.getElementById('submit-order');
 submitButton.addEventListener('click', event => {
+            
+    form.reset();
 
     event.preventDefault();
     let form = document.getElementById('customer-information');
@@ -26,12 +28,12 @@ submitButton.addEventListener('click', event => {
         billingAddress: elements.billingAddress.value,
         shippingAddress: elements.shippingAddress.value,
     };
-    console.log('customer data', customer);
+    // console.log('customer data', customer);
 
     let order = {
         customer: customer, 
         products: cart
     };
-    console.log('customer order', order);
+    // console.log('customer order', order);
     orderApi.add(order);
 });
