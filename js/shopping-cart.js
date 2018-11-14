@@ -45,7 +45,7 @@ const shoppingCart = {
 
 export default shoppingCart;
     
-// submitButton.addEventListener('click', function(){
-//     orderApi.add(order[i]);
-//     shoppingCart.update(cart);
-// });
+submitButton.addEventListener('click', function(){
+    orderApi.add(order[i]);
+    shoppingCart.update(cart);
+});
