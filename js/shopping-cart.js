@@ -1,5 +1,5 @@
-import html from './html.js';
-import cartApi from '../apis/cart-api.js';
+// import html from './html.js';
+import orderApi from '../apis/order-api.js';
 
 
 function makeProduct(product) {
@@ -19,16 +19,20 @@ function makeProduct(product) {
 const list = document.getElementById('cart-list');
 // const submitButton = document.getElementById('submit-order');
 
+// submitButton.addEventListener('click', function(){
+//     // orderApi.add(order[i]);
+//     // shoppingCart.update(cart);
+// });
 const shoppingCart = {
     init(cart) {
         for(let i = 0; i < cart.length; i++) {
             const dom = makeProduct(cart[i]);
             dom.getElementById('add').addEventListener('click', function(){
-                cartApi.add(cart[i]);
+                orderApi.add(cart[i]);
                 shoppingCart.update(cart);
             });
             dom.getElementById('remove').addEventListener('click', function(){
-                cartApi.remove(cart[i]);
+                orderApi.remove(cart[i]);
                 shoppingCart.update(cart);
             });
             list.appendChild(dom);
@@ -43,9 +47,4 @@ const shoppingCart = {
     }
 };
 
-export default shoppingCart;
-    
-submitButton.addEventListener('click', function(){
-    orderApi.add(order[i]);
-    shoppingCart.update(cart);
-});
+export default shoppingCart; 

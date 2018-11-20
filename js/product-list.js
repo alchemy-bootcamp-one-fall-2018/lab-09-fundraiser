@@ -24,8 +24,7 @@ function makeProduct(product) {
 const list = document.getElementById('products');
 
 const productList = {
-    // add products array
-    // onRemove callback
+
     init(products, onSelect) {
         for(let i = 0; i < products.length; i++) {
             productList.add(products[i]);
@@ -38,21 +37,15 @@ const productList = {
 
         // do work of finding elements _before_ appending
         const listItem = dom.querySelector('li');
-
         listItem.addEventListener('click', function() {
             productList.onSelect(product);
 
-            add(product) {
-                cart.push(product);
-                makeProduct();
-            };
-
             cart.push(product);
-            makeProduct();
-
-             // append to <ul>, this will empty the fragment
-            list.appendChild(dom);
+        
         });
+        
+        // append to <ul>, this will empty the fragment
+        list.appendChild(dom);
 
        
     },
