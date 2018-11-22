@@ -1,23 +1,23 @@
 import productsApi from '../apis/products-api.js';
-import customerApi from '../apis/customer-api.js';
+import cartApi from '../apis/cart-api.js';
 import productList from './product-list.js';
 import shoppingCart from './shopping-cart.js';
 import orderApi from '../apis/order-api.js';
 const products = productsApi.getAll();
-const cart = orderApi.get();
+const cart = cartApi.get();
 
 
 shoppingCart.init(cart);
 
 productList.init(products, function(product) {
-    orderApi.add(product);
+    cartApi.add(product);
     shoppingCart.update(cart);
     // orderApi.add(order);
 });
 const submitButton = document.getElementById('submit-order');
 submitButton.addEventListener('click', event => {
-    console.log('banana');        
-    form.reset();
+           
+    // form.reset();
 
     event.preventDefault();
     let form = document.getElementById('customer-information');
