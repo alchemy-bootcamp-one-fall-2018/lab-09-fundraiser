@@ -41,12 +41,11 @@ const productList = {
             productList.onSelect(product);
 
             cart.push(product);
-        
-        });
+            makeProduct();
         
         // append to <ul>, this will empty the fragment
-        list.appendChild(dom);
-
+            list.appendChild(dom);
+        });
        
     },
     remove(index) {
